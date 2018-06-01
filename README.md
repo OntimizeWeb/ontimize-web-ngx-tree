@@ -36,7 +36,7 @@ You must add the module styles definition in your '*.angular-cli.json*' file sty
 
 ### Import in an application module
 
-Include the library chart module into your app in the module where you want to use it.
+Include the library tree module into your app in the module where you want to use it.
 
 ```bash
 ...
