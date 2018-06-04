@@ -1,10 +1,13 @@
 import { Component, OnInit, Injector, Optional, Inject, forwardRef, OnDestroy, SkipSelf, ElementRef, NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { Util } from '../../utils';
-import { OSharedModule } from '../../shared';
-import { OFormComponent } from '../form/o-form.component';
+import {
+  OntimizeWebModule,
+  Util,
+  OSharedModule,
+  OFormComponent,
+  OServiceBaseComponent
+} from 'ontimize-web-ngx';
 import { OTreeComponent } from './o-tree.component';
-import { OServiceBaseComponent } from '../o-service-base-component.class';
 
 export const DEFAULT_INPUTS_O_TREE_NODE = [
   ...OServiceBaseComponent.DEFAULT_INPUTS_O_SERVICE_BASE_COMPONENT,
@@ -81,7 +84,7 @@ export class OTreeNodeComponent extends OTreeComponent implements OnInit, OnDest
 
 @NgModule({
   declarations: [OTreeNodeComponent],
-  imports: [OSharedModule, CommonModule],
+  imports: [OntimizeWebModule, OSharedModule, CommonModule],
   exports: [OTreeNodeComponent]
 })
 export class OTreeNodeModule {

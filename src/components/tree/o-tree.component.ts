@@ -5,18 +5,18 @@ import { TreeModule, TreeModel, Ng2TreeSettings, TreeComponent, Tree, NodeSelect
 import { LoadNextLevelEvent } from 'ng2-tree/src/tree.events';
 
 import {
+  OntimizeWebModule,
   InputConverter,
   LocalStorageService,
   DialogService,
   Util,
-  Codes,
-  ISQLOrder,
   OSharedModule,
   ServiceUtils,
-  FilterExpressionUtils,
+  OServiceBaseComponent,
+  Codes,
+  ISQLOrder,
   OFormComponent,
-  OSearchInputModule,
-  OServiceBaseComponent
+  FilterExpressionUtils
 } from 'ontimize-web-ngx';
 
 
@@ -301,6 +301,7 @@ export class OTreeComponent extends OServiceBaseComponent implements OnInit, Aft
   }
 
   protected setData(treeArray: any[], sqlTypes?: any) {
+    console.log(sqlTypes);
     let childrenArray: TreeModel[] = [];
 
     treeArray.forEach(el => {
@@ -428,6 +429,7 @@ export class OTreeComponent extends OServiceBaseComponent implements OnInit, Aft
   }
 
   nodeCreated(event: NodeCreatedEvent) {
+    console.log(event);
     // if (node && node.node && node.node.value.length > 0 && this.dataService) {
     //   let nodeObject: Tree = node.node;
     //   let nodeToInsert = {};
@@ -454,6 +456,7 @@ export class OTreeComponent extends OServiceBaseComponent implements OnInit, Aft
   }
 
   nodeRemoved(event: NodeRemovedEvent) {
+    console.log(event);
     // if (node && node.node && node.node.id && this.dataService) {
     // // this.dialogService.confirm('CONFIRM', 'MESSAGES.CONFIRM_DELETE_TREE_NODE').then(
     // //     res => {
@@ -475,6 +478,7 @@ export class OTreeComponent extends OServiceBaseComponent implements OnInit, Aft
   }
 
   nodeRenamed(event: NodeRenamedEvent) {
+    console.log(event);
     // if (node && node.node && node.node.id && node.node.value.length > 0 && this.dataService) {
     //   // let nodeObject: Tree = node.node;
     //   // let nodeToRename = {};
@@ -533,8 +537,9 @@ export class OTreeComponent extends OServiceBaseComponent implements OnInit, Aft
 @NgModule({
   declarations: [OTreeComponent],
   imports: [
+    OntimizeWebModule,
     OSharedModule,
-    OSearchInputModule,
+    // OSearchInputModule,
     CommonModule,
     TreeModule,
     RouterModule
