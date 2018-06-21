@@ -10,5 +10,5 @@ export * from './src/components';
   imports: OTREE_MODULES,
   exports: OTREE_MODULES
 })
-export class OChartModule {
+export class OTreeModule {
 }

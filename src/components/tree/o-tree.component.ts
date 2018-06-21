@@ -1,7 +1,7 @@
-import { Component, OnInit, ViewEncapsulation, NgModule, Injector, ElementRef, Optional, Inject, forwardRef, OnDestroy, ViewChild, AfterViewInit, EventEmitter } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation, NgModule, Injector, ElementRef, Optional, Inject, forwardRef, OnDestroy, ViewChild, AfterViewInit, EventEmitter, SimpleChange } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Router, ActivatedRoute, RouterModule } from '@angular/router';
-import { TreeModule, TreeModel, Ng2TreeSettings, TreeComponent, Tree, NodeSelectedEvent, NodeCollapsedEvent, NodeExpandedEvent, NodeMovedEvent, NodeCreatedEvent, NodeRemovedEvent, NodeRenamedEvent } from 'ng2-tree';
+import { TreeModule, TreeModel, Ng2TreeSettings, TreeComponent, Tree, NodeSelectedEvent, NodeCollapsedEvent, NodeExpandedEvent, NodeMovedEvent, NodeCreatedEvent, NodeRemovedEvent, NodeRenamedEvent, TreeController } from 'ng2-tree';
 import { LoadNextLevelEvent } from 'ng2-tree/src/tree.events';
 
 import {
@@ -16,9 +16,11 @@ import {
   Codes,
   ISQLOrder,
   OFormComponent,
-  FilterExpressionUtils
+  FilterExpressionUtils,
+  OSearchInputModule,
+  OntimizeService,
+  dataServiceFactory
 } from 'ontimize-web-ngx';
-
 
 import { OTreeNodeComponent } from './o-tree-node.component';
 
@@ -62,10 +64,10 @@ export const DEFAULT_INPUTS_O_TREE = [
 
 export const DEFAULT_OUTPUTS_O_TREE = [
   'onNodeSelected',
-  'onNodeMoved',
-  'onNodeCreated',
-  'onNodeRemoved',
-  'onNodeRenamed',
+  // 'onNodeMoved',
+  // 'onNodeCreated',
+  // 'onNodeRemoved',
+  // 'onNodeRenamed',
   'onNodeExpanded',
   'onNodeCollapsed',
   'onLoadNextLevel'
@@ -78,6 +80,9 @@ export const DEFAULT_OUTPUTS_O_TREE = [
   inputs: DEFAULT_INPUTS_O_TREE,
   outputs: DEFAULT_OUTPUTS_O_TREE,
   encapsulation: ViewEncapsulation.None,
+  providers: [
+    { provide: OntimizeService, useFactory: dataServiceFactory, deps: [Injector] }
+  ],
   host: {
     '[class.o-tree]': 'tree'
   }
@@ -178,10 +183,21 @@ export class OTreeComponent extends OServiceBaseComponent implements OnInit, Aft
     super.destroy();
   }
 
+  ngOnChanges(changes: { [propName: string]: SimpleChange }) {
+    if (Util.isDefined(this.tree) && Util.isDefined(this.treeComponent)) {
+      super.ngOnChanges(changes);
+    }
+  }
+
   initialize(): void {
-    super.initialize();
     this.sortColArray = ServiceUtils.parseSortColumns(this.sortColumns);
     this.descriptionColArray = Util.parseArray(this.descriptionColumns, true);
+    super.initialize();
+  }
+
+  onLanguageChangeCallback(res: any) {
+    super.onLanguageChangeCallback(res);
+    this.treeComponent.getController().reloadChildren();
   }
 
   setDataArray(data: any): void {
@@ -204,6 +220,7 @@ export class OTreeComponent extends OServiceBaseComponent implements OnInit, Aft
     }
     return filter;
   }
+
   getRecursiveChildren(id: any, callback) {
     // let queryMethodName = this.pageable ? this.paginatedQueryMethod : this.queryMethod;
     let queryMethodName = this.queryMethod;
@@ -226,6 +243,7 @@ export class OTreeComponent extends OServiceBaseComponent implements OnInit, Aft
         route: this.route,
         value: this.translateService.get(childNode.rootTitle),
         id: childNode.oattr,
+        treeNodeComponent: childNode,
         loadChildren: (childNodeCallback) => {
           let queryMethodName = childNode.queryMethod;
           if (!childNode.dataService || !(queryMethodName in childNode.dataService) || !childNode.entity) {
@@ -236,7 +254,6 @@ export class OTreeComponent extends OServiceBaseComponent implements OnInit, Aft
           childNode.doChildQuery(queryMethodName, queryArguments, childNodeCallback);
         }
       };
-
       children.push(treeNode);
     });
     if (this.treeNodes.length === 1 && !this.treeNodes[0].showRoot) {
@@ -247,11 +264,12 @@ export class OTreeComponent extends OServiceBaseComponent implements OnInit, Aft
   }
 
   protected doChildQuery(queryMethodName: string, queryArguments: any[], callback: any) {
+    const self = this;
     this.dataService[queryMethodName].apply(this.dataService, queryArguments).subscribe(resp => {
       let children = [];
       if (resp && resp.data && resp.data.length > 0) {
         for (let i = 0, len = resp.data.length; i < len; i++) {
-          let child = this.mapTreeNode(resp.data[i]);
+          let child = this.mapTreeNode(resp.data[i], self);
           children.push(child);
         }
       }
@@ -259,12 +277,13 @@ export class OTreeComponent extends OServiceBaseComponent implements OnInit, Aft
     });
   }
 
-  protected mapTreeNode(itemdata: any = {}): TreeModel {
+  protected mapTreeNode(itemdata: any = {}, treeNodeComponent?: OTreeComponent): TreeModel {
     let treeNode = {
       data: itemdata,
       value: this.getNodeDescription(itemdata),
       id: this.getNodeId(itemdata),
-      route: this.route
+      route: this.route,
+      treeNodeComponent: treeNodeComponent
     };
     if (this.recursive) {
       treeNode['loadChildren'] = (callback) => this.getRecursiveChildren(itemdata[this.keysArray[0]], callback);
@@ -374,30 +393,39 @@ export class OTreeComponent extends OServiceBaseComponent implements OnInit, Aft
   nodeSelected(event: NodeSelectedEvent) {
     if (event && event.node && Util.isDefined(event.node.id)) {
       const node: Tree = event.node;
-      // const controller: TreeController = this.treeComponent.getControllerByNodeId(node.id);
-      // if (controller && controller.isCollapsed()) {
-      //   controller.expand();
-      // } else if (controller && controller.isExpanded()) {
-      //   controller.collapse();
-      // }
-      const nodeModel = node.node ? (node.node as any).data : node;
-      this.onNodeSelected.emit(nodeModel);
-      this.selectedNode = node;
-
-      if (Util.isDefined((node.node as any).route) || (node.id === 0)) {
-        let route = '';
-        if (node.id === 0) {
-          route = OTreeComponent.DEFAULT_ROOT_ROUTE;
-        } else {
-          let nodeRoute = (node.node as any).route;
-          let routeArray = nodeRoute.split(Codes.ROUTE_SEPARATOR);
-          for (let i = 0, len = routeArray.length; i < len; i++) {
-            if (routeArray[i].startsWith(Codes.ROUTE_VARIABLE_CHAR)) {
-              routeArray[i] = nodeModel[routeArray[i].substring(1)];
-            }
-          }
-          route = routeArray.join(Codes.ROUTE_SEPARATOR);
+      const controller: TreeController = this.treeComponent.getControllerByNodeId(node.id);
+      if (controller) {
+        const innerTreeModel: TreeModel = controller.toTreeModel();
+        if (innerTreeModel && innerTreeModel.treeNodeComponent) {
+          const nodeModel = innerTreeModel.data;
+          innerTreeModel.treeNodeComponent.innerNodeSelected(nodeModel, node/*(controller as any).tree*/);
+          return;
         }
+      }
+      const nodeModel = node.node ? (node.node as any).data : node;
+      this.innerNodeSelected(nodeModel, node);
+    }
+  }
+
+  protected innerNodeSelected(data: any, node: Tree) {
+    this.onNodeSelected.emit(data);
+    this.selectedNode = node;
+
+    if (Util.isDefined((node.node as any).route) || (node.id === 0)) {
+      let route = undefined;
+      if (node.id === 0) {
+        // route = OTreeComponent.DEFAULT_ROOT_ROUTE;
+      } else {
+        let nodeRoute = (node.node as any).route;
+        let routeArray = nodeRoute.split(Codes.ROUTE_SEPARATOR);
+        for (let i = 0, len = routeArray.length; i < len; i++) {
+          if (routeArray[i].startsWith(Codes.ROUTE_VARIABLE_CHAR)) {
+            routeArray[i] = data[routeArray[i].substring(1)];
+          }
+        }
+        route = routeArray.join(Codes.ROUTE_SEPARATOR);
+      }
+      if (Util.isDefined(route)) {
         const extras = {
           relativeTo: this.actRoute
         };
@@ -539,12 +567,12 @@ export class OTreeComponent extends OServiceBaseComponent implements OnInit, Aft
   imports: [
     OntimizeWebModule,
     OSharedModule,
-    // OSearchInputModule,
+    OSearchInputModule,
     CommonModule,
     TreeModule,
     RouterModule
   ],
   exports: [OTreeComponent]
 })
-export class OTreeModule {
+export class OTreeComponentModule {
 }

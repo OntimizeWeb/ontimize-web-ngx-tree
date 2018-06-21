@@ -1,12 +1,15 @@
-import { Component, OnInit, Injector, Optional, Inject, forwardRef, OnDestroy, SkipSelf, ElementRef, NgModule } from '@angular/core';
+import { Component, OnInit, Injector, Optional, Inject, forwardRef, OnDestroy, SkipSelf, ElementRef, NgModule, EventEmitter } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {
   OntimizeWebModule,
   Util,
   OSharedModule,
   OFormComponent,
-  OServiceBaseComponent
+  OServiceBaseComponent,
+  OntimizeService,
+  dataServiceFactory
 } from 'ontimize-web-ngx';
+
 import { OTreeComponent } from './o-tree.component';
 
 export const DEFAULT_INPUTS_O_TREE_NODE = [
@@ -36,24 +39,37 @@ export const DEFAULT_INPUTS_O_TREE_NODE = [
 
 export const DEFAULT_OUTPUTS_O_TREE_NODE = [
   'onNodeSelected',
-  'onNodeMoved',
-  'onNodeCreated',
-  'onNodeRemoved',
-  'onNodeRenamed',
+  // 'onNodeMoved',
+  // 'onNodeCreated',
+  // 'onNodeRemoved',
+  // 'onNodeRenamed',
   'onNodeExpanded',
   'onNodeCollapsed',
-  'onLoadNextLevel'];
+  'onLoadNextLevel'
+];
 
 @Component({
   selector: 'o-tree-node',
   template: ' ',
   inputs: DEFAULT_INPUTS_O_TREE_NODE,
-  outputs: DEFAULT_OUTPUTS_O_TREE_NODE
+  outputs: DEFAULT_OUTPUTS_O_TREE_NODE,
+  providers: [
+    { provide: OntimizeService, useFactory: dataServiceFactory, deps: [Injector] }
+  ],
 })
 
 export class OTreeNodeComponent extends OTreeComponent implements OnInit, OnDestroy {
   public static DEFAULT_INPUTS_O_TREE_NODE = DEFAULT_INPUTS_O_TREE_NODE;
   public static DEFAULT_OUTPUTS_O_TREE_NODE = DEFAULT_OUTPUTS_O_TREE_NODE;
+
+  onNodeSelected: EventEmitter<any> = new EventEmitter();
+  // onNodeMoved: EventEmitter<any> = new EventEmitter();
+  // onNodeCreated: EventEmitter<any> = new EventEmitter();
+  // onNodeRemoved: EventEmitter<any> = new EventEmitter();
+  // onNodeRenamed: EventEmitter<any> = new EventEmitter();
+  onNodeExpanded: EventEmitter<any> = new EventEmitter();
+  onNodeCollapsed: EventEmitter<any> = new EventEmitter();
+  onLoadNextLevel: EventEmitter<any> = new EventEmitter();
 
   constructor(
     injector: Injector,
@@ -87,6 +103,6 @@ export class OTreeNodeComponent extends OTreeComponent implements OnInit, OnDest
   imports: [OntimizeWebModule, OSharedModule, CommonModule],
   exports: [OTreeNodeComponent]
 })
-export class OTreeNodeModule {
+export class OTreeNodeComponentModule {
 }
 
