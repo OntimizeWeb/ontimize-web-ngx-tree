@@ -71,6 +71,8 @@ export class OTreeNodeComponent extends OTreeComponent implements OnInit, OnDest
   onNodeCollapsed: EventEmitter<any> = new EventEmitter();
   onLoadNextLevel: EventEmitter<any> = new EventEmitter();
 
+  forcedShowRoot: boolean = false;
+
   constructor(
     injector: Injector,
     elRef: ElementRef,
@@ -96,6 +98,11 @@ export class OTreeNodeComponent extends OTreeComponent implements OnInit, OnDest
   registerChildNode(child: OTreeNodeComponent) {
     this.treeNodes.push(child);
   }
+
+  onLanguageChangeCallback() {
+    // empty
+  }
+
 }
 
 @NgModule({

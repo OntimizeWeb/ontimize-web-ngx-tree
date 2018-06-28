@@ -88,6 +88,7 @@ export const DEFAULT_OUTPUTS_O_TREE = [
   }
 })
 export class OTreeComponent extends OServiceBaseComponent implements OnInit, AfterViewInit, OnDestroy {
+
   static DEFAULT_INPUTS_O_TREE = DEFAULT_INPUTS_O_TREE;
   static DEFAULT_OUTPUTS_O_TREE = DEFAULT_OUTPUTS_O_TREE;
   static DEFAULT_ROOT_ROUTE = 'home';
@@ -145,6 +146,7 @@ export class OTreeComponent extends OServiceBaseComponent implements OnInit, Aft
   protected dialogService: DialogService;
   protected router: Router;
   protected actRoute: ActivatedRoute;
+  protected translating: boolean;
 
   constructor(
     injector: Injector,
@@ -197,7 +199,35 @@ export class OTreeComponent extends OServiceBaseComponent implements OnInit, Aft
 
   onLanguageChangeCallback(res: any) {
     super.onLanguageChangeCallback(res);
-    this.treeComponent.getController().reloadChildren();
+    this.translating = true;
+    this.treeComponent.getController().rename(this.translateService.get(this.rootTitle));
+    this.translateChildren(this.tree);
+    this.translating = false;
+  }
+
+  protected translateChildren(treeModel: TreeModel) {
+    const self = this;
+    treeModel.children.forEach(child => {
+      const controller: TreeController = self.treeComponent.getControllerByNodeId(child.id);
+      if (controller) {
+        const innerTreeModel: TreeModel = controller.toTreeModel();
+        if (innerTreeModel) {
+          const comp = innerTreeModel.treeNodeComponent;
+          if (comp) {
+            if (innerTreeModel.loadChildren && (comp.showRoot || comp.forcedShowRoot)) {
+              controller.rename(self.translateService.get(comp.rootTitle));
+            } else if (!innerTreeModel.loadChildren && comp.translate) {
+              controller.rename(comp.getNodeDescription(innerTreeModel.data));
+            }
+          }
+          if (controller.isExpanded()) {
+            if (innerTreeModel.children && innerTreeModel.children.length) {
+              self.translateChildren(innerTreeModel);
+            }
+          }
+        }
+      }
+    });
   }
 
   setDataArray(data: any): void {
@@ -259,6 +289,9 @@ export class OTreeComponent extends OServiceBaseComponent implements OnInit, Aft
     if (this.treeNodes.length === 1 && !this.treeNodes[0].showRoot) {
       children[0].loadChildren(callback);
     } else {
+      this.treeNodes.forEach((childNode: OTreeNodeComponent) => {
+        childNode.forcedShowRoot = true;
+      });
       callback(children);
     }
   }
@@ -298,7 +331,7 @@ export class OTreeComponent extends OServiceBaseComponent implements OnInit, Aft
     this.keysArray.forEach(key => {
       id += item[key];
     });
-    return id;
+    return this.keys + ':' + id;
   }
 
   protected getNodeDescription(item: any = {}) {
@@ -506,7 +539,9 @@ export class OTreeComponent extends OServiceBaseComponent implements OnInit, Aft
   }
 
   nodeRenamed(event: NodeRenamedEvent) {
-    console.log(event);
+    if (!this.translating) {
+      console.log(event);
+    }
     // if (node && node.node && node.node.id && node.node.value.length > 0 && this.dataService) {
     //   // let nodeObject: Tree = node.node;
     //   // let nodeToRename = {};
