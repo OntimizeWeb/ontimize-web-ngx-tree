@@ -1,21 +1,21 @@
-<example-comp #ex collapsible="no" collapsed="no" comp-name="TREE.BASIC.COMPONENT" comp-desc="TREE.BASIC.COMPONENT.DESC"
-  [files]="files" (showSource)="onShowSource(treeview, ex)" style.height="65%">
-  <div fxLayout="row" fxLayoutAlign="center stretch" layout-padding>
-    <div fxLayout="column" layout-padding fxLayoutAlign="center stretch" fxFlex="45">
-      <o-tree #treeview fxFlex service="customers" entity="customer" keys="CUSTOMERID" columns="CUSTOMERID;SURNAME;NAME" description-columns="SURNAME;NAME"
-        separator=", " recursive="no" query-on-init="true" service-type="DummyService" root-title="CUSTOMERS" [title]="treeTitle.value"
-        [controls]="controlsToggle.checked" [quick-filter]="quickFilterToggle.checked" [refresh-button]="refreshButtonToggle.checked"
-        (onNodeSelected)="nodeSelected($event)" (onNodeExpanded)="nodeExpanded($event)" (onNodeCollapsed)="nodeCollapsed($event)"
-        (onLoadNextLevel)="nextLevelLoaded($event)">
-      </o-tree>
-    </div>
-    <o-column attr="conf" title-label="{{ 'TREE.CONFIGURATION' | oTranslate }}" elevation="0" fxFlex="55" layout-padding layout-align="center">
-      <o-column title-label="{{ 'TREE.INPUTS' | oTranslate }}" elevation="0" fxFlex="65" layout-padding layout-align="center">
-        <mat-form-field fxFlex="50">
-          <input matInput #treeTitle placeholder="{{ 'TITLE' | oTranslate }}" value="Tree">
-        </mat-form-field>
-        <div fxLayout="row">
-          <div fxLayout="column" fxFlex="50">
+<div fxFlexFill fxLayout="column">
+  <example-comp #ex collapsible="no" collapsed="no" comp-name="TREE.BASIC.COMPONENT" comp-desc="TREE.BASIC.COMPONENT.DESC"
+    [files]="files" (showSource)="onShowSource(treeview, ex)">
+    <div fxLayout="row" fxLayoutAlign="center stretch" layout-padding>
+      <div fxLayout="column" layout-padding fxLayoutAlign="center stretch" fxFlex="45">
+        <o-tree #treeview fxFlex service="customers" entity="customer" keys="CUSTOMERID" columns="CUSTOMERID;SURNAME;NAME" description-columns="SURNAME;NAME"
+          separator=", " recursive="no" query-on-init="true" service-type="DummyService" root-title="CUSTOMERS" [title]="treeTitle.value"
+          [controls]="controlsToggle.checked" [quick-filter]="quickFilterToggle.checked" [refresh-button]="refreshButtonToggle.checked"
+          (onNodeSelected)="nodeSelected($event)" (onNodeExpanded)="nodeExpanded($event)" (onNodeCollapsed)="nodeCollapsed($event)"
+          (onLoadNextLevel)="nextLevelLoaded($event)">
+        </o-tree>
+      </div>
+      <o-column attr="conf" title-label="{{ 'TREE.CONFIGURATION' | oTranslate }}" elevation="0" fxFlex="55" layout-padding layout-align="center">
+        <o-column title-label="{{ 'TREE.INPUTS' | oTranslate }}" elevation="0" fxFlex layout-padding layout-align="center">
+          <mat-form-field fxFlex="50">
+            <input matInput #treeTitle placeholder="{{ 'TITLE' | oTranslate }}" value="Tree">
+          </mat-form-field>
+          <div fxLayout="column">
             <mat-slide-toggle #controlsToggle checked="true">
               {{ 'TREE.CONTROLS' | oTranslate }}
             </mat-slide-toggle>
@@ -28,18 +28,13 @@
               {{ 'TREE.REFRESH_BUTTON' | oTranslate }}
             </mat-slide-toggle>
           </div>
-          <div fxLayout="column" fxFlex="50">
-            <!-- <mat-slide-toggle #showRootToggle checked="true">
-              {{ 'TREE.SHOW_ROOT_BUTTON' | oTranslate }}
-            </mat-slide-toggle> -->
+        </o-column>
+        <o-column class="event-column" title-label="{{ 'TREE.OUTPUTS' | oTranslate }}" elevation="0" fxFlex layout-padding layout-align="center">
+          <div *ngFor="let ev of treeEvents">
+            {{ ev.event }}
           </div>
-        </div>
+        </o-column>
       </o-column>
-      <o-column class="event-column" title-label="{{ 'TREE.OUTPUTS' | oTranslate }}" elevation="0" fxFlex="60" layout-padding layout-align="center">
-        <div *ngFor="let ev of treeEvents">
-          {{ ev.event }}
-        </div>
-      </o-column>
-    </o-column>
-  </div>
-</example-comp>
+    </div>
+  </example-comp>
+</div>

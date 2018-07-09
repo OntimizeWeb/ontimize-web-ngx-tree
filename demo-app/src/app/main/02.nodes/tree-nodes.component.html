@@ -23,35 +23,5 @@
       </o-tree>
 
     </div>
-
-    <div fxLayout="column" layout-padding fxLayoutAlign="start stretch" fxFlex="55">
-
-      <o-column title-label="{{ 'TREE.CONFIGURATION' | oTranslate }}" elevation="0" fxFlex="65" layout-padding layout-align="center">
-        <mat-form-field fxFlex="50">
-          <input matInput #treeTitle placeholder="{{ 'TITLE' | oTranslate }}" value="Tree">
-        </mat-form-field>
-        <div fxLayout="row">
-          <div fxLayout="column" fxFlex="50">
-            <mat-slide-toggle #controlsToggle checked="true">
-              {{ 'TREE.CONTROLS' | oTranslate }}
-            </mat-slide-toggle>
-
-            <mat-slide-toggle #quickFilterToggle checked="true">
-              {{ 'TREE.QUICKFILTER' | oTranslate }}
-            </mat-slide-toggle>
-
-            <mat-slide-toggle #refreshButtonToggle checked="true">
-              {{ 'TREE.REFRESH_BUTTON' | oTranslate }}
-            </mat-slide-toggle>
-          </div>
-          <div fxLayout="column" fxFlex="50">
-            <!-- <mat-slide-toggle #showRootToggle checked="true">
-              {{ 'TREE.SHOW_ROOT_BUTTON' | oTranslate }}
-            </mat-slide-toggle> -->
-          </div>
-        </div>
-      </o-column>
-
-    </div>
   </div>
 </example-comp>

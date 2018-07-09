@@ -113,5 +113,7 @@
   "TREE.QUICKFILTER": "Filter",
   "TREE.REFRESH_BUTTON": "Refresh button",
   "TREE.INPUTS": "Inputs",
-  "TREE.OUTPUTS": "Outputs"
+  "TREE.OUTPUTS": "Outputs",
+  "ACCOUNT_CONCEPTS" :"Concepts",
+  "ACCOUNT_MOVEMENTTYPES" :"Movement types"
 }
