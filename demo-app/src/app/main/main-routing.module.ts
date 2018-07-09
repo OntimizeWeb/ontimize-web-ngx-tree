@@ -4,9 +4,10 @@ import { Routes, RouterModule } from '@angular/router';
 import { MainComponent } from './main.component';
 import { HomeModule } from './home/home.module';
 import { AboutModule } from './about/about.module';
-import { SettingsModule } from './settings/settings.module';
-import { CustomersTreeModule } from './customers-tree/customers-tree.module';
-
+import { TreeBasicComponent } from './01.basic/tree-basic.component';
+import { TreeNodesComponent } from './02.nodes/tree-nodes.component';
+import { TreeStaticComponent } from './03.static/tree-static.component';
+import { DetailModule } from './04.detail/detail.module';
 
 export function loadHomeModule() {
   return HomeModule;
@@ -16,12 +17,8 @@ export function loadAboutModule() {
   return AboutModule;
 }
 
-export function loadSettingsModule() {
-  return SettingsModule;
-}
-
-export function loadCustomersTreeModule() {
-  return CustomersTreeModule;
+export function loadDetailModule() {
+  return DetailModule;
 }
 
 export const routes: Routes = [
@@ -29,10 +26,12 @@ export const routes: Routes = [
     path: '', component: MainComponent,
     children: [
       { path: '', redirectTo: 'home', pathMatch: 'full' },
-      { path: 'home', loadChildren: loadHomeModule },
       { path: 'about', loadChildren: loadAboutModule },
-      { path: 'settings', loadChildren: loadSettingsModule },
-      { path: 'customersTree', loadChildren: loadCustomersTreeModule }
+      { path: 'home', loadChildren: loadHomeModule },
+      { path: 'basic', component: TreeBasicComponent },
+      { path: 'nodes', component: TreeNodesComponent },
+      { path: 'static', component: TreeStaticComponent },
+      { path: 'detail', loadChildren: loadDetailModule }
     ]
   }
 ];

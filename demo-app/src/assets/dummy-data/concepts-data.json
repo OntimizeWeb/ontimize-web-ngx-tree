@@ -1,0 +1,2838 @@
+{
+  "code": 0,
+  "message": "",
+  "data": [
+    {
+      "CONCEPT": "Salary",
+      "ACCOUNTID": 1
+    },
+    {
+      "CONCEPT": "Sight account",
+      "ACCOUNTID": 1
+    },
+    {
+      "CONCEPT": "Maintenance",
+      "ACCOUNTID": 1
+    },
+    {
+      "CONCEPT": "Salary",
+      "ACCOUNTID": 2
+    },
+    {
+      "CONCEPT": "Bill",
+      "ACCOUNTID": 2
+    },
+    {
+      "CONCEPT": "Aqualia",
+      "ACCOUNTID": 2
+    },
+    {
+      "CONCEPT": "Taxes",
+      "ACCOUNTID": 2
+    },
+    {
+      "CONCEPT": "Budget",
+      "ACCOUNTID": 2
+    },
+    {
+      "CONCEPT": "Inital transfer",
+      "ACCOUNTID": 3
+    },
+    {
+      "CONCEPT": "Open account",
+      "ACCOUNTID": 5
+    },
+    {
+      "CONCEPT": "Taxes",
+      "ACCOUNTID": 6
+    },
+    {
+      "CONCEPT": "Aqualia June",
+      "ACCOUNTID": 6
+    },
+    {
+      "CONCEPT": "Maintenance",
+      "ACCOUNTID": 6
+    },
+    {
+      "CONCEPT": "Automatic restore",
+      "ACCOUNTID": 6
+    },
+    {
+      "CONCEPT": "Academy",
+      "ACCOUNTID": 6
+    },
+    {
+      "CONCEPT": "Unknow",
+      "ACCOUNTID": 6
+    },
+    {
+      "CONCEPT": "Purchase",
+      "ACCOUNTID": 6
+    },
+    {
+      "CONCEPT": "open",
+      "ACCOUNTID": 7
+    },
+    {
+      "CONCEPT": "September salary",
+      "ACCOUNTID": 7
+    },
+    {
+      "CONCEPT": "Renting",
+      "ACCOUNTID": 8
+    },
+    {
+      "CONCEPT": "Maintenance",
+      "ACCOUNTID": 8
+    },
+    {
+      "CONCEPT": "Sight account",
+      "ACCOUNTID": 8
+    },
+    {
+      "CONCEPT": "Renting",
+      "ACCOUNTID": 9
+    },
+    {
+      "CONCEPT": "Automatic restore",
+      "ACCOUNTID": 9
+    },
+    {
+      "CONCEPT": "Aqualia Inc.",
+      "ACCOUNTID": 9
+    },
+    {
+      "CONCEPT": "Sight account",
+      "ACCOUNTID": 10
+    },
+    {
+      "CONCEPT": "Renting December",
+      "ACCOUNTID": 10
+    },
+    {
+      "CONCEPT": "Bill",
+      "ACCOUNTID": 10
+    },
+    {
+      "CONCEPT": "Renting May",
+      "ACCOUNTID": 11
+    },
+    {
+      "CONCEPT": "Bill",
+      "ACCOUNTID": 11
+    },
+    {
+      "CONCEPT": "Taxes",
+      "ACCOUNTID": 11
+    },
+    {
+      "CONCEPT": "Maintenance",
+      "ACCOUNTID": 11
+    },
+    {
+      "CONCEPT": "Budget",
+      "ACCOUNTID": 11
+    },
+    {
+      "CONCEPT": "Renting July",
+      "ACCOUNTID": 11
+    },
+    {
+      "CONCEPT": "Taxes",
+      "ACCOUNTID": 27
+    },
+    {
+      "CONCEPT": "Renting",
+      "ACCOUNTID": 27
+    },
+    {
+      "CONCEPT": "Sight account",
+      "ACCOUNTID": 27
+    },
+    {
+      "CONCEPT": "Maintenance",
+      "ACCOUNTID": 27
+    },
+    {
+      "CONCEPT": "Purchase",
+      "ACCOUNTID": 27
+    },
+    {
+      "CONCEPT": "Academy",
+      "ACCOUNTID": 36
+    },
+    {
+      "CONCEPT": "Salary",
+      "ACCOUNTID": 36
+    },
+    {
+      "CONCEPT": "Sight account",
+      "ACCOUNTID": 36
+    },
+    {
+      "CONCEPT": "Budget",
+      "ACCOUNTID": 41
+    },
+    {
+      "CONCEPT": "Purchase",
+      "ACCOUNTID": 7040
+    },
+    {
+      "CONCEPT": "Sight account",
+      "ACCOUNTID": 7041
+    },
+    {
+      "CONCEPT": "Bill",
+      "ACCOUNTID": 7041
+    },
+    {
+      "CONCEPT": "Automatic restore",
+      "ACCOUNTID": 7090
+    },
+    {
+      "CONCEPT": "Salary",
+      "ACCOUNTID": 7090
+    },
+    {
+      "CONCEPT": "Taxes",
+      "ACCOUNTID": 7090
+    },
+    {
+      "CONCEPT": "Renting",
+      "ACCOUNTID": 7090
+    },
+    {
+      "CONCEPT": "Bill",
+      "ACCOUNTID": 7090
+    },
+    {
+      "CONCEPT": "Sight account",
+      "ACCOUNTID": 7090
+    },
+    {
+      "CONCEPT": "Maintenance",
+      "ACCOUNTID": 7090
+    },
+    {
+      "CONCEPT": "Unknow",
+      "ACCOUNTID": 7090
+    },
+    {
+      "CONCEPT": "Salary",
+      "ACCOUNTID": 7091
+    },
+    {
+      "CONCEPT": "Unknow",
+      "ACCOUNTID": 7091
+    },
+    {
+      "CONCEPT": "Maintenance",
+      "ACCOUNTID": 7091
+    },
+    {
+      "CONCEPT": "Taxes",
+      "ACCOUNTID": 7091
+    },
+    {
+      "CONCEPT": "Automatic restore",
+      "ACCOUNTID": 7091
+    },
+    {
+      "CONCEPT": "Renting",
+      "ACCOUNTID": 7091
+    },
+    {
+      "CONCEPT": "Sight account",
+      "ACCOUNTID": 7091
+    },
+    {
+      "CONCEPT": "Unknow",
+      "ACCOUNTID": 7123
+    },
+    {
+      "CONCEPT": "Salary",
+      "ACCOUNTID": 7123
+    },
+    {
+      "CONCEPT": "Purchase",
+      "ACCOUNTID": 7123
+    },
+    {
+      "CONCEPT": "Taxes",
+      "ACCOUNTID": 7123
+    },
+    {
+      "CONCEPT": "Automatic restore",
+      "ACCOUNTID": 7123
+    },
+    {
+      "CONCEPT": "Budget",
+      "ACCOUNTID": 7123
+    },
+    {
+      "CONCEPT": "Salary",
+      "ACCOUNTID": 7124
+    },
+    {
+      "CONCEPT": "Sight account",
+      "ACCOUNTID": 7124
+    },
+    {
+      "CONCEPT": "Maintenance",
+      "ACCOUNTID": 7124
+    },
+    {
+      "CONCEPT": "Taxes",
+      "ACCOUNTID": 7124
+    },
+    {
+      "CONCEPT": "Automatic restore",
+      "ACCOUNTID": 7124
+    },
+    {
+      "CONCEPT": "Renting",
+      "ACCOUNTID": 7124
+    },
+    {
+      "CONCEPT": "Maintenance",
+      "ACCOUNTID": 7125
+    },
+    {
+      "CONCEPT": "Unknow",
+      "ACCOUNTID": 7125
+    },
+    {
+      "CONCEPT": "Automatic restore",
+      "ACCOUNTID": 7125
+    },
+    {
+      "CONCEPT": "Taxes",
+      "ACCOUNTID": 7125
+    },
+    {
+      "CONCEPT": "Salary",
+      "ACCOUNTID": 7125
+    },
+    {
+      "CONCEPT": "Purchase",
+      "ACCOUNTID": 7126
+    },
+    {
+      "CONCEPT": "Maintance",
+      "ACCOUNTID": 7126
+    },
+    {
+      "CONCEPT": "Maintenance",
+      "ACCOUNTID": 7126
+    },
+    {
+      "CONCEPT": "Salary",
+      "ACCOUNTID": 7126
+    },
+    {
+      "CONCEPT": "Bill",
+      "ACCOUNTID": 7126
+    },
+    {
+      "CONCEPT": "Renting",
+      "ACCOUNTID": 7126
+    },
+    {
+      "CONCEPT": "Budget",
+      "ACCOUNTID": 7126
+    },
+    {
+      "CONCEPT": "Maintenance",
+      "ACCOUNTID": 7223
+    },
+    {
+      "CONCEPT": "Salary",
+      "ACCOUNTID": 7223
+    },
+    {
+      "CONCEPT": "Bill",
+      "ACCOUNTID": 7223
+    },
+    {
+      "CONCEPT": "Unknow",
+      "ACCOUNTID": 7223
+    },
+    {
+      "CONCEPT": "Purchase",
+      "ACCOUNTID": 7223
+    },
+    {
+      "CONCEPT": "Automatic restore",
+      "ACCOUNTID": 7223
+    },
+    {
+      "CONCEPT": "Taxes",
+      "ACCOUNTID": 7223
+    },
+    {
+      "CONCEPT": "Maintenance",
+      "ACCOUNTID": 7224
+    },
+    {
+      "CONCEPT": "Budget",
+      "ACCOUNTID": 7224
+    },
+    {
+      "CONCEPT": "Purchase",
+      "ACCOUNTID": 7224
+    },
+    {
+      "CONCEPT": "Salary",
+      "ACCOUNTID": 7224
+    },
+    {
+      "CONCEPT": "Bill",
+      "ACCOUNTID": 7224
+    },
+    {
+      "CONCEPT": "Taxes",
+      "ACCOUNTID": 7224
+    },
+    {
+      "CONCEPT": "Renting",
+      "ACCOUNTID": 7224
+    },
+    {
+      "CONCEPT": "Maintenance",
+      "ACCOUNTID": 7225
+    },
+    {
+      "CONCEPT": "Taxes",
+      "ACCOUNTID": 7225
+    },
+    {
+      "CONCEPT": "Renting",
+      "ACCOUNTID": 7225
+    },
+    {
+      "CONCEPT": "Purchase",
+      "ACCOUNTID": 7225
+    },
+    {
+      "CONCEPT": "Salary",
+      "ACCOUNTID": 7225
+    },
+    {
+      "CONCEPT": "Sight account",
+      "ACCOUNTID": 7225
+    },
+    {
+      "CONCEPT": "Budget",
+      "ACCOUNTID": 7225
+    },
+    {
+      "CONCEPT": "Unknow",
+      "ACCOUNTID": 7226
+    },
+    {
+      "CONCEPT": "Maintenance",
+      "ACCOUNTID": 7226
+    },
+    {
+      "CONCEPT": "Sight account",
+      "ACCOUNTID": 7226
+    },
+    {
+      "CONCEPT": "Salary",
+      "ACCOUNTID": 7226
+    },
+    {
+      "CONCEPT": "Taxes",
+      "ACCOUNTID": 7226
+    },
+    {
+      "CONCEPT": "Bill",
+      "ACCOUNTID": 7226
+    },
+    {
+      "CONCEPT": "Purchase",
+      "ACCOUNTID": 7226
+    },
+    {
+      "CONCEPT": "Automatic restore",
+      "ACCOUNTID": 7226
+    },
+    {
+      "CONCEPT": "Salary",
+      "ACCOUNTID": 7296
+    },
+    {
+      "CONCEPT": "Maintenance",
+      "ACCOUNTID": 7296
+    },
+    {
+      "CONCEPT": "Sight account",
+      "ACCOUNTID": 7296
+    },
+    {
+      "CONCEPT": "Renting",
+      "ACCOUNTID": 7296
+    },
+    {
+      "CONCEPT": "Purchase",
+      "ACCOUNTID": 7296
+    },
+    {
+      "CONCEPT": "Maintenance",
+      "ACCOUNTID": 7297
+    },
+    {
+      "CONCEPT": "Renting",
+      "ACCOUNTID": 7297
+    },
+    {
+      "CONCEPT": "Taxes",
+      "ACCOUNTID": 7297
+    },
+    {
+      "CONCEPT": "Automatic restore",
+      "ACCOUNTID": 7297
+    },
+    {
+      "CONCEPT": "Salary",
+      "ACCOUNTID": 7297
+    },
+    {
+      "CONCEPT": "Purchase",
+      "ACCOUNTID": 7297
+    },
+    {
+      "CONCEPT": "Budget",
+      "ACCOUNTID": 7297
+    },
+    {
+      "CONCEPT": "Automatic restore",
+      "ACCOUNTID": 7298
+    },
+    {
+      "CONCEPT": "Taxes",
+      "ACCOUNTID": 7298
+    },
+    {
+      "CONCEPT": "Bill",
+      "ACCOUNTID": 7298
+    },
+    {
+      "CONCEPT": "Renting",
+      "ACCOUNTID": 7298
+    },
+    {
+      "CONCEPT": "Budget",
+      "ACCOUNTID": 7298
+    },
+    {
+      "CONCEPT": "Maintenance",
+      "ACCOUNTID": 7298
+    },
+    {
+      "CONCEPT": "Salary",
+      "ACCOUNTID": 7298
+    },
+    {
+      "CONCEPT": "Salary",
+      "ACCOUNTID": 7299
+    },
+    {
+      "CONCEPT": "Maintenance",
+      "ACCOUNTID": 7299
+    },
+    {
+      "CONCEPT": "Bill",
+      "ACCOUNTID": 7299
+    },
+    {
+      "CONCEPT": "Purchase",
+      "ACCOUNTID": 7299
+    },
+    {
+      "CONCEPT": "Taxes",
+      "ACCOUNTID": 7299
+    },
+    {
+      "CONCEPT": "Automatic restore",
+      "ACCOUNTID": 7299
+    },
+    {
+      "CONCEPT": "Sight account",
+      "ACCOUNTID": 7299
+    },
+    {
+      "CONCEPT": "Salary",
+      "ACCOUNTID": 7300
+    },
+    {
+      "CONCEPT": "Taxes",
+      "ACCOUNTID": 7300
+    },
+    {
+      "CONCEPT": "Maintenance",
+      "ACCOUNTID": 7300
+    },
+    {
+      "CONCEPT": "Automatic restore",
+      "ACCOUNTID": 7300
+    },
+    {
+      "CONCEPT": "Purchase",
+      "ACCOUNTID": 7301
+    },
+    {
+      "CONCEPT": "Salary",
+      "ACCOUNTID": 7301
+    },
+    {
+      "CONCEPT": "Maintenance",
+      "ACCOUNTID": 7301
+    },
+    {
+      "CONCEPT": "Automatic restore",
+      "ACCOUNTID": 7301
+    },
+    {
+      "CONCEPT": "Taxes",
+      "ACCOUNTID": 7301
+    },
+    {
+      "CONCEPT": "Renting",
+      "ACCOUNTID": 7301
+    },
+    {
+      "CONCEPT": "Unknow",
+      "ACCOUNTID": 7302
+    },
+    {
+      "CONCEPT": "Taxes",
+      "ACCOUNTID": 7302
+    },
+    {
+      "CONCEPT": "Maintenance",
+      "ACCOUNTID": 7302
+    },
+    {
+      "CONCEPT": "Renting",
+      "ACCOUNTID": 7302
+    },
+    {
+      "CONCEPT": "Bill",
+      "ACCOUNTID": 7302
+    },
+    {
+      "CONCEPT": "Salary",
+      "ACCOUNTID": 7303
+    },
+    {
+      "CONCEPT": "Taxes",
+      "ACCOUNTID": 7303
+    },
+    {
+      "CONCEPT": "Maintenance",
+      "ACCOUNTID": 7303
+    },
+    {
+      "CONCEPT": "Purchase",
+      "ACCOUNTID": 7303
+    },
+    {
+      "CONCEPT": "Bill",
+      "ACCOUNTID": 7303
+    },
+    {
+      "CONCEPT": "Unknow",
+      "ACCOUNTID": 7303
+    },
+    {
+      "CONCEPT": "Renting",
+      "ACCOUNTID": 7304
+    },
+    {
+      "CONCEPT": "Purchase",
+      "ACCOUNTID": 7304
+    },
+    {
+      "CONCEPT": "Taxes",
+      "ACCOUNTID": 7304
+    },
+    {
+      "CONCEPT": "Unknow",
+      "ACCOUNTID": 7304
+    },
+    {
+      "CONCEPT": "Salary",
+      "ACCOUNTID": 7304
+    },
+    {
+      "CONCEPT": "Maintenance",
+      "ACCOUNTID": 7304
+    },
+    {
+      "CONCEPT": "Salary",
+      "ACCOUNTID": 7305
+    },
+    {
+      "CONCEPT": "Purchase",
+      "ACCOUNTID": 7305
+    },
+    {
+      "CONCEPT": "Taxes",
+      "ACCOUNTID": 7305
+    },
+    {
+      "CONCEPT": "Maintenance",
+      "ACCOUNTID": 7305
+    },
+    {
+      "CONCEPT": "Automatic restore",
+      "ACCOUNTID": 7305
+    },
+    {
+      "CONCEPT": "Sight account",
+      "ACCOUNTID": 7305
+    },
+    {
+      "CONCEPT": "Salary",
+      "ACCOUNTID": 7306
+    },
+    {
+      "CONCEPT": "Maintenance",
+      "ACCOUNTID": 7306
+    },
+    {
+      "CONCEPT": "Taxes",
+      "ACCOUNTID": 7306
+    },
+    {
+      "CONCEPT": "Automatic restore",
+      "ACCOUNTID": 7306
+    },
+    {
+      "CONCEPT": "Renting",
+      "ACCOUNTID": 7306
+    },
+    {
+      "CONCEPT": "Taxes",
+      "ACCOUNTID": 7307
+    },
+    {
+      "CONCEPT": "Salary",
+      "ACCOUNTID": 7307
+    },
+    {
+      "CONCEPT": "Maintenance",
+      "ACCOUNTID": 7307
+    },
+    {
+      "CONCEPT": "Bill",
+      "ACCOUNTID": 7307
+    },
+    {
+      "CONCEPT": "Salary",
+      "ACCOUNTID": 7308
+    },
+    {
+      "CONCEPT": "Sight account",
+      "ACCOUNTID": 7308
+    },
+    {
+      "CONCEPT": "Unknow",
+      "ACCOUNTID": 7308
+    },
+    {
+      "CONCEPT": "Budget",
+      "ACCOUNTID": 7308
+    },
+    {
+      "CONCEPT": "Maintenance",
+      "ACCOUNTID": 7309
+    },
+    {
+      "CONCEPT": "Bill",
+      "ACCOUNTID": 7309
+    },
+    {
+      "CONCEPT": "Salary",
+      "ACCOUNTID": 7309
+    },
+    {
+      "CONCEPT": "Renting",
+      "ACCOUNTID": 7309
+    },
+    {
+      "CONCEPT": "Unknow",
+      "ACCOUNTID": 7309
+    },
+    {
+      "CONCEPT": "Budget",
+      "ACCOUNTID": 7309
+    },
+    {
+      "CONCEPT": "Sight account",
+      "ACCOUNTID": 7309
+    },
+    {
+      "CONCEPT": "Unknow",
+      "ACCOUNTID": 7310
+    },
+    {
+      "CONCEPT": "Maintenance",
+      "ACCOUNTID": 7310
+    },
+    {
+      "CONCEPT": "Salary",
+      "ACCOUNTID": 7310
+    },
+    {
+      "CONCEPT": "Taxes",
+      "ACCOUNTID": 7310
+    },
+    {
+      "CONCEPT": "Renting",
+      "ACCOUNTID": 7310
+    },
+    {
+      "CONCEPT": "Budget",
+      "ACCOUNTID": 7310
+    },
+    {
+      "CONCEPT": "Bill",
+      "ACCOUNTID": 19370
+    },
+    {
+      "CONCEPT": "Sight account",
+      "ACCOUNTID": 19370
+    },
+    {
+      "CONCEPT": "Renting",
+      "ACCOUNTID": 19370
+    },
+    {
+      "CONCEPT": "Unknow",
+      "ACCOUNTID": 19370
+    },
+    {
+      "CONCEPT": "Taxes",
+      "ACCOUNTID": 19370
+    },
+    {
+      "CONCEPT": "Automatic restore",
+      "ACCOUNTID": 19370
+    },
+    {
+      "CONCEPT": "Budget",
+      "ACCOUNTID": 19370
+    },
+    {
+      "CONCEPT": "Salary",
+      "ACCOUNTID": 19371
+    },
+    {
+      "CONCEPT": "Maintenance",
+      "ACCOUNTID": 19371
+    },
+    {
+      "CONCEPT": "Purchase",
+      "ACCOUNTID": 19371
+    },
+    {
+      "CONCEPT": "Bill",
+      "ACCOUNTID": 19371
+    },
+    {
+      "CONCEPT": "Taxes",
+      "ACCOUNTID": 19371
+    },
+    {
+      "CONCEPT": "Budget",
+      "ACCOUNTID": 19371
+    },
+    {
+      "CONCEPT": "Taxes",
+      "ACCOUNTID": 19372
+    },
+    {
+      "CONCEPT": "Unknow",
+      "ACCOUNTID": 19372
+    },
+    {
+      "CONCEPT": "Salary",
+      "ACCOUNTID": 19372
+    },
+    {
+      "CONCEPT": "Maintenance",
+      "ACCOUNTID": 19372
+    },
+    {
+      "CONCEPT": "Purchase",
+      "ACCOUNTID": 19372
+    },
+    {
+      "CONCEPT": "Renting",
+      "ACCOUNTID": 19373
+    },
+    {
+      "CONCEPT": "Salary",
+      "ACCOUNTID": 19373
+    },
+    {
+      "CONCEPT": "Sight account",
+      "ACCOUNTID": 19373
+    },
+    {
+      "CONCEPT": "Maintenance",
+      "ACCOUNTID": 19373
+    },
+    {
+      "CONCEPT": "Budget",
+      "ACCOUNTID": 19373
+    },
+    {
+      "CONCEPT": "Purchase",
+      "ACCOUNTID": 19374
+    },
+    {
+      "CONCEPT": "Salary",
+      "ACCOUNTID": 19374
+    },
+    {
+      "CONCEPT": "Maintenance",
+      "ACCOUNTID": 19374
+    },
+    {
+      "CONCEPT": "Taxes",
+      "ACCOUNTID": 19374
+    },
+    {
+      "CONCEPT": "Renting",
+      "ACCOUNTID": 19374
+    },
+    {
+      "CONCEPT": "Budget",
+      "ACCOUNTID": 19374
+    },
+    {
+      "CONCEPT": "Maintenance",
+      "ACCOUNTID": 19375
+    },
+    {
+      "CONCEPT": "Salary",
+      "ACCOUNTID": 19375
+    },
+    {
+      "CONCEPT": "Budget",
+      "ACCOUNTID": 19375
+    },
+    {
+      "CONCEPT": "Bill",
+      "ACCOUNTID": 19375
+    },
+    {
+      "CONCEPT": "Automatic restore",
+      "ACCOUNTID": 19375
+    },
+    {
+      "CONCEPT": "Unknow",
+      "ACCOUNTID": 19375
+    },
+    {
+      "CONCEPT": "Renting",
+      "ACCOUNTID": 19375
+    },
+    {
+      "CONCEPT": "Salary",
+      "ACCOUNTID": 19376
+    },
+    {
+      "CONCEPT": "Renting",
+      "ACCOUNTID": 19376
+    },
+    {
+      "CONCEPT": "Maintenance",
+      "ACCOUNTID": 19376
+    },
+    {
+      "CONCEPT": "Purchase",
+      "ACCOUNTID": 19376
+    },
+    {
+      "CONCEPT": "Bill",
+      "ACCOUNTID": 19376
+    },
+    {
+      "CONCEPT": "Sight account",
+      "ACCOUNTID": 19376
+    },
+    {
+      "CONCEPT": "Taxes",
+      "ACCOUNTID": 19376
+    },
+    {
+      "CONCEPT": "Automatic restore",
+      "ACCOUNTID": 19376
+    },
+    {
+      "CONCEPT": "Budget",
+      "ACCOUNTID": 19376
+    },
+    {
+      "CONCEPT": "Renting",
+      "ACCOUNTID": 19377
+    },
+    {
+      "CONCEPT": "Maintenance",
+      "ACCOUNTID": 19377
+    },
+    {
+      "CONCEPT": "Salary",
+      "ACCOUNTID": 19377
+    },
+    {
+      "CONCEPT": "Purchase",
+      "ACCOUNTID": 19377
+    },
+    {
+      "CONCEPT": "Unknow",
+      "ACCOUNTID": 19377
+    },
+    {
+      "CONCEPT": "Budget",
+      "ACCOUNTID": 19377
+    },
+    {
+      "CONCEPT": "Automatic restore",
+      "ACCOUNTID": 19377
+    },
+    {
+      "CONCEPT": "Taxes",
+      "ACCOUNTID": 19377
+    },
+    {
+      "CONCEPT": "Bill",
+      "ACCOUNTID": 19377
+    },
+    {
+      "CONCEPT": "Maintenance",
+      "ACCOUNTID": 19378
+    },
+    {
+      "CONCEPT": "Purchase",
+      "ACCOUNTID": 19378
+    },
+    {
+      "CONCEPT": "Unknow",
+      "ACCOUNTID": 19378
+    },
+    {
+      "CONCEPT": "Taxes",
+      "ACCOUNTID": 19378
+    },
+    {
+      "CONCEPT": "Renting",
+      "ACCOUNTID": 19378
+    },
+    {
+      "CONCEPT": "Bill",
+      "ACCOUNTID": 19378
+    },
+    {
+      "CONCEPT": "Salary",
+      "ACCOUNTID": 19378
+    },
+    {
+      "CONCEPT": "Automatic restore",
+      "ACCOUNTID": 19378
+    },
+    {
+      "CONCEPT": "Budget",
+      "ACCOUNTID": 19379
+    },
+    {
+      "CONCEPT": "Taxes",
+      "ACCOUNTID": 19379
+    },
+    {
+      "CONCEPT": "Automatic restore",
+      "ACCOUNTID": 19379
+    },
+    {
+      "CONCEPT": "Sight account",
+      "ACCOUNTID": 19379
+    },
+    {
+      "CONCEPT": "Renting",
+      "ACCOUNTID": 19379
+    },
+    {
+      "CONCEPT": "Maintenance",
+      "ACCOUNTID": 19380
+    },
+    {
+      "CONCEPT": "Salary",
+      "ACCOUNTID": 19380
+    },
+    {
+      "CONCEPT": "Bill",
+      "ACCOUNTID": 19380
+    },
+    {
+      "CONCEPT": "Automatic restore",
+      "ACCOUNTID": 19380
+    },
+    {
+      "CONCEPT": "Purchase",
+      "ACCOUNTID": 19380
+    },
+    {
+      "CONCEPT": "Taxes ",
+      "ACCOUNTID": 19380
+    },
+    {
+      "CONCEPT": "Sight account",
+      "ACCOUNTID": 19380
+    },
+    {
+      "CONCEPT": "Budget",
+      "ACCOUNTID": 19380
+    },
+    {
+      "CONCEPT": "Maintenance",
+      "ACCOUNTID": 19381
+    },
+    {
+      "CONCEPT": "Renting",
+      "ACCOUNTID": 19381
+    },
+    {
+      "CONCEPT": "Bill",
+      "ACCOUNTID": 19381
+    },
+    {
+      "CONCEPT": "Taxes",
+      "ACCOUNTID": 19381
+    },
+    {
+      "CONCEPT": "Salary",
+      "ACCOUNTID": 19381
+    },
+    {
+      "CONCEPT": "Sight account",
+      "ACCOUNTID": 19382
+    },
+    {
+      "CONCEPT": "Purchase",
+      "ACCOUNTID": 19382
+    },
+    {
+      "CONCEPT": "Taxes",
+      "ACCOUNTID": 19382
+    },
+    {
+      "CONCEPT": "Unknow",
+      "ACCOUNTID": 19382
+    },
+    {
+      "CONCEPT": "Maintenance",
+      "ACCOUNTID": 19382
+    },
+    {
+      "CONCEPT": "Salary",
+      "ACCOUNTID": 19382
+    },
+    {
+      "CONCEPT": "Budget",
+      "ACCOUNTID": 19382
+    },
+    {
+      "CONCEPT": "Bill",
+      "ACCOUNTID": 19382
+    },
+    {
+      "CONCEPT": "Sight account",
+      "ACCOUNTID": 19383
+    },
+    {
+      "CONCEPT": "Renting",
+      "ACCOUNTID": 19383
+    },
+    {
+      "CONCEPT": "Bill",
+      "ACCOUNTID": 19383
+    },
+    {
+      "CONCEPT": "Taxes",
+      "ACCOUNTID": 19383
+    },
+    {
+      "CONCEPT": "Maintenance",
+      "ACCOUNTID": 19383
+    },
+    {
+      "CONCEPT": "Salary",
+      "ACCOUNTID": 19383
+    },
+    {
+      "CONCEPT": "Unknow",
+      "ACCOUNTID": 19384
+    },
+    {
+      "CONCEPT": "Bill",
+      "ACCOUNTID": 19384
+    },
+    {
+      "CONCEPT": "Maintenance",
+      "ACCOUNTID": 19384
+    },
+    {
+      "CONCEPT": "Taxes",
+      "ACCOUNTID": 19384
+    },
+    {
+      "CONCEPT": "Salary",
+      "ACCOUNTID": 19384
+    },
+    {
+      "CONCEPT": "Bill",
+      "ACCOUNTID": 19620
+    },
+    {
+      "CONCEPT": "Unknow",
+      "ACCOUNTID": 19620
+    },
+    {
+      "CONCEPT": "Purchase",
+      "ACCOUNTID": 19620
+    },
+    {
+      "CONCEPT": "Taxes",
+      "ACCOUNTID": 19620
+    },
+    {
+      "CONCEPT": "Sight account",
+      "ACCOUNTID": 19620
+    },
+    {
+      "CONCEPT": "Bill",
+      "ACCOUNTID": 19621
+    },
+    {
+      "CONCEPT": "Maintenance",
+      "ACCOUNTID": 19621
+    },
+    {
+      "CONCEPT": "Taxes",
+      "ACCOUNTID": 19621
+    },
+    {
+      "CONCEPT": "Automatic restore",
+      "ACCOUNTID": 19621
+    },
+    {
+      "CONCEPT": "Salary",
+      "ACCOUNTID": 19621
+    },
+    {
+      "CONCEPT": "Renting",
+      "ACCOUNTID": 19622
+    },
+    {
+      "CONCEPT": "Salary",
+      "ACCOUNTID": 19622
+    },
+    {
+      "CONCEPT": "Bill",
+      "ACCOUNTID": 19622
+    },
+    {
+      "CONCEPT": "Automatic restore",
+      "ACCOUNTID": 19622
+    },
+    {
+      "CONCEPT": "Maintenance",
+      "ACCOUNTID": 19622
+    },
+    {
+      "CONCEPT": "Purchase",
+      "ACCOUNTID": 19623
+    },
+    {
+      "CONCEPT": "Budget",
+      "ACCOUNTID": 19623
+    },
+    {
+      "CONCEPT": "Salary",
+      "ACCOUNTID": 19623
+    },
+    {
+      "CONCEPT": "Bill",
+      "ACCOUNTID": 19623
+    },
+    {
+      "CONCEPT": "Sight account",
+      "ACCOUNTID": 19624
+    },
+    {
+      "CONCEPT": "Budget",
+      "ACCOUNTID": 19624
+    },
+    {
+      "CONCEPT": "Maintenance",
+      "ACCOUNTID": 19624
+    },
+    {
+      "CONCEPT": "Salary",
+      "ACCOUNTID": 19624
+    },
+    {
+      "CONCEPT": "Renting",
+      "ACCOUNTID": 19624
+    },
+    {
+      "CONCEPT": "Taxes",
+      "ACCOUNTID": 19624
+    },
+    {
+      "CONCEPT": "Sight account",
+      "ACCOUNTID": 19625
+    },
+    {
+      "CONCEPT": "Taxes",
+      "ACCOUNTID": 19625
+    },
+    {
+      "CONCEPT": "Unknow",
+      "ACCOUNTID": 19625
+    },
+    {
+      "CONCEPT": "Automatic restore",
+      "ACCOUNTID": 19625
+    },
+    {
+      "CONCEPT": "Maintenance",
+      "ACCOUNTID": 19625
+    },
+    {
+      "CONCEPT": "Purchase",
+      "ACCOUNTID": 19625
+    },
+    {
+      "CONCEPT": "Sight account",
+      "ACCOUNTID": 19626
+    },
+    {
+      "CONCEPT": "Maintenance",
+      "ACCOUNTID": 19626
+    },
+    {
+      "CONCEPT": "Taxes",
+      "ACCOUNTID": 19626
+    },
+    {
+      "CONCEPT": "Automatic restore",
+      "ACCOUNTID": 19626
+    },
+    {
+      "CONCEPT": "Salary",
+      "ACCOUNTID": 19626
+    },
+    {
+      "CONCEPT": "Renting",
+      "ACCOUNTID": 19626
+    },
+    {
+      "CONCEPT": "Renting",
+      "ACCOUNTID": 19627
+    },
+    {
+      "CONCEPT": "Sight account",
+      "ACCOUNTID": 19627
+    },
+    {
+      "CONCEPT": "Maintenance",
+      "ACCOUNTID": 19627
+    },
+    {
+      "CONCEPT": "Salary",
+      "ACCOUNTID": 19627
+    },
+    {
+      "CONCEPT": "Unknow",
+      "ACCOUNTID": 19627
+    },
+    {
+      "CONCEPT": "Bill",
+      "ACCOUNTID": 19627
+    },
+    {
+      "CONCEPT": "Taxes",
+      "ACCOUNTID": 19627
+    },
+    {
+      "CONCEPT": "Automatic restore",
+      "ACCOUNTID": 19627
+    },
+    {
+      "CONCEPT": "Purchase",
+      "ACCOUNTID": 19627
+    },
+    {
+      "CONCEPT": "Taxes",
+      "ACCOUNTID": 19628
+    },
+    {
+      "CONCEPT": "Sight account",
+      "ACCOUNTID": 19628
+    },
+    {
+      "CONCEPT": "Unknow",
+      "ACCOUNTID": 19628
+    },
+    {
+      "CONCEPT": "Salary",
+      "ACCOUNTID": 19628
+    },
+    {
+      "CONCEPT": "Automatic restore",
+      "ACCOUNTID": 19628
+    },
+    {
+      "CONCEPT": "Maintenance",
+      "ACCOUNTID": 19628
+    },
+    {
+      "CONCEPT": "Bill",
+      "ACCOUNTID": 19628
+    },
+    {
+      "CONCEPT": "Budget",
+      "ACCOUNTID": 19628
+    },
+    {
+      "CONCEPT": "Taxes",
+      "ACCOUNTID": 19629
+    },
+    {
+      "CONCEPT": "Salary",
+      "ACCOUNTID": 19629
+    },
+    {
+      "CONCEPT": "Unknow",
+      "ACCOUNTID": 19629
+    },
+    {
+      "CONCEPT": "Purchase",
+      "ACCOUNTID": 19629
+    },
+    {
+      "CONCEPT": "Sight account",
+      "ACCOUNTID": 19630
+    },
+    {
+      "CONCEPT": "Unknow",
+      "ACCOUNTID": 19630
+    },
+    {
+      "CONCEPT": "Purchase",
+      "ACCOUNTID": 19630
+    },
+    {
+      "CONCEPT": "Salary",
+      "ACCOUNTID": 19630
+    },
+    {
+      "CONCEPT": "Budget",
+      "ACCOUNTID": 19630
+    },
+    {
+      "CONCEPT": "Taxes",
+      "ACCOUNTID": 19630
+    },
+    {
+      "CONCEPT": "Renting",
+      "ACCOUNTID": 19630
+    },
+    {
+      "CONCEPT": "Maintenance",
+      "ACCOUNTID": 19630
+    },
+    {
+      "CONCEPT": "Salary",
+      "ACCOUNTID": 19631
+    },
+    {
+      "CONCEPT": "Purchase",
+      "ACCOUNTID": 19631
+    },
+    {
+      "CONCEPT": "Renting",
+      "ACCOUNTID": 19631
+    },
+    {
+      "CONCEPT": "Budget",
+      "ACCOUNTID": 19631
+    },
+    {
+      "CONCEPT": "Taxes",
+      "ACCOUNTID": 19631
+    },
+    {
+      "CONCEPT": "Bill",
+      "ACCOUNTID": 19631
+    },
+    {
+      "CONCEPT": "Automatic restore",
+      "ACCOUNTID": 19631
+    },
+    {
+      "CONCEPT": "Sight account",
+      "ACCOUNTID": 19631
+    },
+    {
+      "CONCEPT": "Salary",
+      "ACCOUNTID": 19632
+    },
+    {
+      "CONCEPT": "Renting",
+      "ACCOUNTID": 19632
+    },
+    {
+      "CONCEPT": "Taxes",
+      "ACCOUNTID": 19632
+    },
+    {
+      "CONCEPT": "Maintenance",
+      "ACCOUNTID": 19632
+    },
+    {
+      "CONCEPT": "Bill",
+      "ACCOUNTID": 19632
+    },
+    {
+      "CONCEPT": "Sight account",
+      "ACCOUNTID": 19632
+    },
+    {
+      "CONCEPT": "Automatic restore",
+      "ACCOUNTID": 19632
+    },
+    {
+      "CONCEPT": "Taxes",
+      "ACCOUNTID": 19633
+    },
+    {
+      "CONCEPT": "Maintenance",
+      "ACCOUNTID": 19633
+    },
+    {
+      "CONCEPT": "Salary",
+      "ACCOUNTID": 19633
+    },
+    {
+      "CONCEPT": "Purchase",
+      "ACCOUNTID": 19633
+    },
+    {
+      "CONCEPT": "Renting",
+      "ACCOUNTID": 19633
+    },
+    {
+      "CONCEPT": "Unknow",
+      "ACCOUNTID": 19633
+    },
+    {
+      "CONCEPT": "Taxes",
+      "ACCOUNTID": 19634
+    },
+    {
+      "CONCEPT": "Sight account",
+      "ACCOUNTID": 19634
+    },
+    {
+      "CONCEPT": "Salary",
+      "ACCOUNTID": 19634
+    },
+    {
+      "CONCEPT": "Automatic restore",
+      "ACCOUNTID": 19634
+    },
+    {
+      "CONCEPT": "Purchase",
+      "ACCOUNTID": 19634
+    },
+    {
+      "CONCEPT": "Maintenance",
+      "ACCOUNTID": 19634
+    },
+    {
+      "CONCEPT": "Bill",
+      "ACCOUNTID": 19634
+    },
+    {
+      "CONCEPT": "Automatic restore",
+      "ACCOUNTID": 19635
+    },
+    {
+      "CONCEPT": "Salary",
+      "ACCOUNTID": 19635
+    },
+    {
+      "CONCEPT": "Budget",
+      "ACCOUNTID": 19635
+    },
+    {
+      "CONCEPT": "Taxes",
+      "ACCOUNTID": 19635
+    },
+    {
+      "CONCEPT": "Renting",
+      "ACCOUNTID": 19635
+    },
+    {
+      "CONCEPT": "Maintenance",
+      "ACCOUNTID": 19635
+    },
+    {
+      "CONCEPT": "Bill",
+      "ACCOUNTID": 19635
+    },
+    {
+      "CONCEPT": "Sight account",
+      "ACCOUNTID": 19636
+    },
+    {
+      "CONCEPT": "Salary",
+      "ACCOUNTID": 19636
+    },
+    {
+      "CONCEPT": "Taxes",
+      "ACCOUNTID": 19636
+    },
+    {
+      "CONCEPT": "Budget",
+      "ACCOUNTID": 19636
+    },
+    {
+      "CONCEPT": "Bill",
+      "ACCOUNTID": 19636
+    },
+    {
+      "CONCEPT": "Maintenance",
+      "ACCOUNTID": 19636
+    },
+    {
+      "CONCEPT": "Maintenance",
+      "ACCOUNTID": 19637
+    },
+    {
+      "CONCEPT": "Salary",
+      "ACCOUNTID": 19637
+    },
+    {
+      "CONCEPT": "Renting",
+      "ACCOUNTID": 19637
+    },
+    {
+      "CONCEPT": "Sight account",
+      "ACCOUNTID": 19637
+    },
+    {
+      "CONCEPT": "Taxes",
+      "ACCOUNTID": 19637
+    },
+    {
+      "CONCEPT": "Salary",
+      "ACCOUNTID": 19638
+    },
+    {
+      "CONCEPT": "Maintenance",
+      "ACCOUNTID": 19638
+    },
+    {
+      "CONCEPT": "Taxes",
+      "ACCOUNTID": 19638
+    },
+    {
+      "CONCEPT": "Sight account",
+      "ACCOUNTID": 19638
+    },
+    {
+      "CONCEPT": "Bill",
+      "ACCOUNTID": 19638
+    },
+    {
+      "CONCEPT": "Budget",
+      "ACCOUNTID": 19638
+    },
+    {
+      "CONCEPT": "Automatic restore",
+      "ACCOUNTID": 19638
+    },
+    {
+      "CONCEPT": "Budget",
+      "ACCOUNTID": 19639
+    },
+    {
+      "CONCEPT": "Automatic restore",
+      "ACCOUNTID": 19639
+    },
+    {
+      "CONCEPT": "Maintenance",
+      "ACCOUNTID": 19639
+    },
+    {
+      "CONCEPT": "Salary",
+      "ACCOUNTID": 19639
+    },
+    {
+      "CONCEPT": "Taxes",
+      "ACCOUNTID": 19639
+    },
+    {
+      "CONCEPT": "Bill",
+      "ACCOUNTID": 19639
+    },
+    {
+      "CONCEPT": "Automatic restore",
+      "ACCOUNTID": 19920
+    },
+    {
+      "CONCEPT": "Sight account",
+      "ACCOUNTID": 19920
+    },
+    {
+      "CONCEPT": "Taxes",
+      "ACCOUNTID": 19920
+    },
+    {
+      "CONCEPT": "Maintenance",
+      "ACCOUNTID": 19920
+    },
+    {
+      "CONCEPT": "Bill",
+      "ACCOUNTID": 19920
+    },
+    {
+      "CONCEPT": "Maintenance",
+      "ACCOUNTID": 19921
+    },
+    {
+      "CONCEPT": "Bill",
+      "ACCOUNTID": 19921
+    },
+    {
+      "CONCEPT": "Renting",
+      "ACCOUNTID": 19921
+    },
+    {
+      "CONCEPT": "Salary",
+      "ACCOUNTID": 19921
+    },
+    {
+      "CONCEPT": "Budget",
+      "ACCOUNTID": 19921
+    },
+    {
+      "CONCEPT": "Unknow",
+      "ACCOUNTID": 19921
+    },
+    {
+      "CONCEPT": "Taxes",
+      "ACCOUNTID": 19922
+    },
+    {
+      "CONCEPT": "Unknow",
+      "ACCOUNTID": 19922
+    },
+    {
+      "CONCEPT": "Automatic restore",
+      "ACCOUNTID": 19922
+    },
+    {
+      "CONCEPT": "Salary",
+      "ACCOUNTID": 19922
+    },
+    {
+      "CONCEPT": "Purchase",
+      "ACCOUNTID": 19922
+    },
+    {
+      "CONCEPT": "Renting",
+      "ACCOUNTID": 19922
+    },
+    {
+      "CONCEPT": "Maintenance",
+      "ACCOUNTID": 19922
+    },
+    {
+      "CONCEPT": "Salary",
+      "ACCOUNTID": 19923
+    },
+    {
+      "CONCEPT": "Maintenance",
+      "ACCOUNTID": 19923
+    },
+    {
+      "CONCEPT": "Bill",
+      "ACCOUNTID": 19923
+    },
+    {
+      "CONCEPT": "Taxes",
+      "ACCOUNTID": 19923
+    },
+    {
+      "CONCEPT": "Salary",
+      "ACCOUNTID": 19924
+    },
+    {
+      "CONCEPT": "Purchase",
+      "ACCOUNTID": 19924
+    },
+    {
+      "CONCEPT": "Taxes",
+      "ACCOUNTID": 19924
+    },
+    {
+      "CONCEPT": "Renting",
+      "ACCOUNTID": 19924
+    },
+    {
+      "CONCEPT": "Sight account",
+      "ACCOUNTID": 19925
+    },
+    {
+      "CONCEPT": "Purchase",
+      "ACCOUNTID": 19925
+    },
+    {
+      "CONCEPT": "Maintenance",
+      "ACCOUNTID": 19925
+    },
+    {
+      "CONCEPT": "Budget",
+      "ACCOUNTID": 19925
+    },
+    {
+      "CONCEPT": "Renting",
+      "ACCOUNTID": 19925
+    },
+    {
+      "CONCEPT": "Salary",
+      "ACCOUNTID": 19925
+    },
+    {
+      "CONCEPT": "Taxes",
+      "ACCOUNTID": 19925
+    },
+    {
+      "CONCEPT": "Automatic restore",
+      "ACCOUNTID": 19925
+    },
+    {
+      "CONCEPT": "Taxes",
+      "ACCOUNTID": 19926
+    },
+    {
+      "CONCEPT": "Maintenance",
+      "ACCOUNTID": 19926
+    },
+    {
+      "CONCEPT": "Automatic restore",
+      "ACCOUNTID": 19926
+    },
+    {
+      "CONCEPT": "Unknow",
+      "ACCOUNTID": 19926
+    },
+    {
+      "CONCEPT": "Salary",
+      "ACCOUNTID": 19926
+    },
+    {
+      "CONCEPT": "Budget",
+      "ACCOUNTID": 19926
+    },
+    {
+      "CONCEPT": "Maintenance",
+      "ACCOUNTID": 19927
+    },
+    {
+      "CONCEPT": "Unknow",
+      "ACCOUNTID": 19927
+    },
+    {
+      "CONCEPT": "Budget",
+      "ACCOUNTID": 19927
+    },
+    {
+      "CONCEPT": "Salary",
+      "ACCOUNTID": 19927
+    },
+    {
+      "CONCEPT": "Taxes",
+      "ACCOUNTID": 19927
+    },
+    {
+      "CONCEPT": "Automatic restore",
+      "ACCOUNTID": 19927
+    },
+    {
+      "CONCEPT": "Renting",
+      "ACCOUNTID": 19928
+    },
+    {
+      "CONCEPT": "Budget",
+      "ACCOUNTID": 19928
+    },
+    {
+      "CONCEPT": "Maintenance",
+      "ACCOUNTID": 19928
+    },
+    {
+      "CONCEPT": "Automatic restore",
+      "ACCOUNTID": 19928
+    },
+    {
+      "CONCEPT": "Taxes",
+      "ACCOUNTID": 19928
+    },
+    {
+      "CONCEPT": "Salary",
+      "ACCOUNTID": 19928
+    },
+    {
+      "CONCEPT": "Unknow",
+      "ACCOUNTID": 19928
+    },
+    {
+      "CONCEPT": "Taxes",
+      "ACCOUNTID": 19929
+    },
+    {
+      "CONCEPT": "Maintenance",
+      "ACCOUNTID": 19929
+    },
+    {
+      "CONCEPT": "Purchase",
+      "ACCOUNTID": 19929
+    },
+    {
+      "CONCEPT": "Renting",
+      "ACCOUNTID": 19930
+    },
+    {
+      "CONCEPT": "Bill",
+      "ACCOUNTID": 19930
+    },
+    {
+      "CONCEPT": "Unknow",
+      "ACCOUNTID": 19930
+    },
+    {
+      "CONCEPT": "Maintenance",
+      "ACCOUNTID": 19930
+    },
+    {
+      "CONCEPT": "Salary",
+      "ACCOUNTID": 19930
+    },
+    {
+      "CONCEPT": "Automatic restore",
+      "ACCOUNTID": 19930
+    },
+    {
+      "CONCEPT": "Budget",
+      "ACCOUNTID": 19930
+    },
+    {
+      "CONCEPT": "Taxes",
+      "ACCOUNTID": 19930
+    },
+    {
+      "CONCEPT": "Sight account",
+      "ACCOUNTID": 19930
+    },
+    {
+      "CONCEPT": "Renting",
+      "ACCOUNTID": 19931
+    },
+    {
+      "CONCEPT": "Maintenance",
+      "ACCOUNTID": 19931
+    },
+    {
+      "CONCEPT": "Budget",
+      "ACCOUNTID": 19931
+    },
+    {
+      "CONCEPT": "Automatic restore",
+      "ACCOUNTID": 19931
+    },
+    {
+      "CONCEPT": "Salary",
+      "ACCOUNTID": 19931
+    },
+    {
+      "CONCEPT": "Taxes",
+      "ACCOUNTID": 19931
+    },
+    {
+      "CONCEPT": "Unknow",
+      "ACCOUNTID": 19931
+    },
+    {
+      "CONCEPT": "Salary",
+      "ACCOUNTID": 19932
+    },
+    {
+      "CONCEPT": "Taxes",
+      "ACCOUNTID": 19932
+    },
+    {
+      "CONCEPT": "Bill",
+      "ACCOUNTID": 19932
+    },
+    {
+      "CONCEPT": "Maintenance",
+      "ACCOUNTID": 19932
+    },
+    {
+      "CONCEPT": "Budget",
+      "ACCOUNTID": 19933
+    },
+    {
+      "CONCEPT": "Salary",
+      "ACCOUNTID": 19933
+    },
+    {
+      "CONCEPT": "Maintenance",
+      "ACCOUNTID": 19933
+    },
+    {
+      "CONCEPT": "Unknow",
+      "ACCOUNTID": 19933
+    },
+    {
+      "CONCEPT": "Renting",
+      "ACCOUNTID": 19933
+    },
+    {
+      "CONCEPT": "Bill",
+      "ACCOUNTID": 19933
+    },
+    {
+      "CONCEPT": "Sight account",
+      "ACCOUNTID": 19933
+    },
+    {
+      "CONCEPT": "Salary",
+      "ACCOUNTID": 19934
+    },
+    {
+      "CONCEPT": "Unknow",
+      "ACCOUNTID": 19934
+    },
+    {
+      "CONCEPT": "Budget",
+      "ACCOUNTID": 19934
+    },
+    {
+      "CONCEPT": "Sight account",
+      "ACCOUNTID": 19934
+    },
+    {
+      "CONCEPT": "Renting",
+      "ACCOUNTID": 19934
+    },
+    {
+      "CONCEPT": "Maintenance",
+      "ACCOUNTID": 19934
+    },
+    {
+      "CONCEPT": "Taxes",
+      "ACCOUNTID": 19934
+    },
+    {
+      "CONCEPT": "Salary",
+      "ACCOUNTID": 19935
+    },
+    {
+      "CONCEPT": "Renting",
+      "ACCOUNTID": 19935
+    },
+    {
+      "CONCEPT": "Maintenance",
+      "ACCOUNTID": 19935
+    },
+    {
+      "CONCEPT": "Taxes",
+      "ACCOUNTID": 19935
+    },
+    {
+      "CONCEPT": "Budget",
+      "ACCOUNTID": 19935
+    },
+    {
+      "CONCEPT": "Purchase",
+      "ACCOUNTID": 19935
+    },
+    {
+      "CONCEPT": "Unknow",
+      "ACCOUNTID": 19935
+    },
+    {
+      "CONCEPT": "Sight account",
+      "ACCOUNTID": 19935
+    },
+    {
+      "CONCEPT": "Taxes 123",
+      "ACCOUNTID": 19935
+    },
+    {
+      "CONCEPT": "Maintenance",
+      "ACCOUNTID": 19936
+    },
+    {
+      "CONCEPT": "Budget",
+      "ACCOUNTID": 19936
+    },
+    {
+      "CONCEPT": "Taxes",
+      "ACCOUNTID": 19936
+    },
+    {
+      "CONCEPT": "Renting",
+      "ACCOUNTID": 19936
+    },
+    {
+      "CONCEPT": "Sight account",
+      "ACCOUNTID": 19936
+    },
+    {
+      "CONCEPT": "Salary",
+      "ACCOUNTID": 19936
+    },
+    {
+      "CONCEPT": "Maintenance",
+      "ACCOUNTID": 19937
+    },
+    {
+      "CONCEPT": "Budget",
+      "ACCOUNTID": 19937
+    },
+    {
+      "CONCEPT": "Automatic restore",
+      "ACCOUNTID": 19937
+    },
+    {
+      "CONCEPT": "Salary",
+      "ACCOUNTID": 19937
+    },
+    {
+      "CONCEPT": "Bill",
+      "ACCOUNTID": 19937
+    },
+    {
+      "CONCEPT": "Taxes",
+      "ACCOUNTID": 19937
+    },
+    {
+      "CONCEPT": "Taxes",
+      "ACCOUNTID": 19938
+    },
+    {
+      "CONCEPT": "Bill",
+      "ACCOUNTID": 19938
+    },
+    {
+      "CONCEPT": "Salary",
+      "ACCOUNTID": 19938
+    },
+    {
+      "CONCEPT": "Sight account",
+      "ACCOUNTID": 19938
+    },
+    {
+      "CONCEPT": "Budget",
+      "ACCOUNTID": 19938
+    },
+    {
+      "CONCEPT": "Renting",
+      "ACCOUNTID": 19938
+    },
+    {
+      "CONCEPT": "Unknow",
+      "ACCOUNTID": 19938
+    },
+    {
+      "CONCEPT": "Automatic restore",
+      "ACCOUNTID": 19938
+    },
+    {
+      "CONCEPT": "Maintenance",
+      "ACCOUNTID": 19938
+    },
+    {
+      "CONCEPT": "Automatic restore",
+      "ACCOUNTID": 19939
+    },
+    {
+      "CONCEPT": "Taxes",
+      "ACCOUNTID": 19939
+    },
+    {
+      "CONCEPT": "Salary",
+      "ACCOUNTID": 19939
+    },
+    {
+      "CONCEPT": "Sight account",
+      "ACCOUNTID": 19939
+    },
+    {
+      "CONCEPT": "Budget",
+      "ACCOUNTID": 19939
+    },
+    {
+      "CONCEPT": "Taxes",
+      "ACCOUNTID": 19940
+    },
+    {
+      "CONCEPT": "Salary",
+      "ACCOUNTID": 19940
+    },
+    {
+      "CONCEPT": "Automatic restore",
+      "ACCOUNTID": 19940
+    },
+    {
+      "CONCEPT": "Purchase",
+      "ACCOUNTID": 19940
+    },
+    {
+      "CONCEPT": "Sight account",
+      "ACCOUNTID": 19940
+    },
+    {
+      "CONCEPT": "Salary",
+      "ACCOUNTID": 19941
+    },
+    {
+      "CONCEPT": "Maintenance",
+      "ACCOUNTID": 19941
+    },
+    {
+      "CONCEPT": "Bill",
+      "ACCOUNTID": 19941
+    },
+    {
+      "CONCEPT": "Taxes",
+      "ACCOUNTID": 19941
+    },
+    {
+      "CONCEPT": "Budget",
+      "ACCOUNTID": 19941
+    },
+    {
+      "CONCEPT": "Purchase",
+      "ACCOUNTID": 19942
+    },
+    {
+      "CONCEPT": "Budget",
+      "ACCOUNTID": 19942
+    },
+    {
+      "CONCEPT": "Maintenance",
+      "ACCOUNTID": 19942
+    },
+    {
+      "CONCEPT": "Salary",
+      "ACCOUNTID": 19942
+    },
+    {
+      "CONCEPT": "Taxes",
+      "ACCOUNTID": 19942
+    },
+    {
+      "CONCEPT": "Sight account",
+      "ACCOUNTID": 19942
+    },
+    {
+      "CONCEPT": "Automatic restore",
+      "ACCOUNTID": 19942
+    },
+    {
+      "CONCEPT": "Maintenance",
+      "ACCOUNTID": 19943
+    },
+    {
+      "CONCEPT": "Salary",
+      "ACCOUNTID": 19943
+    },
+    {
+      "CONCEPT": "Renting",
+      "ACCOUNTID": 19943
+    },
+    {
+      "CONCEPT": "Taxes",
+      "ACCOUNTID": 19943
+    },
+    {
+      "CONCEPT": "Unknow",
+      "ACCOUNTID": 19943
+    },
+    {
+      "CONCEPT": "Automatic restore",
+      "ACCOUNTID": 19943
+    },
+    {
+      "CONCEPT": "Budget",
+      "ACCOUNTID": 19943
+    },
+    {
+      "CONCEPT": "Salary",
+      "ACCOUNTID": 19944
+    },
+    {
+      "CONCEPT": "Maintenance",
+      "ACCOUNTID": 19944
+    },
+    {
+      "CONCEPT": "Sight account",
+      "ACCOUNTID": 19944
+    },
+    {
+      "CONCEPT": "Taxes",
+      "ACCOUNTID": 19944
+    },
+    {
+      "CONCEPT": "Unknow",
+      "ACCOUNTID": 19944
+    },
+    {
+      "CONCEPT": "Automatic restore",
+      "ACCOUNTID": 19944
+    },
+    {
+      "CONCEPT": "Salary",
+      "ACCOUNTID": 19945
+    },
+    {
+      "CONCEPT": "Taxes",
+      "ACCOUNTID": 19945
+    },
+    {
+      "CONCEPT": "Purchase",
+      "ACCOUNTID": 19945
+    },
+    {
+      "CONCEPT": "Bill",
+      "ACCOUNTID": 19945
+    },
+    {
+      "CONCEPT": "Maintenance",
+      "ACCOUNTID": 19945
+    },
+    {
+      "CONCEPT": "Unknow",
+      "ACCOUNTID": 19945
+    },
+    {
+      "CONCEPT": "Taxes",
+      "ACCOUNTID": 19946
+    },
+    {
+      "CONCEPT": "Automatic restore",
+      "ACCOUNTID": 19946
+    },
+    {
+      "CONCEPT": "Maintenance",
+      "ACCOUNTID": 19946
+    },
+    {
+      "CONCEPT": "Sight account",
+      "ACCOUNTID": 19946
+    },
+    {
+      "CONCEPT": "Purchase",
+      "ACCOUNTID": 19946
+    },
+    {
+      "CONCEPT": "Salary",
+      "ACCOUNTID": 19946
+    },
+    {
+      "CONCEPT": "Renting",
+      "ACCOUNTID": 19946
+    },
+    {
+      "CONCEPT": "Taxes",
+      "ACCOUNTID": 19947
+    },
+    {
+      "CONCEPT": "Bill",
+      "ACCOUNTID": 19947
+    },
+    {
+      "CONCEPT": "Salary",
+      "ACCOUNTID": 19947
+    },
+    {
+      "CONCEPT": "Maintenance",
+      "ACCOUNTID": 19947
+    },
+    {
+      "CONCEPT": "Automatic restore",
+      "ACCOUNTID": 19947
+    },
+    {
+      "CONCEPT": "Salary",
+      "ACCOUNTID": 19948
+    },
+    {
+      "CONCEPT": "Automatic restore",
+      "ACCOUNTID": 19948
+    },
+    {
+      "CONCEPT": "Maintenance",
+      "ACCOUNTID": 19948
+    },
+    {
+      "CONCEPT": "Taxes",
+      "ACCOUNTID": 19948
+    },
+    {
+      "CONCEPT": "Unknow",
+      "ACCOUNTID": 19948
+    },
+    {
+      "CONCEPT": "Budget",
+      "ACCOUNTID": 19948
+    },
+    {
+      "CONCEPT": "Purchase",
+      "ACCOUNTID": 19949
+    },
+    {
+      "CONCEPT": "Taxes",
+      "ACCOUNTID": 19949
+    },
+    {
+      "CONCEPT": "Budget",
+      "ACCOUNTID": 19949
+    },
+    {
+      "CONCEPT": "Salary",
+      "ACCOUNTID": 19949
+    },
+    {
+      "CONCEPT": "Maintenance",
+      "ACCOUNTID": 19949
+    },
+    {
+      "CONCEPT": "Unknow",
+      "ACCOUNTID": 19950
+    },
+    {
+      "CONCEPT": "Taxes",
+      "ACCOUNTID": 19950
+    },
+    {
+      "CONCEPT": "Sight account",
+      "ACCOUNTID": 19950
+    },
+    {
+      "CONCEPT": "Maintenance",
+      "ACCOUNTID": 19950
+    },
+    {
+      "CONCEPT": "Salary",
+      "ACCOUNTID": 19950
+    },
+    {
+      "CONCEPT": "Purchase",
+      "ACCOUNTID": 19951
+    },
+    {
+      "CONCEPT": "Bill",
+      "ACCOUNTID": 19951
+    },
+    {
+      "CONCEPT": "Sight account",
+      "ACCOUNTID": 19951
+    },
+    {
+      "CONCEPT": "Taxes",
+      "ACCOUNTID": 19951
+    },
+    {
+      "CONCEPT": "Renting",
+      "ACCOUNTID": 19951
+    },
+    {
+      "CONCEPT": "Salary",
+      "ACCOUNTID": 19951
+    },
+    {
+      "CONCEPT": "Budget",
+      "ACCOUNTID": 19951
+    },
+    {
+      "CONCEPT": "Maintenance",
+      "ACCOUNTID": 19951
+    },
+    {
+      "CONCEPT": "Automatic restore",
+      "ACCOUNTID": 19951
+    },
+    {
+      "CONCEPT": "Taxes",
+      "ACCOUNTID": 19952
+    },
+    {
+      "CONCEPT": "Sight account",
+      "ACCOUNTID": 19952
+    },
+    {
+      "CONCEPT": "Automatic restore",
+      "ACCOUNTID": 19952
+    },
+    {
+      "CONCEPT": "Salary",
+      "ACCOUNTID": 19952
+    },
+    {
+      "CONCEPT": "Budget",
+      "ACCOUNTID": 19952
+    },
+    {
+      "CONCEPT": "Bill",
+      "ACCOUNTID": 19952
+    },
+    {
+      "CONCEPT": "Unknow",
+      "ACCOUNTID": 19952
+    },
+    {
+      "CONCEPT": "Maintenance",
+      "ACCOUNTID": 19952
+    },
+    {
+      "CONCEPT": "Taxes",
+      "ACCOUNTID": 19953
+    },
+    {
+      "CONCEPT": "Salary",
+      "ACCOUNTID": 19953
+    },
+    {
+      "CONCEPT": "Unknow",
+      "ACCOUNTID": 19953
+    },
+    {
+      "CONCEPT": "Maintenance",
+      "ACCOUNTID": 19953
+    },
+    {
+      "CONCEPT": "Purchase",
+      "ACCOUNTID": 19953
+    },
+    {
+      "CONCEPT": "Renting",
+      "ACCOUNTID": 19953
+    },
+    {
+      "CONCEPT": "Taxes",
+      "ACCOUNTID": 19954
+    },
+    {
+      "CONCEPT": "Maintenance",
+      "ACCOUNTID": 19954
+    },
+    {
+      "CONCEPT": "Salary",
+      "ACCOUNTID": 19954
+    },
+    {
+      "CONCEPT": "Sight account",
+      "ACCOUNTID": 19954
+    },
+    {
+      "CONCEPT": "Purchase",
+      "ACCOUNTID": 19954
+    },
+    {
+      "CONCEPT": "Automatic restore",
+      "ACCOUNTID": 19954
+    },
+    {
+      "CONCEPT": "Salary",
+      "ACCOUNTID": 19955
+    },
+    {
+      "CONCEPT": "Sight account",
+      "ACCOUNTID": 19955
+    },
+    {
+      "CONCEPT": "Taxes",
+      "ACCOUNTID": 19955
+    },
+    {
+      "CONCEPT": "Maintenance",
+      "ACCOUNTID": 19955
+    },
+    {
+      "CONCEPT": "Budget",
+      "ACCOUNTID": 19955
+    },
+    {
+      "CONCEPT": "Budget",
+      "ACCOUNTID": 19956
+    },
+    {
+      "CONCEPT": "Purchase",
+      "ACCOUNTID": 19956
+    },
+    {
+      "CONCEPT": "Bill",
+      "ACCOUNTID": 19956
+    },
+    {
+      "CONCEPT": "Salary",
+      "ACCOUNTID": 19956
+    },
+    {
+      "CONCEPT": "Taxes",
+      "ACCOUNTID": 19956
+    },
+    {
+      "CONCEPT": "Maintenance",
+      "ACCOUNTID": 19956
+    },
+    {
+      "CONCEPT": "Renting",
+      "ACCOUNTID": 19956
+    },
+    {
+      "CONCEPT": "Automatic restore",
+      "ACCOUNTID": 19956
+    },
+    {
+      "CONCEPT": "Taxes",
+      "ACCOUNTID": 19957
+    },
+    {
+      "CONCEPT": "Automatic restore",
+      "ACCOUNTID": 19957
+    },
+    {
+      "CONCEPT": "Budget",
+      "ACCOUNTID": 19957
+    },
+    {
+      "CONCEPT": "Maintenance",
+      "ACCOUNTID": 19957
+    },
+    {
+      "CONCEPT": "Renting",
+      "ACCOUNTID": 19957
+    },
+    {
+      "CONCEPT": "Sight account",
+      "ACCOUNTID": 19957
+    },
+    {
+      "CONCEPT": "Unknow",
+      "ACCOUNTID": 19957
+    },
+    {
+      "CONCEPT": "Bill",
+      "ACCOUNTID": 19957
+    },
+    {
+      "CONCEPT": "Salary",
+      "ACCOUNTID": 19957
+    },
+    {
+      "CONCEPT": "Salary",
+      "ACCOUNTID": 19958
+    },
+    {
+      "CONCEPT": "Taxes",
+      "ACCOUNTID": 19958
+    },
+    {
+      "CONCEPT": "Maintenance",
+      "ACCOUNTID": 19958
+    },
+    {
+      "CONCEPT": "Budget",
+      "ACCOUNTID": 19958
+    },
+    {
+      "CONCEPT": "Automatic restore",
+      "ACCOUNTID": 19958
+    },
+    {
+      "CONCEPT": "Renting",
+      "ACCOUNTID": 19959
+    },
+    {
+      "CONCEPT": "Salary",
+      "ACCOUNTID": 19959
+    },
+    {
+      "CONCEPT": "Taxes",
+      "ACCOUNTID": 19959
+    },
+    {
+      "CONCEPT": "Maintenance",
+      "ACCOUNTID": 19959
+    },
+    {
+      "CONCEPT": "Automatic restore",
+      "ACCOUNTID": 19959
+    },
+    {
+      "CONCEPT": "Purchase",
+      "ACCOUNTID": 19959
+    },
+    {
+      "CONCEPT": "Purchase",
+      "ACCOUNTID": 19960
+    },
+    {
+      "CONCEPT": "Bill",
+      "ACCOUNTID": 19960
+    },
+    {
+      "CONCEPT": "Maintenance",
+      "ACCOUNTID": 19960
+    },
+    {
+      "CONCEPT": "Taxes",
+      "ACCOUNTID": 19960
+    },
+    {
+      "CONCEPT": "Automatic restore",
+      "ACCOUNTID": 19960
+    },
+    {
+      "CONCEPT": "Bill",
+      "ACCOUNTID": 19961
+    },
+    {
+      "CONCEPT": "Unknow",
+      "ACCOUNTID": 19961
+    },
+    {
+      "CONCEPT": "Salary",
+      "ACCOUNTID": 19961
+    },
+    {
+      "CONCEPT": "Taxes",
+      "ACCOUNTID": 19961
+    },
+    {
+      "CONCEPT": "Sight account",
+      "ACCOUNTID": 19961
+    },
+    {
+      "CONCEPT": "Maintenance",
+      "ACCOUNTID": 19961
+    },
+    {
+      "CONCEPT": "Taxes",
+      "ACCOUNTID": 19962
+    },
+    {
+      "CONCEPT": "Salary",
+      "ACCOUNTID": 19962
+    },
+    {
+      "CONCEPT": "Renting",
+      "ACCOUNTID": 19962
+    },
+    {
+      "CONCEPT": "Budget",
+      "ACCOUNTID": 19962
+    },
+    {
+      "CONCEPT": "Bill",
+      "ACCOUNTID": 19962
+    },
+    {
+      "CONCEPT": "Purchase",
+      "ACCOUNTID": 19962
+    },
+    {
+      "CONCEPT": "Maintenance",
+      "ACCOUNTID": 19963
+    },
+    {
+      "CONCEPT": "Salary",
+      "ACCOUNTID": 19963
+    },
+    {
+      "CONCEPT": "Purchase",
+      "ACCOUNTID": 19963
+    },
+    {
+      "CONCEPT": "Sight account",
+      "ACCOUNTID": 19963
+    },
+    {
+      "CONCEPT": "Budget",
+      "ACCOUNTID": 19963
+    },
+    {
+      "CONCEPT": "Unknow",
+      "ACCOUNTID": 19963
+    },
+    {
+      "CONCEPT": "Taxes",
+      "ACCOUNTID": 19963
+    },
+    {
+      "CONCEPT": "Salary",
+      "ACCOUNTID": 19964
+    },
+    {
+      "CONCEPT": "Taxes",
+      "ACCOUNTID": 19964
+    },
+    {
+      "CONCEPT": "Unknow",
+      "ACCOUNTID": 19964
+    },
+    {
+      "CONCEPT": "Maintenance",
+      "ACCOUNTID": 19964
+    },
+    {
+      "CONCEPT": "Sight account",
+      "ACCOUNTID": 19964
+    },
+    {
+      "CONCEPT": "Bill",
+      "ACCOUNTID": 19964
+    },
+    {
+      "CONCEPT": "Renting",
+      "ACCOUNTID": 19964
+    },
+    {
+      "CONCEPT": "Payment salary",
+      "ACCOUNTID": 19976
+    },
+    {
+      "CONCEPT": "Amazon marketplace",
+      "ACCOUNTID": 19976
+    }
+  ],
+  "sqlTypes": {
+    "CONCEPT": 12,
+    "ACCOUNTID": 4
+  }
+}

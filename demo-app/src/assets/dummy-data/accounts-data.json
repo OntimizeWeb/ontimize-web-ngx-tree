@@ -1,0 +1,851 @@
+{
+  "code": 0,
+  "message": "",
+  "data": [
+    {
+      "ACCOUNT": "2095 0002 34 0000000010",
+      "ACCOUNTID": 1,
+      "CUSTOMERID": 7511
+    },
+    {
+      "ACCOUNT": "2095 0002 34 0000000010",
+      "ACCOUNTID": 1,
+      "CUSTOMERID": 10602
+    },
+    {
+      "ACCOUNT": "2095 0002 34 0000000010",
+      "ACCOUNTID": 1,
+      "CUSTOMERID": 10603
+    },
+    {
+      "ACCOUNT": "2095 0002 34 0000000010",
+      "ACCOUNTID": 1,
+      "CUSTOMERID": 10605
+    },
+    {
+      "ACCOUNT": "2095 0002 34 0000000010",
+      "ACCOUNTID": 1,
+      "CUSTOMERID": 10813
+    },
+    {
+      "ACCOUNT": "2095 0000 00 0000000002",
+      "ACCOUNTID": 2,
+      "CUSTOMERID": 10606
+    },
+    {
+      "ACCOUNT": "2095 0000 00 0000000003",
+      "ACCOUNTID": 3,
+      "CUSTOMERID": 10808
+    },
+    {
+      "ACCOUNT": "2095 0001 00 0000000001",
+      "ACCOUNTID": 5,
+      "CUSTOMERID": 10604
+    },
+    {
+      "ACCOUNT": "2095 0001 00 0000000001",
+      "ACCOUNTID": 5,
+      "CUSTOMERID": 10813
+    },
+    {
+      "ACCOUNT": "2095 0001 00 0000000004",
+      "ACCOUNTID": 6,
+      "CUSTOMERID": 10607
+    },
+    {
+      "ACCOUNT": "2095 0001 00 0000000005",
+      "ACCOUNTID": 7,
+      "CUSTOMERID": 10808
+    },
+    {
+      "ACCOUNT": "2095 0001 00 0000000006",
+      "ACCOUNTID": 8,
+      "CUSTOMERID": 10602
+    },
+    {
+      "ACCOUNT": "2095 0001 00 0000000007",
+      "ACCOUNTID": 9,
+      "CUSTOMERID": 10604
+    },
+    {
+      "ACCOUNT": "2095 0001 00 0000000008",
+      "ACCOUNTID": 10,
+      "CUSTOMERID": 10810
+    },
+    {
+      "ACCOUNT": "2095 0001 00 0000000008",
+      "ACCOUNTID": 10,
+      "CUSTOMERID": 10811
+    },
+    {
+      "ACCOUNT": "2095 0001 00 0000000008",
+      "ACCOUNTID": 10,
+      "CUSTOMERID": 10812
+    },
+    {
+      "ACCOUNT": "2095 0001 00 0000000009",
+      "ACCOUNTID": 11,
+      "CUSTOMERID": 10602
+    },
+    {
+      "ACCOUNT": "2095 0001 00 0000000009",
+      "ACCOUNTID": 11,
+      "CUSTOMERID": 10605
+    },
+    {
+      "ACCOUNT": "2095 0001 00 0001125411",
+      "ACCOUNTID": 27,
+      "CUSTOMERID": 10834
+    },
+    {
+      "ACCOUNT": "2095 0001 00 0015811111",
+      "ACCOUNTID": 36,
+      "CUSTOMERID": 10815
+    },
+    {
+      "ACCOUNT": "2095 0003 00 0000251442",
+      "ACCOUNTID": 41,
+      "CUSTOMERID": 10810
+    },
+    {
+      "ACCOUNT": "2095 0070 31 5734988462",
+      "ACCOUNTID": 7040,
+      "CUSTOMERID": 10602
+    },
+    {
+      "ACCOUNT": "2095 0103 43 1009255260",
+      "ACCOUNTID": 7041,
+      "CUSTOMERID": 10603
+    },
+    {
+      "ACCOUNT": "2095 0103 74 7856003780",
+      "ACCOUNTID": 7090,
+      "CUSTOMERID": 10602
+    },
+    {
+      "ACCOUNT": "2095 0101 47 0054733541",
+      "ACCOUNTID": 7091,
+      "CUSTOMERID": 10603
+    },
+    {
+      "ACCOUNT": "2095 0000 17 5400649868",
+      "ACCOUNTID": 7123,
+      "CUSTOMERID": 10602
+    },
+    {
+      "ACCOUNT": "2095 0004 47 5615307257",
+      "ACCOUNTID": 7124,
+      "CUSTOMERID": 10603
+    },
+    {
+      "ACCOUNT": "2095 0004 47 5615307257",
+      "ACCOUNTID": 7124,
+      "CUSTOMERID": 10604
+    },
+    {
+      "ACCOUNT": "2095 0070 43 6393721816",
+      "ACCOUNTID": 7125,
+      "CUSTOMERID": 10605
+    },
+    {
+      "ACCOUNT": "2095 0003 42 5796260745",
+      "ACCOUNTID": 7126,
+      "CUSTOMERID": 10606
+    },
+    {
+      "ACCOUNT": "2095 0003 42 5796260745",
+      "ACCOUNTID": 7126,
+      "CUSTOMERID": 10607
+    },
+    {
+      "ACCOUNT": "2095 0102 42 5907669950",
+      "ACCOUNTID": 7223,
+      "CUSTOMERID": 10602
+    },
+    {
+      "ACCOUNT": "2095 0002 28 4760933257",
+      "ACCOUNTID": 7224,
+      "CUSTOMERID": 10603
+    },
+    {
+      "ACCOUNT": "2095 0002 28 4760933257",
+      "ACCOUNTID": 7224,
+      "CUSTOMERID": 10604
+    },
+    {
+      "ACCOUNT": "2095 0102 93 3646418053",
+      "ACCOUNTID": 7225,
+      "CUSTOMERID": 10605
+    },
+    {
+      "ACCOUNT": "2095 0102 93 3646418053",
+      "ACCOUNTID": 7225,
+      "CUSTOMERID": 10606
+    },
+    {
+      "ACCOUNT": "2095 0102 18 7151447929",
+      "ACCOUNTID": 7226,
+      "CUSTOMERID": 10607
+    },
+    {
+      "ACCOUNT": "2095 0002 39 5292426114",
+      "ACCOUNTID": 7296,
+      "CUSTOMERID": 10602
+    },
+    {
+      "ACCOUNT": "2095 0101 46 0679526807",
+      "ACCOUNTID": 7297,
+      "CUSTOMERID": 10603
+    },
+    {
+      "ACCOUNT": "2095 0070 30 8821432025",
+      "ACCOUNTID": 7298,
+      "CUSTOMERID": 10604
+    },
+    {
+      "ACCOUNT": "2095 0070 30 8821432025",
+      "ACCOUNTID": 7298,
+      "CUSTOMERID": 10605
+    },
+    {
+      "ACCOUNT": "2095 0101 72 2610413611",
+      "ACCOUNTID": 7299,
+      "CUSTOMERID": 10606
+    },
+    {
+      "ACCOUNT": "2095 0101 72 2610413611",
+      "ACCOUNTID": 7299,
+      "CUSTOMERID": 10607
+    },
+    {
+      "ACCOUNT": "2095 0070 28 7437156202",
+      "ACCOUNTID": 7300,
+      "CUSTOMERID": 10808
+    },
+    {
+      "ACCOUNT": "2095 0070 28 7437156202",
+      "ACCOUNTID": 7300,
+      "CUSTOMERID": 10810
+    },
+    {
+      "ACCOUNT": "2095 0000 34 3151615919",
+      "ACCOUNTID": 7301,
+      "CUSTOMERID": 10811
+    },
+    {
+      "ACCOUNT": "2095 0070 07 0784642399",
+      "ACCOUNTID": 7302,
+      "CUSTOMERID": 10812
+    },
+    {
+      "ACCOUNT": "2095 0004 63 5890104123",
+      "ACCOUNTID": 7303,
+      "CUSTOMERID": 10813
+    },
+    {
+      "ACCOUNT": "2095 0070 76 8171065567",
+      "ACCOUNTID": 7304,
+      "CUSTOMERID": 10814
+    },
+    {
+      "ACCOUNT": "2095 0103 86 8856734200",
+      "ACCOUNTID": 7305,
+      "CUSTOMERID": 10815
+    },
+    {
+      "ACCOUNT": "2095 0070 35 7682391175",
+      "ACCOUNTID": 7306,
+      "CUSTOMERID": 10834
+    },
+    {
+      "ACCOUNT": "2095 0103 10 1303828703",
+      "ACCOUNTID": 7307,
+      "CUSTOMERID": 19362
+    },
+    {
+      "ACCOUNT": "2095 0103 10 1303828703",
+      "ACCOUNTID": 7307,
+      "CUSTOMERID": 19363
+    },
+    {
+      "ACCOUNT": "2095 0101 11 8843583505",
+      "ACCOUNTID": 7308,
+      "CUSTOMERID": 19327
+    },
+    {
+      "ACCOUNT": "2095 0003 25 5506824885",
+      "ACCOUNTID": 7309,
+      "CUSTOMERID": 19360
+    },
+    {
+      "ACCOUNT": "2095 0002 95 1061103749",
+      "ACCOUNTID": 7310,
+      "CUSTOMERID": 19365
+    },
+    {
+      "ACCOUNT": "2095 0004 11 0264511022",
+      "ACCOUNTID": 19370,
+      "CUSTOMERID": 19271
+    },
+    {
+      "ACCOUNT": "2095 0004 11 0264511022",
+      "ACCOUNTID": 19370,
+      "CUSTOMERID": 19272
+    },
+    {
+      "ACCOUNT": "2095 0004 19 3219639760",
+      "ACCOUNTID": 19371,
+      "CUSTOMERID": 19273
+    },
+    {
+      "ACCOUNT": "2095 0004 19 3219639760",
+      "ACCOUNTID": 19371,
+      "CUSTOMERID": 19274
+    },
+    {
+      "ACCOUNT": "2095 0002 84 0790946410",
+      "ACCOUNTID": 19372,
+      "CUSTOMERID": 19320
+    },
+    {
+      "ACCOUNT": "2095 0070 68 2918720775",
+      "ACCOUNTID": 19373,
+      "CUSTOMERID": 19321
+    },
+    {
+      "ACCOUNT": "2095 0070 02 4876711204",
+      "ACCOUNTID": 19374,
+      "CUSTOMERID": 19322
+    },
+    {
+      "ACCOUNT": "2095 0003 70 3960900384",
+      "ACCOUNTID": 19375,
+      "CUSTOMERID": 19323
+    },
+    {
+      "ACCOUNT": "2095 0003 70 3960900384",
+      "ACCOUNTID": 19375,
+      "CUSTOMERID": 19324
+    },
+    {
+      "ACCOUNT": "2095 0002 26 7146388530",
+      "ACCOUNTID": 19376,
+      "CUSTOMERID": 19325
+    },
+    {
+      "ACCOUNT": "2095 0002 26 7146388530",
+      "ACCOUNTID": 19376,
+      "CUSTOMERID": 19326
+    },
+    {
+      "ACCOUNT": "2095 0103 72 4522491902",
+      "ACCOUNTID": 19377,
+      "CUSTOMERID": 19327
+    },
+    {
+      "ACCOUNT": "2095 0103 72 4522491902",
+      "ACCOUNTID": 19377,
+      "CUSTOMERID": 19328
+    },
+    {
+      "ACCOUNT": "2095 0003 01 5486025482",
+      "ACCOUNTID": 19378,
+      "CUSTOMERID": 19363
+    },
+    {
+      "ACCOUNT": "2095 0070 07 1694955564",
+      "ACCOUNTID": 19379,
+      "CUSTOMERID": 19355
+    },
+    {
+      "ACCOUNT": "2095 0070 04 0311077857",
+      "ACCOUNTID": 19380,
+      "CUSTOMERID": 19330
+    },
+    {
+      "ACCOUNT": "2095 0070 04 0311077857",
+      "ACCOUNTID": 19380,
+      "CUSTOMERID": 19331
+    },
+    {
+      "ACCOUNT": "2095 0101 83 3331790023",
+      "ACCOUNTID": 19381,
+      "CUSTOMERID": 19345
+    },
+    {
+      "ACCOUNT": "2095 0103 85 0815179651",
+      "ACCOUNTID": 19382,
+      "CUSTOMERID": 19344
+    },
+    {
+      "ACCOUNT": "2095 0103 85 0815179651",
+      "ACCOUNTID": 19382,
+      "CUSTOMERID": 19345
+    },
+    {
+      "ACCOUNT": "2095 0102 88 3283180626",
+      "ACCOUNTID": 19383,
+      "CUSTOMERID": 19328
+    },
+    {
+      "ACCOUNT": "2095 0102 88 3283180626",
+      "ACCOUNTID": 19383,
+      "CUSTOMERID": 19331
+    },
+    {
+      "ACCOUNT": "2095 0003 09 5956339559",
+      "ACCOUNTID": 19384,
+      "CUSTOMERID": 19355
+    },
+    {
+      "ACCOUNT": "2095 0102 43 2597878157",
+      "ACCOUNTID": 19620,
+      "CUSTOMERID": 19331
+    },
+    {
+      "ACCOUNT": "2095 0102 43 2597878157",
+      "ACCOUNTID": 19620,
+      "CUSTOMERID": 19332
+    },
+    {
+      "ACCOUNT": "2095 0070 80 1877871185",
+      "ACCOUNTID": 19621,
+      "CUSTOMERID": 19333
+    },
+    {
+      "ACCOUNT": "2095 0070 80 1877871185",
+      "ACCOUNTID": 19621,
+      "CUSTOMERID": 19334
+    },
+    {
+      "ACCOUNT": "2095 0103 62 2713917110",
+      "ACCOUNTID": 19622,
+      "CUSTOMERID": 19335
+    },
+    {
+      "ACCOUNT": "2095 0103 62 2713917110",
+      "ACCOUNTID": 19622,
+      "CUSTOMERID": 19336
+    },
+    {
+      "ACCOUNT": "2095 0102 23 8699077909",
+      "ACCOUNTID": 19623,
+      "CUSTOMERID": 19337
+    },
+    {
+      "ACCOUNT": "2095 0102 23 8699077909",
+      "ACCOUNTID": 19623,
+      "CUSTOMERID": 19338
+    },
+    {
+      "ACCOUNT": "2095 0101 69 4122324281",
+      "ACCOUNTID": 19624,
+      "CUSTOMERID": 19340
+    },
+    {
+      "ACCOUNT": "2095 0004 14 4118651334",
+      "ACCOUNTID": 19625,
+      "CUSTOMERID": 19332
+    },
+    {
+      "ACCOUNT": "2095 0002 39 8963572716",
+      "ACCOUNTID": 19626,
+      "CUSTOMERID": 19359
+    },
+    {
+      "ACCOUNT": "2095 0070 32 1609792624",
+      "ACCOUNTID": 19627,
+      "CUSTOMERID": 19348
+    },
+    {
+      "ACCOUNT": "2095 0070 32 1609792624",
+      "ACCOUNTID": 19627,
+      "CUSTOMERID": 19349
+    },
+    {
+      "ACCOUNT": "2095 0070 32 1609792624",
+      "ACCOUNTID": 19627,
+      "CUSTOMERID": 19352
+    },
+    {
+      "ACCOUNT": "2095 0103 86 9219409060",
+      "ACCOUNTID": 19628,
+      "CUSTOMERID": 10603
+    },
+    {
+      "ACCOUNT": "2095 0102 61 0364507162",
+      "ACCOUNTID": 19629,
+      "CUSTOMERID": 19340
+    },
+    {
+      "ACCOUNT": "2095 0102 61 0364507162",
+      "ACCOUNTID": 19629,
+      "CUSTOMERID": 19341
+    },
+    {
+      "ACCOUNT": "2095 0002 68 1919405004",
+      "ACCOUNTID": 19630,
+      "CUSTOMERID": 19343
+    },
+    {
+      "ACCOUNT": "2095 0000 47 3141858187",
+      "ACCOUNTID": 19631,
+      "CUSTOMERID": 19323
+    },
+    {
+      "ACCOUNT": "2095 0003 68 4985800838",
+      "ACCOUNTID": 19632,
+      "CUSTOMERID": 19324
+    },
+    {
+      "ACCOUNT": "2095 0103 98 6052276283",
+      "ACCOUNTID": 19633,
+      "CUSTOMERID": 19364
+    },
+    {
+      "ACCOUNT": "2095 0004 54 9418619951",
+      "ACCOUNTID": 19634,
+      "CUSTOMERID": 19361
+    },
+    {
+      "ACCOUNT": "2095 0101 72 1484647739",
+      "ACCOUNTID": 19635,
+      "CUSTOMERID": 19349
+    },
+    {
+      "ACCOUNT": "2095 0101 72 1484647739",
+      "ACCOUNTID": 19635,
+      "CUSTOMERID": 19351
+    },
+    {
+      "ACCOUNT": "2095 0101 72 1484647739",
+      "ACCOUNTID": 19635,
+      "CUSTOMERID": 19352
+    },
+    {
+      "ACCOUNT": "2095 0004 24 1406348359",
+      "ACCOUNTID": 19636,
+      "CUSTOMERID": 19357
+    },
+    {
+      "ACCOUNT": "2095 0004 24 1406348359",
+      "ACCOUNTID": 19636,
+      "CUSTOMERID": 19358
+    },
+    {
+      "ACCOUNT": "2095 0004 24 1406348359",
+      "ACCOUNTID": 19636,
+      "CUSTOMERID": 19359
+    },
+    {
+      "ACCOUNT": "2095 0004 24 1406348359",
+      "ACCOUNTID": 19636,
+      "CUSTOMERID": 19361
+    },
+    {
+      "ACCOUNT": "2095 0101 70 0553724082",
+      "ACCOUNTID": 19637,
+      "CUSTOMERID": 19339
+    },
+    {
+      "ACCOUNT": "2095 0003 67 5456101212",
+      "ACCOUNTID": 19638,
+      "CUSTOMERID": 19339
+    },
+    {
+      "ACCOUNT": "2095 0103 15 5677591967",
+      "ACCOUNTID": 19639,
+      "CUSTOMERID": 19273
+    },
+    {
+      "ACCOUNT": "2095 0002 07 4247489358",
+      "ACCOUNTID": 19920,
+      "CUSTOMERID": 19271
+    },
+    {
+      "ACCOUNT": "2095 0102 92 3313229402",
+      "ACCOUNTID": 19921,
+      "CUSTOMERID": 19272
+    },
+    {
+      "ACCOUNT": "2095 0102 92 3313229402",
+      "ACCOUNTID": 19921,
+      "CUSTOMERID": 19273
+    },
+    {
+      "ACCOUNT": "2095 0003 36 5524444709",
+      "ACCOUNTID": 19922,
+      "CUSTOMERID": 19274
+    },
+    {
+      "ACCOUNT": "2095 0003 36 5524444709",
+      "ACCOUNTID": 19922,
+      "CUSTOMERID": 19320
+    },
+    {
+      "ACCOUNT": "2095 0102 71 5860431398",
+      "ACCOUNTID": 19923,
+      "CUSTOMERID": 19321
+    },
+    {
+      "ACCOUNT": "2095 0000 07 6642910070",
+      "ACCOUNTID": 19924,
+      "CUSTOMERID": 19322
+    },
+    {
+      "ACCOUNT": "2095 0000 07 6642910070",
+      "ACCOUNTID": 19924,
+      "CUSTOMERID": 19323
+    },
+    {
+      "ACCOUNT": "2095 0070 41 1535474400",
+      "ACCOUNTID": 19925,
+      "CUSTOMERID": 19324
+    },
+    {
+      "ACCOUNT": "2095 0003 86 8769929713",
+      "ACCOUNTID": 19926,
+      "CUSTOMERID": 19325
+    },
+    {
+      "ACCOUNT": "2095 0102 81 4750522587",
+      "ACCOUNTID": 19927,
+      "CUSTOMERID": 19326
+    },
+    {
+      "ACCOUNT": "2095 0102 81 4750522587",
+      "ACCOUNTID": 19927,
+      "CUSTOMERID": 19327
+    },
+    {
+      "ACCOUNT": "2095 0103 74 4472677340",
+      "ACCOUNTID": 19928,
+      "CUSTOMERID": 19328
+    },
+    {
+      "ACCOUNT": "2095 0003 41 4023149711",
+      "ACCOUNTID": 19929,
+      "CUSTOMERID": 10602
+    },
+    {
+      "ACCOUNT": "2095 0002 61 2615755060",
+      "ACCOUNTID": 19930,
+      "CUSTOMERID": 19334
+    },
+    {
+      "ACCOUNT": "2095 0000 61 1102863800",
+      "ACCOUNTID": 19931,
+      "CUSTOMERID": 19364
+    },
+    {
+      "ACCOUNT": "2095 0003 14 4586421586",
+      "ACCOUNTID": 19932,
+      "CUSTOMERID": 19356
+    },
+    {
+      "ACCOUNT": "2095 0000 34 7841261591",
+      "ACCOUNTID": 19933,
+      "CUSTOMERID": 19274
+    },
+    {
+      "ACCOUNT": "2095 0103 85 5091166326",
+      "ACCOUNTID": 19934,
+      "CUSTOMERID": 19349
+    },
+    {
+      "ACCOUNT": "2095 0070 65 4787729648",
+      "ACCOUNTID": 19935,
+      "CUSTOMERID": 19362
+    },
+    {
+      "ACCOUNT": "2095 0000 13 6699755900",
+      "ACCOUNTID": 19936,
+      "CUSTOMERID": 19340
+    },
+    {
+      "ACCOUNT": "2095 0004 09 7083034826",
+      "ACCOUNTID": 19937,
+      "CUSTOMERID": 19341
+    },
+    {
+      "ACCOUNT": "2095 0002 98 3732870743",
+      "ACCOUNTID": 19938,
+      "CUSTOMERID": 19322
+    },
+    {
+      "ACCOUNT": "2095 0002 98 3732870743",
+      "ACCOUNTID": 19938,
+      "CUSTOMERID": 19328
+    },
+    {
+      "ACCOUNT": "2095 0101 45 8909483244",
+      "ACCOUNTID": 19939,
+      "CUSTOMERID": 19329
+    },
+    {
+      "ACCOUNT": "2095 0004 23 3383112904",
+      "ACCOUNTID": 19940,
+      "CUSTOMERID": 19360
+    },
+    {
+      "ACCOUNT": "2095 0070 15 8732069486",
+      "ACCOUNTID": 19941,
+      "CUSTOMERID": 10606
+    },
+    {
+      "ACCOUNT": "2095 0070 32 5886003173",
+      "ACCOUNTID": 19942,
+      "CUSTOMERID": 19353
+    },
+    {
+      "ACCOUNT": "2095 0002 32 7337830535",
+      "ACCOUNTID": 19943,
+      "CUSTOMERID": 19335
+    },
+    {
+      "ACCOUNT": "2095 0103 97 1888414239",
+      "ACCOUNTID": 19944,
+      "CUSTOMERID": 19345
+    },
+    {
+      "ACCOUNT": "2095 0103 97 1888414239",
+      "ACCOUNTID": 19944,
+      "CUSTOMERID": 19347
+    },
+    {
+      "ACCOUNT": "2095 0003 21 4544747521",
+      "ACCOUNTID": 19945,
+      "CUSTOMERID": 10605
+    },
+    {
+      "ACCOUNT": "2095 0070 60 7033829217",
+      "ACCOUNTID": 19946,
+      "CUSTOMERID": 19360
+    },
+    {
+      "ACCOUNT": "2095 0070 27 4085559883",
+      "ACCOUNTID": 19947,
+      "CUSTOMERID": 10604
+    },
+    {
+      "ACCOUNT": "2095 0002 80 1811598418",
+      "ACCOUNTID": 19948,
+      "CUSTOMERID": 19342
+    },
+    {
+      "ACCOUNT": "2095 0101 97 1787451731",
+      "ACCOUNTID": 19949,
+      "CUSTOMERID": 19360
+    },
+    {
+      "ACCOUNT": "2095 0101 92 7015032165",
+      "ACCOUNTID": 19950,
+      "CUSTOMERID": 19364
+    },
+    {
+      "ACCOUNT": "2095 0103 37 2001230170",
+      "ACCOUNTID": 19951,
+      "CUSTOMERID": 10603
+    },
+    {
+      "ACCOUNT": "2095 0103 37 2001230170",
+      "ACCOUNTID": 19951,
+      "CUSTOMERID": 19344
+    },
+    {
+      "ACCOUNT": "2095 0103 37 2001230170",
+      "ACCOUNTID": 19951,
+      "CUSTOMERID": 19360
+    },
+    {
+      "ACCOUNT": "2095 0004 02 0000000000",
+      "ACCOUNTID": 19952,
+      "CUSTOMERID": 19270
+    },
+    {
+      "ACCOUNT": "2095 0004 02 0000000000",
+      "ACCOUNTID": 19952,
+      "CUSTOMERID": 19340
+    },
+    {
+      "ACCOUNT": "2095 0004 02 0000000000",
+      "ACCOUNTID": 19952,
+      "CUSTOMERID": 19353
+    },
+    {
+      "ACCOUNT": "2095 0003 34 5421513666",
+      "ACCOUNTID": 19953,
+      "CUSTOMERID": 19274
+    },
+    {
+      "ACCOUNT": "2095 0004 18 7885690283",
+      "ACCOUNTID": 19954,
+      "CUSTOMERID": 19323
+    },
+    {
+      "ACCOUNT": "2095 0103 21 7915330865",
+      "ACCOUNTID": 19955,
+      "CUSTOMERID": 19271
+    },
+    {
+      "ACCOUNT": "2095 0002 89 0859987448",
+      "ACCOUNTID": 19956,
+      "CUSTOMERID": 19353
+    },
+    {
+      "ACCOUNT": "2095 0002 89 0859987448",
+      "ACCOUNTID": 19956,
+      "CUSTOMERID": 19354
+    },
+    {
+      "ACCOUNT": "2095 0000 61 1944423538",
+      "ACCOUNTID": 19957,
+      "CUSTOMERID": 19320
+    },
+    {
+      "ACCOUNT": "2095 0004 56 2831532184",
+      "ACCOUNTID": 19958,
+      "CUSTOMERID": 19340
+    },
+    {
+      "ACCOUNT": "2095 0102 02 4605329055",
+      "ACCOUNTID": 19959,
+      "CUSTOMERID": 7511
+    },
+    {
+      "ACCOUNT": "2095 0002 53 2124973004",
+      "ACCOUNTID": 19960,
+      "CUSTOMERID": 19363
+    },
+    {
+      "ACCOUNT": "2095 0004 62 4209128511",
+      "ACCOUNTID": 19961,
+      "CUSTOMERID": 19323
+    },
+    {
+      "ACCOUNT": "2095 0070 17 7096256655",
+      "ACCOUNTID": 19962,
+      "CUSTOMERID": 19333
+    },
+    {
+      "ACCOUNT": "2095 0003 57 9497214042",
+      "ACCOUNTID": 19963,
+      "CUSTOMERID": 19365
+    },
+    {
+      "ACCOUNT": "2095 0004 07 3550721268",
+      "ACCOUNTID": 19964,
+      "CUSTOMERID": 19331
+    },
+    {
+      "ACCOUNT": "2095 1471 98 1000019976",
+      "ACCOUNTID": 19976,
+      "CUSTOMERID": 19381
+    }
+  ],
+  "sqlTypes": {
+    "ACCOUNT": 12,
+    "ACCOUNTID": 4,
+    "CUSTOMERID": 4
+  }
+}

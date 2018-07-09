@@ -5,12 +5,29 @@ export const MENU_CONFIG: MenuRootItem[] = [
   {
     id: 'views', name: 'VIEW', icon: 'remove_red_eye', opened: true,
     items: [{
-      id: 'customersTree',
-      name: 'CUSTOMERS_TREE',
-      tooltip: 'CUSTOMERS_TREE_CONTENT',
-      route: '/main/customersTree',
-      icon: 'people',
-      'show-in-card-menu': false
+      id: 'basic',
+      name: 'BASIC',
+      tooltip: 'BASIC_CONTENT',
+      route: '/main/basic',
+      icon: 'people'
+    }, {
+      id: 'nodes',
+      name: 'NODES',
+      tooltip: 'NODES_CONTENT',
+      route: '/main/nodes',
+      icon: 'people'
+    }, {
+      id: 'static',
+      name: 'STATIC',
+      tooltip: 'STATIC_CONTENT',
+      route: '/main/static',
+      icon: 'people'
+    }, {
+      id: 'detail',
+      name: 'DETAIL',
+      tooltip: 'DETAIL_CONTENT',
+      route: '/main/detail',
+      icon: 'people'
     }]
   },
   {

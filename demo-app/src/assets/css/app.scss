@@ -19,14 +19,14 @@
 @import 'node_modules/ontimize-web-ngx/theme.scss';
 @include o-material-theme($theme);
 
-@import 'node_modules/ontimize-web-ngx-filemanager/o-filemanager-table-theme.scss';
-@include o-filemanager-table-theme($theme);
 /*
 * Propagate theme to screen styles definition.
 */
 @import '../../app/login/login.theme.scss';
 @include login-theme($theme);
 
+@import '../../app/shared/example/example.theme.scss';
+@include example-component-theme($theme);
 
 /*
 * Other app styles

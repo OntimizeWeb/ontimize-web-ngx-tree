@@ -50,8 +50,6 @@
         visible-columns="ACCOUNT;BALANCE;STARTDATE;ENDDATE" title="ACCOUNTS" sort-columns="STARTDATE" query-on-init="false"
         query-rows="6" quick-filter="yes" pageable="no" insert-button="no" row-height="medium" class="vertical-padding-8">
 
-        <o-table-button (onClick)="onAddAccount()" label="ADD_ACCOUNT" icon="add"></o-table-button>
-
         <o-table-column attr="ACCOUNT" title="ACCOUNT" class="o-table-column-centered"></o-table-column>
         <o-table-column attr="STARTDATE" title="STARTDATE" type="date" format="LL"></o-table-column>
         <o-table-column attr="BALANCE" title="BALANCE" type="currency" currency-symbol="€" currency-symbol-position="right" thousand-separator="."
@@ -60,12 +58,6 @@
         <o-table-column attr="ENDDATE" title="ENDDATE" type="date" format="LL"></o-table-column>
       </o-table>
 
-    </mat-tab>
-
-    <mat-tab label="{{ 'DOCUMENTS' | oTranslate }}">
-      <div fxLayout="column" layout-padding>
-        <o-filemanager-table service="customers" workspace-key="ID_DMS_DOC" new-folder-button="yes"></o-filemanager-table>
-      </div>
     </mat-tab>
 
   </mat-tab-group>

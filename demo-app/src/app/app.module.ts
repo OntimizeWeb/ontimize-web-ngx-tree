@@ -12,9 +12,17 @@ import { CONFIG } from './app.config';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 
+import { DummyService } from './shared/services/dummy.service';
+export function getDummyServiceProvider(injector: Injector) {
+  return new DummyService(injector);
+}
+
 // Defining custom providers (if needed)...
-export const customProviders: any = [
-];
+export const customProviders: any = [{
+  provide: 'DummyService',
+  useFactory: getDummyServiceProvider,
+  deps: [Injector]
+}];
 
 @NgModule({
   imports: [

@@ -48,6 +48,7 @@ module.exports = {
     new GlobCopyWebpackPlugin({
       "patterns": [
         "assets/css/loader.css",
+        "assets/dummy-data",
         { "glob": "**/*", "input": "../node_modules/ontimize-web-ngx/assets/", "output": "./assets/" },
         "assets/i18n",
         "assets/images",

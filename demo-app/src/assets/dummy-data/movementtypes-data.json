@@ -1,0 +1,2094 @@
+{
+  "code": 0,
+  "message": "",
+  "data": [
+    {
+      "DESCRIPTION": "Transfer",
+      "ACCOUNTID": 1
+    },
+    {
+      "DESCRIPTION": "Salary",
+      "ACCOUNTID": 1
+    },
+    {
+      "DESCRIPTION": "Automatic Cash",
+      "ACCOUNTID": 1
+    },
+    {
+      "DESCRIPTION": "Banking fees",
+      "ACCOUNTID": 1
+    },
+    {
+      "DESCRIPTION": "Direct debit",
+      "ACCOUNTID": 2
+    },
+    {
+      "DESCRIPTION": "Automatic Cash",
+      "ACCOUNTID": 2
+    },
+    {
+      "DESCRIPTION": "Salary",
+      "ACCOUNTID": 2
+    },
+    {
+      "DESCRIPTION": "Banking fees",
+      "ACCOUNTID": 2
+    },
+    {
+      "DESCRIPTION": "Transfer",
+      "ACCOUNTID": 3
+    },
+    {
+      "DESCRIPTION": "Transfer",
+      "ACCOUNTID": 5
+    },
+    {
+      "DESCRIPTION": "Transfer",
+      "ACCOUNTID": 6
+    },
+    {
+      "DESCRIPTION": "Salary",
+      "ACCOUNTID": 6
+    },
+    {
+      "DESCRIPTION": "Direct debit",
+      "ACCOUNTID": 6
+    },
+    {
+      "DESCRIPTION": "Banking fees",
+      "ACCOUNTID": 6
+    },
+    {
+      "DESCRIPTION": "Automatic Cash",
+      "ACCOUNTID": 6
+    },
+    {
+      "DESCRIPTION": "Transfer",
+      "ACCOUNTID": 7
+    },
+    {
+      "DESCRIPTION": "Salary",
+      "ACCOUNTID": 7
+    },
+    {
+      "DESCRIPTION": "Transfer",
+      "ACCOUNTID": 8
+    },
+    {
+      "DESCRIPTION": "Banking fees",
+      "ACCOUNTID": 8
+    },
+    {
+      "DESCRIPTION": "Automatic Cash",
+      "ACCOUNTID": 8
+    },
+    {
+      "DESCRIPTION": "Direct debit",
+      "ACCOUNTID": 9
+    },
+    {
+      "DESCRIPTION": "Salary",
+      "ACCOUNTID": 9
+    },
+    {
+      "DESCRIPTION": "Salary",
+      "ACCOUNTID": 10
+    },
+    {
+      "DESCRIPTION": "Direct debit",
+      "ACCOUNTID": 10
+    },
+    {
+      "DESCRIPTION": "Direct debit",
+      "ACCOUNTID": 11
+    },
+    {
+      "DESCRIPTION": "Salary",
+      "ACCOUNTID": 11
+    },
+    {
+      "DESCRIPTION": "Banking fees",
+      "ACCOUNTID": 11
+    },
+    {
+      "DESCRIPTION": "Transfer",
+      "ACCOUNTID": 11
+    },
+    {
+      "DESCRIPTION": "Salary",
+      "ACCOUNTID": 27
+    },
+    {
+      "DESCRIPTION": "Direct debit",
+      "ACCOUNTID": 27
+    },
+    {
+      "DESCRIPTION": "Automatic Cash",
+      "ACCOUNTID": 27
+    },
+    {
+      "DESCRIPTION": "Banking fees",
+      "ACCOUNTID": 27
+    },
+    {
+      "DESCRIPTION": "Salary",
+      "ACCOUNTID": 36
+    },
+    {
+      "DESCRIPTION": "Transfer",
+      "ACCOUNTID": 36
+    },
+    {
+      "DESCRIPTION": "Automatic Cash",
+      "ACCOUNTID": 36
+    },
+    {
+      "DESCRIPTION": "Transfer",
+      "ACCOUNTID": 41
+    },
+    {
+      "DESCRIPTION": "Automatic Cash",
+      "ACCOUNTID": 7040
+    },
+    {
+      "DESCRIPTION": "Direct debit",
+      "ACCOUNTID": 7041
+    },
+    {
+      "DESCRIPTION": "Automatic Cash",
+      "ACCOUNTID": 7090
+    },
+    {
+      "DESCRIPTION": "Salary",
+      "ACCOUNTID": 7090
+    },
+    {
+      "DESCRIPTION": "Banking fees",
+      "ACCOUNTID": 7090
+    },
+    {
+      "DESCRIPTION": "Direct debit",
+      "ACCOUNTID": 7090
+    },
+    {
+      "DESCRIPTION": "Transfer",
+      "ACCOUNTID": 7090
+    },
+    {
+      "DESCRIPTION": "Salary",
+      "ACCOUNTID": 7091
+    },
+    {
+      "DESCRIPTION": "Automatic Cash",
+      "ACCOUNTID": 7091
+    },
+    {
+      "DESCRIPTION": "Transfer",
+      "ACCOUNTID": 7091
+    },
+    {
+      "DESCRIPTION": "Banking fees",
+      "ACCOUNTID": 7091
+    },
+    {
+      "DESCRIPTION": "Direct debit",
+      "ACCOUNTID": 7091
+    },
+    {
+      "DESCRIPTION": "Direct debit",
+      "ACCOUNTID": 7123
+    },
+    {
+      "DESCRIPTION": "Automatic Cash",
+      "ACCOUNTID": 7123
+    },
+    {
+      "DESCRIPTION": "Salary",
+      "ACCOUNTID": 7123
+    },
+    {
+      "DESCRIPTION": "Banking fees",
+      "ACCOUNTID": 7123
+    },
+    {
+      "DESCRIPTION": "Salary",
+      "ACCOUNTID": 7124
+    },
+    {
+      "DESCRIPTION": "Direct debit",
+      "ACCOUNTID": 7124
+    },
+    {
+      "DESCRIPTION": "Transfer",
+      "ACCOUNTID": 7124
+    },
+    {
+      "DESCRIPTION": "Banking fees",
+      "ACCOUNTID": 7124
+    },
+    {
+      "DESCRIPTION": "Automatic Cash",
+      "ACCOUNTID": 7124
+    },
+    {
+      "DESCRIPTION": "Transfer",
+      "ACCOUNTID": 7125
+    },
+    {
+      "DESCRIPTION": "Direct debit",
+      "ACCOUNTID": 7125
+    },
+    {
+      "DESCRIPTION": "Banking fees",
+      "ACCOUNTID": 7125
+    },
+    {
+      "DESCRIPTION": "Salary",
+      "ACCOUNTID": 7125
+    },
+    {
+      "DESCRIPTION": "Automatic Cash",
+      "ACCOUNTID": 7126
+    },
+    {
+      "DESCRIPTION": "Transfer",
+      "ACCOUNTID": 7126
+    },
+    {
+      "DESCRIPTION": "Direct debit",
+      "ACCOUNTID": 7126
+    },
+    {
+      "DESCRIPTION": "Salary",
+      "ACCOUNTID": 7126
+    },
+    {
+      "DESCRIPTION": "Transfer",
+      "ACCOUNTID": 7223
+    },
+    {
+      "DESCRIPTION": "Salary",
+      "ACCOUNTID": 7223
+    },
+    {
+      "DESCRIPTION": "Direct debit",
+      "ACCOUNTID": 7223
+    },
+    {
+      "DESCRIPTION": "Automatic Cash",
+      "ACCOUNTID": 7223
+    },
+    {
+      "DESCRIPTION": "Banking fees",
+      "ACCOUNTID": 7223
+    },
+    {
+      "DESCRIPTION": "Transfer",
+      "ACCOUNTID": 7224
+    },
+    {
+      "DESCRIPTION": "Automatic Cash",
+      "ACCOUNTID": 7224
+    },
+    {
+      "DESCRIPTION": "Direct debit",
+      "ACCOUNTID": 7224
+    },
+    {
+      "DESCRIPTION": "Salary",
+      "ACCOUNTID": 7224
+    },
+    {
+      "DESCRIPTION": "Banking fees",
+      "ACCOUNTID": 7224
+    },
+    {
+      "DESCRIPTION": "Transfer",
+      "ACCOUNTID": 7225
+    },
+    {
+      "DESCRIPTION": "Banking fees",
+      "ACCOUNTID": 7225
+    },
+    {
+      "DESCRIPTION": "Automatic Cash",
+      "ACCOUNTID": 7225
+    },
+    {
+      "DESCRIPTION": "Direct debit",
+      "ACCOUNTID": 7225
+    },
+    {
+      "DESCRIPTION": "Salary",
+      "ACCOUNTID": 7225
+    },
+    {
+      "DESCRIPTION": "Direct debit",
+      "ACCOUNTID": 7226
+    },
+    {
+      "DESCRIPTION": "Transfer",
+      "ACCOUNTID": 7226
+    },
+    {
+      "DESCRIPTION": "Salary",
+      "ACCOUNTID": 7226
+    },
+    {
+      "DESCRIPTION": "Automatic Cash",
+      "ACCOUNTID": 7226
+    },
+    {
+      "DESCRIPTION": "Banking fees",
+      "ACCOUNTID": 7226
+    },
+    {
+      "DESCRIPTION": "Salary",
+      "ACCOUNTID": 7296
+    },
+    {
+      "DESCRIPTION": "Transfer",
+      "ACCOUNTID": 7296
+    },
+    {
+      "DESCRIPTION": "Automatic Cash",
+      "ACCOUNTID": 7296
+    },
+    {
+      "DESCRIPTION": "Direct debit",
+      "ACCOUNTID": 7296
+    },
+    {
+      "DESCRIPTION": "Transfer",
+      "ACCOUNTID": 7297
+    },
+    {
+      "DESCRIPTION": "Automatic Cash",
+      "ACCOUNTID": 7297
+    },
+    {
+      "DESCRIPTION": "Banking fees",
+      "ACCOUNTID": 7297
+    },
+    {
+      "DESCRIPTION": "Salary",
+      "ACCOUNTID": 7297
+    },
+    {
+      "DESCRIPTION": "Direct debit",
+      "ACCOUNTID": 7297
+    },
+    {
+      "DESCRIPTION": "Direct debit",
+      "ACCOUNTID": 7298
+    },
+    {
+      "DESCRIPTION": "Banking fees",
+      "ACCOUNTID": 7298
+    },
+    {
+      "DESCRIPTION": "Automatic Cash",
+      "ACCOUNTID": 7298
+    },
+    {
+      "DESCRIPTION": "Transfer",
+      "ACCOUNTID": 7298
+    },
+    {
+      "DESCRIPTION": "Salary",
+      "ACCOUNTID": 7298
+    },
+    {
+      "DESCRIPTION": "Salary",
+      "ACCOUNTID": 7299
+    },
+    {
+      "DESCRIPTION": "Transfer",
+      "ACCOUNTID": 7299
+    },
+    {
+      "DESCRIPTION": "Automatic Cash",
+      "ACCOUNTID": 7299
+    },
+    {
+      "DESCRIPTION": "Direct debit",
+      "ACCOUNTID": 7299
+    },
+    {
+      "DESCRIPTION": "Banking fees",
+      "ACCOUNTID": 7299
+    },
+    {
+      "DESCRIPTION": "Salary",
+      "ACCOUNTID": 7300
+    },
+    {
+      "DESCRIPTION": "Banking fees",
+      "ACCOUNTID": 7300
+    },
+    {
+      "DESCRIPTION": "Transfer",
+      "ACCOUNTID": 7300
+    },
+    {
+      "DESCRIPTION": "Automatic Cash",
+      "ACCOUNTID": 7300
+    },
+    {
+      "DESCRIPTION": "Automatic Cash",
+      "ACCOUNTID": 7301
+    },
+    {
+      "DESCRIPTION": "Salary",
+      "ACCOUNTID": 7301
+    },
+    {
+      "DESCRIPTION": "Transfer",
+      "ACCOUNTID": 7301
+    },
+    {
+      "DESCRIPTION": "Direct debit",
+      "ACCOUNTID": 7301
+    },
+    {
+      "DESCRIPTION": "Banking fees",
+      "ACCOUNTID": 7301
+    },
+    {
+      "DESCRIPTION": "Automatic Cash",
+      "ACCOUNTID": 7302
+    },
+    {
+      "DESCRIPTION": "Banking fees",
+      "ACCOUNTID": 7302
+    },
+    {
+      "DESCRIPTION": "Transfer",
+      "ACCOUNTID": 7302
+    },
+    {
+      "DESCRIPTION": "Direct debit",
+      "ACCOUNTID": 7302
+    },
+    {
+      "DESCRIPTION": "Salary",
+      "ACCOUNTID": 7303
+    },
+    {
+      "DESCRIPTION": "Banking fees",
+      "ACCOUNTID": 7303
+    },
+    {
+      "DESCRIPTION": "Transfer",
+      "ACCOUNTID": 7303
+    },
+    {
+      "DESCRIPTION": "Automatic Cash",
+      "ACCOUNTID": 7303
+    },
+    {
+      "DESCRIPTION": "Direct debit",
+      "ACCOUNTID": 7303
+    },
+    {
+      "DESCRIPTION": "Direct debit",
+      "ACCOUNTID": 7304
+    },
+    {
+      "DESCRIPTION": "Automatic Cash",
+      "ACCOUNTID": 7304
+    },
+    {
+      "DESCRIPTION": "Banking fees",
+      "ACCOUNTID": 7304
+    },
+    {
+      "DESCRIPTION": "Salary",
+      "ACCOUNTID": 7304
+    },
+    {
+      "DESCRIPTION": "Transfer",
+      "ACCOUNTID": 7304
+    },
+    {
+      "DESCRIPTION": "Salary",
+      "ACCOUNTID": 7305
+    },
+    {
+      "DESCRIPTION": "Automatic Cash",
+      "ACCOUNTID": 7305
+    },
+    {
+      "DESCRIPTION": "Banking fees",
+      "ACCOUNTID": 7305
+    },
+    {
+      "DESCRIPTION": "Transfer",
+      "ACCOUNTID": 7305
+    },
+    {
+      "DESCRIPTION": "Direct debit",
+      "ACCOUNTID": 7305
+    },
+    {
+      "DESCRIPTION": "Salary",
+      "ACCOUNTID": 7306
+    },
+    {
+      "DESCRIPTION": "Transfer",
+      "ACCOUNTID": 7306
+    },
+    {
+      "DESCRIPTION": "Banking fees",
+      "ACCOUNTID": 7306
+    },
+    {
+      "DESCRIPTION": "Automatic Cash",
+      "ACCOUNTID": 7306
+    },
+    {
+      "DESCRIPTION": "Banking fees",
+      "ACCOUNTID": 7307
+    },
+    {
+      "DESCRIPTION": "Salary",
+      "ACCOUNTID": 7307
+    },
+    {
+      "DESCRIPTION": "Transfer",
+      "ACCOUNTID": 7307
+    },
+    {
+      "DESCRIPTION": "Automatic Cash",
+      "ACCOUNTID": 7307
+    },
+    {
+      "DESCRIPTION": "Salary",
+      "ACCOUNTID": 7308
+    },
+    {
+      "DESCRIPTION": "Automatic Cash",
+      "ACCOUNTID": 7308
+    },
+    {
+      "DESCRIPTION": "Direct debit",
+      "ACCOUNTID": 7308
+    },
+    {
+      "DESCRIPTION": "Transfer",
+      "ACCOUNTID": 7309
+    },
+    {
+      "DESCRIPTION": "Automatic Cash",
+      "ACCOUNTID": 7309
+    },
+    {
+      "DESCRIPTION": "Salary",
+      "ACCOUNTID": 7309
+    },
+    {
+      "DESCRIPTION": "Direct debit",
+      "ACCOUNTID": 7309
+    },
+    {
+      "DESCRIPTION": "Automatic Cash",
+      "ACCOUNTID": 7310
+    },
+    {
+      "DESCRIPTION": "Transfer",
+      "ACCOUNTID": 7310
+    },
+    {
+      "DESCRIPTION": "Salary",
+      "ACCOUNTID": 7310
+    },
+    {
+      "DESCRIPTION": "Banking fees",
+      "ACCOUNTID": 7310
+    },
+    {
+      "DESCRIPTION": "Direct debit",
+      "ACCOUNTID": 7310
+    },
+    {
+      "DESCRIPTION": "Automatic Cash",
+      "ACCOUNTID": 19370
+    },
+    {
+      "DESCRIPTION": "Direct debit",
+      "ACCOUNTID": 19370
+    },
+    {
+      "DESCRIPTION": "Banking fees",
+      "ACCOUNTID": 19370
+    },
+    {
+      "DESCRIPTION": "Salary",
+      "ACCOUNTID": 19371
+    },
+    {
+      "DESCRIPTION": "Transfer",
+      "ACCOUNTID": 19371
+    },
+    {
+      "DESCRIPTION": "Automatic Cash",
+      "ACCOUNTID": 19371
+    },
+    {
+      "DESCRIPTION": "Banking fees",
+      "ACCOUNTID": 19371
+    },
+    {
+      "DESCRIPTION": "Banking fees",
+      "ACCOUNTID": 19372
+    },
+    {
+      "DESCRIPTION": "Automatic Cash",
+      "ACCOUNTID": 19372
+    },
+    {
+      "DESCRIPTION": "Salary",
+      "ACCOUNTID": 19372
+    },
+    {
+      "DESCRIPTION": "Transfer",
+      "ACCOUNTID": 19372
+    },
+    {
+      "DESCRIPTION": "Direct debit",
+      "ACCOUNTID": 19372
+    },
+    {
+      "DESCRIPTION": "Automatic Cash",
+      "ACCOUNTID": 19373
+    },
+    {
+      "DESCRIPTION": "Salary",
+      "ACCOUNTID": 19373
+    },
+    {
+      "DESCRIPTION": "Direct debit",
+      "ACCOUNTID": 19373
+    },
+    {
+      "DESCRIPTION": "Transfer",
+      "ACCOUNTID": 19373
+    },
+    {
+      "DESCRIPTION": "Automatic Cash",
+      "ACCOUNTID": 19374
+    },
+    {
+      "DESCRIPTION": "Salary",
+      "ACCOUNTID": 19374
+    },
+    {
+      "DESCRIPTION": "Transfer",
+      "ACCOUNTID": 19374
+    },
+    {
+      "DESCRIPTION": "Banking fees",
+      "ACCOUNTID": 19374
+    },
+    {
+      "DESCRIPTION": "Direct debit",
+      "ACCOUNTID": 19374
+    },
+    {
+      "DESCRIPTION": "Transfer",
+      "ACCOUNTID": 19375
+    },
+    {
+      "DESCRIPTION": "Salary",
+      "ACCOUNTID": 19375
+    },
+    {
+      "DESCRIPTION": "Automatic Cash",
+      "ACCOUNTID": 19375
+    },
+    {
+      "DESCRIPTION": "Direct debit",
+      "ACCOUNTID": 19375
+    },
+    {
+      "DESCRIPTION": "Salary",
+      "ACCOUNTID": 19376
+    },
+    {
+      "DESCRIPTION": "Direct debit",
+      "ACCOUNTID": 19376
+    },
+    {
+      "DESCRIPTION": "Transfer",
+      "ACCOUNTID": 19376
+    },
+    {
+      "DESCRIPTION": "Automatic Cash",
+      "ACCOUNTID": 19376
+    },
+    {
+      "DESCRIPTION": "Banking fees",
+      "ACCOUNTID": 19376
+    },
+    {
+      "DESCRIPTION": "Direct debit",
+      "ACCOUNTID": 19377
+    },
+    {
+      "DESCRIPTION": "Transfer",
+      "ACCOUNTID": 19377
+    },
+    {
+      "DESCRIPTION": "Salary",
+      "ACCOUNTID": 19377
+    },
+    {
+      "DESCRIPTION": "Automatic Cash",
+      "ACCOUNTID": 19377
+    },
+    {
+      "DESCRIPTION": "Banking fees",
+      "ACCOUNTID": 19377
+    },
+    {
+      "DESCRIPTION": "Transfer",
+      "ACCOUNTID": 19378
+    },
+    {
+      "DESCRIPTION": "Direct debit",
+      "ACCOUNTID": 19378
+    },
+    {
+      "DESCRIPTION": "Banking fees",
+      "ACCOUNTID": 19378
+    },
+    {
+      "DESCRIPTION": "Salary",
+      "ACCOUNTID": 19378
+    },
+    {
+      "DESCRIPTION": "Automatic Cash",
+      "ACCOUNTID": 19378
+    },
+    {
+      "DESCRIPTION": "Automatic Cash",
+      "ACCOUNTID": 19379
+    },
+    {
+      "DESCRIPTION": "Banking fees",
+      "ACCOUNTID": 19379
+    },
+    {
+      "DESCRIPTION": "Direct debit",
+      "ACCOUNTID": 19379
+    },
+    {
+      "DESCRIPTION": "Transfer",
+      "ACCOUNTID": 19380
+    },
+    {
+      "DESCRIPTION": "Salary",
+      "ACCOUNTID": 19380
+    },
+    {
+      "DESCRIPTION": "Direct debit",
+      "ACCOUNTID": 19380
+    },
+    {
+      "DESCRIPTION": "Automatic Cash",
+      "ACCOUNTID": 19380
+    },
+    {
+      "DESCRIPTION": "Banking fees",
+      "ACCOUNTID": 19380
+    },
+    {
+      "DESCRIPTION": "Transfer",
+      "ACCOUNTID": 19381
+    },
+    {
+      "DESCRIPTION": "Automatic Cash",
+      "ACCOUNTID": 19381
+    },
+    {
+      "DESCRIPTION": "Banking fees",
+      "ACCOUNTID": 19381
+    },
+    {
+      "DESCRIPTION": "Direct debit",
+      "ACCOUNTID": 19381
+    },
+    {
+      "DESCRIPTION": "Salary",
+      "ACCOUNTID": 19381
+    },
+    {
+      "DESCRIPTION": "Direct debit",
+      "ACCOUNTID": 19382
+    },
+    {
+      "DESCRIPTION": "Banking fees",
+      "ACCOUNTID": 19382
+    },
+    {
+      "DESCRIPTION": "Automatic Cash",
+      "ACCOUNTID": 19382
+    },
+    {
+      "DESCRIPTION": "Transfer",
+      "ACCOUNTID": 19382
+    },
+    {
+      "DESCRIPTION": "Salary",
+      "ACCOUNTID": 19382
+    },
+    {
+      "DESCRIPTION": "Automatic Cash",
+      "ACCOUNTID": 19383
+    },
+    {
+      "DESCRIPTION": "Direct debit",
+      "ACCOUNTID": 19383
+    },
+    {
+      "DESCRIPTION": "Banking fees",
+      "ACCOUNTID": 19383
+    },
+    {
+      "DESCRIPTION": "Transfer",
+      "ACCOUNTID": 19383
+    },
+    {
+      "DESCRIPTION": "Salary",
+      "ACCOUNTID": 19383
+    },
+    {
+      "DESCRIPTION": "Automatic Cash",
+      "ACCOUNTID": 19384
+    },
+    {
+      "DESCRIPTION": "Transfer",
+      "ACCOUNTID": 19384
+    },
+    {
+      "DESCRIPTION": "Banking fees",
+      "ACCOUNTID": 19384
+    },
+    {
+      "DESCRIPTION": "Salary",
+      "ACCOUNTID": 19384
+    },
+    {
+      "DESCRIPTION": "Automatic Cash",
+      "ACCOUNTID": 19620
+    },
+    {
+      "DESCRIPTION": "Direct debit",
+      "ACCOUNTID": 19620
+    },
+    {
+      "DESCRIPTION": "Banking fees",
+      "ACCOUNTID": 19620
+    },
+    {
+      "DESCRIPTION": "Direct debit",
+      "ACCOUNTID": 19621
+    },
+    {
+      "DESCRIPTION": "Transfer",
+      "ACCOUNTID": 19621
+    },
+    {
+      "DESCRIPTION": "Banking fees",
+      "ACCOUNTID": 19621
+    },
+    {
+      "DESCRIPTION": "Automatic Cash",
+      "ACCOUNTID": 19621
+    },
+    {
+      "DESCRIPTION": "Salary",
+      "ACCOUNTID": 19621
+    },
+    {
+      "DESCRIPTION": "Direct debit",
+      "ACCOUNTID": 19622
+    },
+    {
+      "DESCRIPTION": "Salary",
+      "ACCOUNTID": 19622
+    },
+    {
+      "DESCRIPTION": "Automatic Cash",
+      "ACCOUNTID": 19622
+    },
+    {
+      "DESCRIPTION": "Transfer",
+      "ACCOUNTID": 19622
+    },
+    {
+      "DESCRIPTION": "Automatic Cash",
+      "ACCOUNTID": 19623
+    },
+    {
+      "DESCRIPTION": "Salary",
+      "ACCOUNTID": 19623
+    },
+    {
+      "DESCRIPTION": "Direct debit",
+      "ACCOUNTID": 19624
+    },
+    {
+      "DESCRIPTION": "Transfer",
+      "ACCOUNTID": 19624
+    },
+    {
+      "DESCRIPTION": "Salary",
+      "ACCOUNTID": 19624
+    },
+    {
+      "DESCRIPTION": "Automatic Cash",
+      "ACCOUNTID": 19624
+    },
+    {
+      "DESCRIPTION": "Banking fees",
+      "ACCOUNTID": 19624
+    },
+    {
+      "DESCRIPTION": "Direct debit",
+      "ACCOUNTID": 19625
+    },
+    {
+      "DESCRIPTION": "Banking fees",
+      "ACCOUNTID": 19625
+    },
+    {
+      "DESCRIPTION": "Automatic Cash",
+      "ACCOUNTID": 19625
+    },
+    {
+      "DESCRIPTION": "Transfer",
+      "ACCOUNTID": 19625
+    },
+    {
+      "DESCRIPTION": "Direct debit",
+      "ACCOUNTID": 19626
+    },
+    {
+      "DESCRIPTION": "Transfer",
+      "ACCOUNTID": 19626
+    },
+    {
+      "DESCRIPTION": "Banking fees",
+      "ACCOUNTID": 19626
+    },
+    {
+      "DESCRIPTION": "Automatic Cash",
+      "ACCOUNTID": 19626
+    },
+    {
+      "DESCRIPTION": "Salary",
+      "ACCOUNTID": 19626
+    },
+    {
+      "DESCRIPTION": "Direct debit",
+      "ACCOUNTID": 19627
+    },
+    {
+      "DESCRIPTION": "Automatic Cash",
+      "ACCOUNTID": 19627
+    },
+    {
+      "DESCRIPTION": "Transfer",
+      "ACCOUNTID": 19627
+    },
+    {
+      "DESCRIPTION": "Salary",
+      "ACCOUNTID": 19627
+    },
+    {
+      "DESCRIPTION": "Banking fees",
+      "ACCOUNTID": 19627
+    },
+    {
+      "DESCRIPTION": "Banking fees",
+      "ACCOUNTID": 19628
+    },
+    {
+      "DESCRIPTION": "Direct debit",
+      "ACCOUNTID": 19628
+    },
+    {
+      "DESCRIPTION": "Salary",
+      "ACCOUNTID": 19628
+    },
+    {
+      "DESCRIPTION": "Automatic Cash",
+      "ACCOUNTID": 19628
+    },
+    {
+      "DESCRIPTION": "Transfer",
+      "ACCOUNTID": 19628
+    },
+    {
+      "DESCRIPTION": "Banking fees",
+      "ACCOUNTID": 19629
+    },
+    {
+      "DESCRIPTION": "Salary",
+      "ACCOUNTID": 19629
+    },
+    {
+      "DESCRIPTION": "Automatic Cash",
+      "ACCOUNTID": 19629
+    },
+    {
+      "DESCRIPTION": "Direct debit",
+      "ACCOUNTID": 19629
+    },
+    {
+      "DESCRIPTION": "Automatic Cash",
+      "ACCOUNTID": 19630
+    },
+    {
+      "DESCRIPTION": "Direct debit",
+      "ACCOUNTID": 19630
+    },
+    {
+      "DESCRIPTION": "Salary",
+      "ACCOUNTID": 19630
+    },
+    {
+      "DESCRIPTION": "Banking fees",
+      "ACCOUNTID": 19630
+    },
+    {
+      "DESCRIPTION": "Transfer",
+      "ACCOUNTID": 19630
+    },
+    {
+      "DESCRIPTION": "Salary",
+      "ACCOUNTID": 19631
+    },
+    {
+      "DESCRIPTION": "Direct debit",
+      "ACCOUNTID": 19631
+    },
+    {
+      "DESCRIPTION": "Automatic Cash",
+      "ACCOUNTID": 19631
+    },
+    {
+      "DESCRIPTION": "Banking fees",
+      "ACCOUNTID": 19631
+    },
+    {
+      "DESCRIPTION": "Salary",
+      "ACCOUNTID": 19632
+    },
+    {
+      "DESCRIPTION": "Automatic Cash",
+      "ACCOUNTID": 19632
+    },
+    {
+      "DESCRIPTION": "Banking fees",
+      "ACCOUNTID": 19632
+    },
+    {
+      "DESCRIPTION": "Transfer",
+      "ACCOUNTID": 19632
+    },
+    {
+      "DESCRIPTION": "Direct debit",
+      "ACCOUNTID": 19632
+    },
+    {
+      "DESCRIPTION": "Banking fees",
+      "ACCOUNTID": 19633
+    },
+    {
+      "DESCRIPTION": "Transfer",
+      "ACCOUNTID": 19633
+    },
+    {
+      "DESCRIPTION": "Salary",
+      "ACCOUNTID": 19633
+    },
+    {
+      "DESCRIPTION": "Direct debit",
+      "ACCOUNTID": 19633
+    },
+    {
+      "DESCRIPTION": "Automatic Cash",
+      "ACCOUNTID": 19633
+    },
+    {
+      "DESCRIPTION": "Banking fees",
+      "ACCOUNTID": 19634
+    },
+    {
+      "DESCRIPTION": "Direct debit",
+      "ACCOUNTID": 19634
+    },
+    {
+      "DESCRIPTION": "Salary",
+      "ACCOUNTID": 19634
+    },
+    {
+      "DESCRIPTION": "Automatic Cash",
+      "ACCOUNTID": 19634
+    },
+    {
+      "DESCRIPTION": "Transfer",
+      "ACCOUNTID": 19634
+    },
+    {
+      "DESCRIPTION": "Automatic Cash",
+      "ACCOUNTID": 19635
+    },
+    {
+      "DESCRIPTION": "Salary",
+      "ACCOUNTID": 19635
+    },
+    {
+      "DESCRIPTION": "Direct debit",
+      "ACCOUNTID": 19635
+    },
+    {
+      "DESCRIPTION": "Banking fees",
+      "ACCOUNTID": 19635
+    },
+    {
+      "DESCRIPTION": "Transfer",
+      "ACCOUNTID": 19635
+    },
+    {
+      "DESCRIPTION": "Automatic Cash",
+      "ACCOUNTID": 19636
+    },
+    {
+      "DESCRIPTION": "Salary",
+      "ACCOUNTID": 19636
+    },
+    {
+      "DESCRIPTION": "Banking fees",
+      "ACCOUNTID": 19636
+    },
+    {
+      "DESCRIPTION": "Transfer",
+      "ACCOUNTID": 19636
+    },
+    {
+      "DESCRIPTION": "Direct debit",
+      "ACCOUNTID": 19636
+    },
+    {
+      "DESCRIPTION": "Transfer",
+      "ACCOUNTID": 19637
+    },
+    {
+      "DESCRIPTION": "Salary",
+      "ACCOUNTID": 19637
+    },
+    {
+      "DESCRIPTION": "Automatic Cash",
+      "ACCOUNTID": 19637
+    },
+    {
+      "DESCRIPTION": "Banking fees",
+      "ACCOUNTID": 19637
+    },
+    {
+      "DESCRIPTION": "Salary",
+      "ACCOUNTID": 19638
+    },
+    {
+      "DESCRIPTION": "Transfer",
+      "ACCOUNTID": 19638
+    },
+    {
+      "DESCRIPTION": "Banking fees",
+      "ACCOUNTID": 19638
+    },
+    {
+      "DESCRIPTION": "Direct debit",
+      "ACCOUNTID": 19638
+    },
+    {
+      "DESCRIPTION": "Automatic Cash",
+      "ACCOUNTID": 19638
+    },
+    {
+      "DESCRIPTION": "Automatic Cash",
+      "ACCOUNTID": 19639
+    },
+    {
+      "DESCRIPTION": "Transfer",
+      "ACCOUNTID": 19639
+    },
+    {
+      "DESCRIPTION": "Salary",
+      "ACCOUNTID": 19639
+    },
+    {
+      "DESCRIPTION": "Banking fees",
+      "ACCOUNTID": 19639
+    },
+    {
+      "DESCRIPTION": "Direct debit",
+      "ACCOUNTID": 19639
+    },
+    {
+      "DESCRIPTION": "Automatic Cash",
+      "ACCOUNTID": 19920
+    },
+    {
+      "DESCRIPTION": "Direct debit",
+      "ACCOUNTID": 19920
+    },
+    {
+      "DESCRIPTION": "Banking fees",
+      "ACCOUNTID": 19920
+    },
+    {
+      "DESCRIPTION": "Transfer",
+      "ACCOUNTID": 19920
+    },
+    {
+      "DESCRIPTION": "Transfer",
+      "ACCOUNTID": 19921
+    },
+    {
+      "DESCRIPTION": "Direct debit",
+      "ACCOUNTID": 19921
+    },
+    {
+      "DESCRIPTION": "Automatic Cash",
+      "ACCOUNTID": 19921
+    },
+    {
+      "DESCRIPTION": "Salary",
+      "ACCOUNTID": 19921
+    },
+    {
+      "DESCRIPTION": "Banking fees",
+      "ACCOUNTID": 19922
+    },
+    {
+      "DESCRIPTION": "Automatic Cash",
+      "ACCOUNTID": 19922
+    },
+    {
+      "DESCRIPTION": "Salary",
+      "ACCOUNTID": 19922
+    },
+    {
+      "DESCRIPTION": "Direct debit",
+      "ACCOUNTID": 19922
+    },
+    {
+      "DESCRIPTION": "Transfer",
+      "ACCOUNTID": 19922
+    },
+    {
+      "DESCRIPTION": "Salary",
+      "ACCOUNTID": 19923
+    },
+    {
+      "DESCRIPTION": "Transfer",
+      "ACCOUNTID": 19923
+    },
+    {
+      "DESCRIPTION": "Direct debit",
+      "ACCOUNTID": 19923
+    },
+    {
+      "DESCRIPTION": "Banking fees",
+      "ACCOUNTID": 19923
+    },
+    {
+      "DESCRIPTION": "Salary",
+      "ACCOUNTID": 19924
+    },
+    {
+      "DESCRIPTION": "Automatic Cash",
+      "ACCOUNTID": 19924
+    },
+    {
+      "DESCRIPTION": "Banking fees",
+      "ACCOUNTID": 19924
+    },
+    {
+      "DESCRIPTION": "Direct debit",
+      "ACCOUNTID": 19924
+    },
+    {
+      "DESCRIPTION": "Direct debit",
+      "ACCOUNTID": 19925
+    },
+    {
+      "DESCRIPTION": "Automatic Cash",
+      "ACCOUNTID": 19925
+    },
+    {
+      "DESCRIPTION": "Transfer",
+      "ACCOUNTID": 19925
+    },
+    {
+      "DESCRIPTION": "Salary",
+      "ACCOUNTID": 19925
+    },
+    {
+      "DESCRIPTION": "Banking fees",
+      "ACCOUNTID": 19925
+    },
+    {
+      "DESCRIPTION": "Banking fees",
+      "ACCOUNTID": 19926
+    },
+    {
+      "DESCRIPTION": "Transfer",
+      "ACCOUNTID": 19926
+    },
+    {
+      "DESCRIPTION": "Automatic Cash",
+      "ACCOUNTID": 19926
+    },
+    {
+      "DESCRIPTION": "Direct debit",
+      "ACCOUNTID": 19926
+    },
+    {
+      "DESCRIPTION": "Salary",
+      "ACCOUNTID": 19926
+    },
+    {
+      "DESCRIPTION": "Transfer",
+      "ACCOUNTID": 19927
+    },
+    {
+      "DESCRIPTION": "Direct debit",
+      "ACCOUNTID": 19927
+    },
+    {
+      "DESCRIPTION": "Salary",
+      "ACCOUNTID": 19927
+    },
+    {
+      "DESCRIPTION": "Banking fees",
+      "ACCOUNTID": 19927
+    },
+    {
+      "DESCRIPTION": "Automatic Cash",
+      "ACCOUNTID": 19927
+    },
+    {
+      "DESCRIPTION": "Direct debit",
+      "ACCOUNTID": 19928
+    },
+    {
+      "DESCRIPTION": "Automatic Cash",
+      "ACCOUNTID": 19928
+    },
+    {
+      "DESCRIPTION": "Transfer",
+      "ACCOUNTID": 19928
+    },
+    {
+      "DESCRIPTION": "Banking fees",
+      "ACCOUNTID": 19928
+    },
+    {
+      "DESCRIPTION": "Salary",
+      "ACCOUNTID": 19928
+    },
+    {
+      "DESCRIPTION": "Banking fees",
+      "ACCOUNTID": 19929
+    },
+    {
+      "DESCRIPTION": "Transfer",
+      "ACCOUNTID": 19929
+    },
+    {
+      "DESCRIPTION": "Automatic Cash",
+      "ACCOUNTID": 19929
+    },
+    {
+      "DESCRIPTION": "Automatic Cash",
+      "ACCOUNTID": 19930
+    },
+    {
+      "DESCRIPTION": "Direct debit",
+      "ACCOUNTID": 19930
+    },
+    {
+      "DESCRIPTION": "Transfer",
+      "ACCOUNTID": 19930
+    },
+    {
+      "DESCRIPTION": "Salary",
+      "ACCOUNTID": 19930
+    },
+    {
+      "DESCRIPTION": "Banking fees",
+      "ACCOUNTID": 19930
+    },
+    {
+      "DESCRIPTION": "Direct debit",
+      "ACCOUNTID": 19931
+    },
+    {
+      "DESCRIPTION": "Transfer",
+      "ACCOUNTID": 19931
+    },
+    {
+      "DESCRIPTION": "Automatic Cash",
+      "ACCOUNTID": 19931
+    },
+    {
+      "DESCRIPTION": "Salary",
+      "ACCOUNTID": 19931
+    },
+    {
+      "DESCRIPTION": "Banking fees",
+      "ACCOUNTID": 19931
+    },
+    {
+      "DESCRIPTION": "Salary",
+      "ACCOUNTID": 19932
+    },
+    {
+      "DESCRIPTION": "Banking fees",
+      "ACCOUNTID": 19932
+    },
+    {
+      "DESCRIPTION": "Direct debit",
+      "ACCOUNTID": 19932
+    },
+    {
+      "DESCRIPTION": "Transfer",
+      "ACCOUNTID": 19932
+    },
+    {
+      "DESCRIPTION": "Automatic Cash",
+      "ACCOUNTID": 19933
+    },
+    {
+      "DESCRIPTION": "Direct debit",
+      "ACCOUNTID": 19933
+    },
+    {
+      "DESCRIPTION": "Salary",
+      "ACCOUNTID": 19933
+    },
+    {
+      "DESCRIPTION": "Transfer",
+      "ACCOUNTID": 19933
+    },
+    {
+      "DESCRIPTION": "Salary",
+      "ACCOUNTID": 19934
+    },
+    {
+      "DESCRIPTION": "Direct debit",
+      "ACCOUNTID": 19934
+    },
+    {
+      "DESCRIPTION": "Automatic Cash",
+      "ACCOUNTID": 19934
+    },
+    {
+      "DESCRIPTION": "Transfer",
+      "ACCOUNTID": 19934
+    },
+    {
+      "DESCRIPTION": "Banking fees",
+      "ACCOUNTID": 19934
+    },
+    {
+      "DESCRIPTION": "Salary",
+      "ACCOUNTID": 19935
+    },
+    {
+      "DESCRIPTION": "Automatic Cash",
+      "ACCOUNTID": 19935
+    },
+    {
+      "DESCRIPTION": "Transfer",
+      "ACCOUNTID": 19935
+    },
+    {
+      "DESCRIPTION": "Banking fees",
+      "ACCOUNTID": 19935
+    },
+    {
+      "DESCRIPTION": "Direct debit",
+      "ACCOUNTID": 19935
+    },
+    {
+      "DESCRIPTION": "Transfer",
+      "ACCOUNTID": 19936
+    },
+    {
+      "DESCRIPTION": "Direct debit",
+      "ACCOUNTID": 19936
+    },
+    {
+      "DESCRIPTION": "Banking fees",
+      "ACCOUNTID": 19936
+    },
+    {
+      "DESCRIPTION": "Automatic Cash",
+      "ACCOUNTID": 19936
+    },
+    {
+      "DESCRIPTION": "Salary",
+      "ACCOUNTID": 19936
+    },
+    {
+      "DESCRIPTION": "Transfer",
+      "ACCOUNTID": 19937
+    },
+    {
+      "DESCRIPTION": "Automatic Cash",
+      "ACCOUNTID": 19937
+    },
+    {
+      "DESCRIPTION": "Direct debit",
+      "ACCOUNTID": 19937
+    },
+    {
+      "DESCRIPTION": "Salary",
+      "ACCOUNTID": 19937
+    },
+    {
+      "DESCRIPTION": "Banking fees",
+      "ACCOUNTID": 19937
+    },
+    {
+      "DESCRIPTION": "Banking fees",
+      "ACCOUNTID": 19938
+    },
+    {
+      "DESCRIPTION": "Direct debit",
+      "ACCOUNTID": 19938
+    },
+    {
+      "DESCRIPTION": "Salary",
+      "ACCOUNTID": 19938
+    },
+    {
+      "DESCRIPTION": "Automatic Cash",
+      "ACCOUNTID": 19938
+    },
+    {
+      "DESCRIPTION": "Transfer",
+      "ACCOUNTID": 19938
+    },
+    {
+      "DESCRIPTION": "Direct debit",
+      "ACCOUNTID": 19939
+    },
+    {
+      "DESCRIPTION": "Banking fees",
+      "ACCOUNTID": 19939
+    },
+    {
+      "DESCRIPTION": "Automatic Cash",
+      "ACCOUNTID": 19939
+    },
+    {
+      "DESCRIPTION": "Salary",
+      "ACCOUNTID": 19939
+    },
+    {
+      "DESCRIPTION": "Banking fees",
+      "ACCOUNTID": 19940
+    },
+    {
+      "DESCRIPTION": "Salary",
+      "ACCOUNTID": 19940
+    },
+    {
+      "DESCRIPTION": "Automatic Cash",
+      "ACCOUNTID": 19940
+    },
+    {
+      "DESCRIPTION": "Direct debit",
+      "ACCOUNTID": 19940
+    },
+    {
+      "DESCRIPTION": "Salary",
+      "ACCOUNTID": 19941
+    },
+    {
+      "DESCRIPTION": "Transfer",
+      "ACCOUNTID": 19941
+    },
+    {
+      "DESCRIPTION": "Direct debit",
+      "ACCOUNTID": 19941
+    },
+    {
+      "DESCRIPTION": "Banking fees",
+      "ACCOUNTID": 19941
+    },
+    {
+      "DESCRIPTION": "Automatic Cash",
+      "ACCOUNTID": 19941
+    },
+    {
+      "DESCRIPTION": "Automatic Cash",
+      "ACCOUNTID": 19942
+    },
+    {
+      "DESCRIPTION": "Direct debit",
+      "ACCOUNTID": 19942
+    },
+    {
+      "DESCRIPTION": "Transfer",
+      "ACCOUNTID": 19942
+    },
+    {
+      "DESCRIPTION": "Salary",
+      "ACCOUNTID": 19942
+    },
+    {
+      "DESCRIPTION": "Banking fees",
+      "ACCOUNTID": 19942
+    },
+    {
+      "DESCRIPTION": "Transfer",
+      "ACCOUNTID": 19943
+    },
+    {
+      "DESCRIPTION": "Salary",
+      "ACCOUNTID": 19943
+    },
+    {
+      "DESCRIPTION": "Automatic Cash",
+      "ACCOUNTID": 19943
+    },
+    {
+      "DESCRIPTION": "Banking fees",
+      "ACCOUNTID": 19943
+    },
+    {
+      "DESCRIPTION": "Direct debit",
+      "ACCOUNTID": 19943
+    },
+    {
+      "DESCRIPTION": "Salary",
+      "ACCOUNTID": 19944
+    },
+    {
+      "DESCRIPTION": "Transfer",
+      "ACCOUNTID": 19944
+    },
+    {
+      "DESCRIPTION": "Automatic Cash",
+      "ACCOUNTID": 19944
+    },
+    {
+      "DESCRIPTION": "Banking fees",
+      "ACCOUNTID": 19944
+    },
+    {
+      "DESCRIPTION": "Direct debit",
+      "ACCOUNTID": 19944
+    },
+    {
+      "DESCRIPTION": "Salary",
+      "ACCOUNTID": 19945
+    },
+    {
+      "DESCRIPTION": "Banking fees",
+      "ACCOUNTID": 19945
+    },
+    {
+      "DESCRIPTION": "Direct debit",
+      "ACCOUNTID": 19945
+    },
+    {
+      "DESCRIPTION": "Automatic Cash",
+      "ACCOUNTID": 19945
+    },
+    {
+      "DESCRIPTION": "Transfer",
+      "ACCOUNTID": 19945
+    },
+    {
+      "DESCRIPTION": "Banking fees",
+      "ACCOUNTID": 19946
+    },
+    {
+      "DESCRIPTION": "Automatic Cash",
+      "ACCOUNTID": 19946
+    },
+    {
+      "DESCRIPTION": "Transfer",
+      "ACCOUNTID": 19946
+    },
+    {
+      "DESCRIPTION": "Direct debit",
+      "ACCOUNTID": 19946
+    },
+    {
+      "DESCRIPTION": "Salary",
+      "ACCOUNTID": 19946
+    },
+    {
+      "DESCRIPTION": "Banking fees",
+      "ACCOUNTID": 19947
+    },
+    {
+      "DESCRIPTION": "Direct debit",
+      "ACCOUNTID": 19947
+    },
+    {
+      "DESCRIPTION": "Salary",
+      "ACCOUNTID": 19947
+    },
+    {
+      "DESCRIPTION": "Transfer",
+      "ACCOUNTID": 19947
+    },
+    {
+      "DESCRIPTION": "Automatic Cash",
+      "ACCOUNTID": 19947
+    },
+    {
+      "DESCRIPTION": "Salary",
+      "ACCOUNTID": 19948
+    },
+    {
+      "DESCRIPTION": "Automatic Cash",
+      "ACCOUNTID": 19948
+    },
+    {
+      "DESCRIPTION": "Transfer",
+      "ACCOUNTID": 19948
+    },
+    {
+      "DESCRIPTION": "Banking fees",
+      "ACCOUNTID": 19948
+    },
+    {
+      "DESCRIPTION": "Direct debit",
+      "ACCOUNTID": 19948
+    },
+    {
+      "DESCRIPTION": "Automatic Cash",
+      "ACCOUNTID": 19949
+    },
+    {
+      "DESCRIPTION": "Banking fees",
+      "ACCOUNTID": 19949
+    },
+    {
+      "DESCRIPTION": "Direct debit",
+      "ACCOUNTID": 19949
+    },
+    {
+      "DESCRIPTION": "Salary",
+      "ACCOUNTID": 19949
+    },
+    {
+      "DESCRIPTION": "Transfer",
+      "ACCOUNTID": 19949
+    },
+    {
+      "DESCRIPTION": "Direct debit",
+      "ACCOUNTID": 19950
+    },
+    {
+      "DESCRIPTION": "Banking fees",
+      "ACCOUNTID": 19950
+    },
+    {
+      "DESCRIPTION": "Automatic Cash",
+      "ACCOUNTID": 19950
+    },
+    {
+      "DESCRIPTION": "Transfer",
+      "ACCOUNTID": 19950
+    },
+    {
+      "DESCRIPTION": "Salary",
+      "ACCOUNTID": 19950
+    },
+    {
+      "DESCRIPTION": "Direct debit",
+      "ACCOUNTID": 19951
+    },
+    {
+      "DESCRIPTION": "Automatic Cash",
+      "ACCOUNTID": 19951
+    },
+    {
+      "DESCRIPTION": "Banking fees",
+      "ACCOUNTID": 19951
+    },
+    {
+      "DESCRIPTION": "Salary",
+      "ACCOUNTID": 19951
+    },
+    {
+      "DESCRIPTION": "Transfer",
+      "ACCOUNTID": 19951
+    },
+    {
+      "DESCRIPTION": "Banking fees",
+      "ACCOUNTID": 19952
+    },
+    {
+      "DESCRIPTION": "Direct debit",
+      "ACCOUNTID": 19952
+    },
+    {
+      "DESCRIPTION": "Salary",
+      "ACCOUNTID": 19952
+    },
+    {
+      "DESCRIPTION": "Transfer",
+      "ACCOUNTID": 19952
+    },
+    {
+      "DESCRIPTION": "Banking fees",
+      "ACCOUNTID": 19953
+    },
+    {
+      "DESCRIPTION": "Salary",
+      "ACCOUNTID": 19953
+    },
+    {
+      "DESCRIPTION": "Automatic Cash",
+      "ACCOUNTID": 19953
+    },
+    {
+      "DESCRIPTION": "Transfer",
+      "ACCOUNTID": 19953
+    },
+    {
+      "DESCRIPTION": "Direct debit",
+      "ACCOUNTID": 19953
+    },
+    {
+      "DESCRIPTION": "Banking fees",
+      "ACCOUNTID": 19954
+    },
+    {
+      "DESCRIPTION": "Transfer",
+      "ACCOUNTID": 19954
+    },
+    {
+      "DESCRIPTION": "Salary",
+      "ACCOUNTID": 19954
+    },
+    {
+      "DESCRIPTION": "Direct debit",
+      "ACCOUNTID": 19954
+    },
+    {
+      "DESCRIPTION": "Automatic Cash",
+      "ACCOUNTID": 19954
+    },
+    {
+      "DESCRIPTION": "Salary",
+      "ACCOUNTID": 19955
+    },
+    {
+      "DESCRIPTION": "Automatic Cash",
+      "ACCOUNTID": 19955
+    },
+    {
+      "DESCRIPTION": "Banking fees",
+      "ACCOUNTID": 19955
+    },
+    {
+      "DESCRIPTION": "Transfer",
+      "ACCOUNTID": 19955
+    },
+    {
+      "DESCRIPTION": "Direct debit",
+      "ACCOUNTID": 19955
+    },
+    {
+      "DESCRIPTION": "Automatic Cash",
+      "ACCOUNTID": 19956
+    },
+    {
+      "DESCRIPTION": "Direct debit",
+      "ACCOUNTID": 19956
+    },
+    {
+      "DESCRIPTION": "Salary",
+      "ACCOUNTID": 19956
+    },
+    {
+      "DESCRIPTION": "Banking fees",
+      "ACCOUNTID": 19956
+    },
+    {
+      "DESCRIPTION": "Transfer",
+      "ACCOUNTID": 19956
+    },
+    {
+      "DESCRIPTION": "Banking fees",
+      "ACCOUNTID": 19957
+    },
+    {
+      "DESCRIPTION": "Automatic Cash",
+      "ACCOUNTID": 19957
+    },
+    {
+      "DESCRIPTION": "Direct debit",
+      "ACCOUNTID": 19957
+    },
+    {
+      "DESCRIPTION": "Transfer",
+      "ACCOUNTID": 19957
+    },
+    {
+      "DESCRIPTION": "Salary",
+      "ACCOUNTID": 19957
+    },
+    {
+      "DESCRIPTION": "Salary",
+      "ACCOUNTID": 19958
+    },
+    {
+      "DESCRIPTION": "Banking fees",
+      "ACCOUNTID": 19958
+    },
+    {
+      "DESCRIPTION": "Transfer",
+      "ACCOUNTID": 19958
+    },
+    {
+      "DESCRIPTION": "Direct debit",
+      "ACCOUNTID": 19958
+    },
+    {
+      "DESCRIPTION": "Automatic Cash",
+      "ACCOUNTID": 19959
+    },
+    {
+      "DESCRIPTION": "Salary",
+      "ACCOUNTID": 19959
+    },
+    {
+      "DESCRIPTION": "Banking fees",
+      "ACCOUNTID": 19959
+    },
+    {
+      "DESCRIPTION": "Transfer",
+      "ACCOUNTID": 19959
+    },
+    {
+      "DESCRIPTION": "Direct debit",
+      "ACCOUNTID": 19959
+    },
+    {
+      "DESCRIPTION": "Automatic Cash",
+      "ACCOUNTID": 19960
+    },
+    {
+      "DESCRIPTION": "Direct debit",
+      "ACCOUNTID": 19960
+    },
+    {
+      "DESCRIPTION": "Transfer",
+      "ACCOUNTID": 19960
+    },
+    {
+      "DESCRIPTION": "Banking fees",
+      "ACCOUNTID": 19960
+    },
+    {
+      "DESCRIPTION": "Automatic Cash",
+      "ACCOUNTID": 19961
+    },
+    {
+      "DESCRIPTION": "Salary",
+      "ACCOUNTID": 19961
+    },
+    {
+      "DESCRIPTION": "Banking fees",
+      "ACCOUNTID": 19961
+    },
+    {
+      "DESCRIPTION": "Transfer",
+      "ACCOUNTID": 19961
+    },
+    {
+      "DESCRIPTION": "Banking fees",
+      "ACCOUNTID": 19962
+    },
+    {
+      "DESCRIPTION": "Salary",
+      "ACCOUNTID": 19962
+    },
+    {
+      "DESCRIPTION": "Direct debit",
+      "ACCOUNTID": 19962
+    },
+    {
+      "DESCRIPTION": "Automatic Cash",
+      "ACCOUNTID": 19962
+    },
+    {
+      "DESCRIPTION": "Transfer",
+      "ACCOUNTID": 19963
+    },
+    {
+      "DESCRIPTION": "Salary",
+      "ACCOUNTID": 19963
+    },
+    {
+      "DESCRIPTION": "Automatic Cash",
+      "ACCOUNTID": 19963
+    },
+    {
+      "DESCRIPTION": "Direct debit",
+      "ACCOUNTID": 19963
+    },
+    {
+      "DESCRIPTION": "Banking fees",
+      "ACCOUNTID": 19963
+    },
+    {
+      "DESCRIPTION": "Salary",
+      "ACCOUNTID": 19964
+    },
+    {
+      "DESCRIPTION": "Banking fees",
+      "ACCOUNTID": 19964
+    },
+    {
+      "DESCRIPTION": "Automatic Cash",
+      "ACCOUNTID": 19964
+    },
+    {
+      "DESCRIPTION": "Transfer",
+      "ACCOUNTID": 19964
+    },
+    {
+      "DESCRIPTION": "Direct debit",
+      "ACCOUNTID": 19964
+    },
+    {
+      "DESCRIPTION": "Transfer",
+      "ACCOUNTID": 19976
+    },
+    {
+      "DESCRIPTION": "Telematic transaction",
+      "ACCOUNTID": 19976
+    }
+  ],
+  "sqlTypes": {
+    "DESCRIPTION": 12,
+    "ACCOUNTID": 4
+  }
+}

@@ -97,5 +97,21 @@
   "EMPLOYEETYPEID": "Tipo empleado",
   "BRANCH_PLAN_UPLOADED": "El plano ha sido cargado",
   "DOCUMENTS": "Documentos",
-  "FILTERS": "Filtros"
+  "FILTERS": "Filtros",
+  "TREE.COMPONENT": "Tree",
+  "TREE.BASIC.COMPONENT": "Árbol básico",
+  "TREE.BASIC.COMPONENT.DESC": "Nodo único (no recursivo)",
+  "TREE.NODES.COMPONENT": "Árbol con nodos internos",
+  "TREE.NODES.COMPONENT.DESC": "Usando nodos internos cuyos datos dependen de su nodo padre",
+  "TREE.STATIC.COMPONENT": "Árbol con datos estáticos",
+  "TREE.STATIC.COMPONENT.DESC": "Cargando los datos de arrays",
+  "TREE.CONFIGURATION": "Configuración del árbol",
+  "TREE.BUTTON.BASIC": "Básico",
+  "TREE.BUTTON.NODES": "Nodos",
+  "TREE.BUTTON.STATIC": "Datos estáticos",
+  "TREE.CONTROLS": "Controles",
+  "TREE.QUICKFILTER": "Filtro",
+  "TREE.REFRESH_BUTTON": "Botón recargar",
+  "TREE.INPUTS": "Inputs",
+  "TREE.OUTPUTS": "Outputs"
 }
