@@ -1,7 +1,15 @@
-import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation, ViewChild } from '@angular/core';
 import { OTranslateService, SnackBarService, OSnackBarConfig } from 'ontimize-web-ngx';
 
 const TREE_HTML_DATA = `
+<o-tree #treeview fxFlex service="customers" entity="customer" keys="CUSTOMERID" query-on-init="true"
+  columns="CUSTOMERID;SURNAME;NAME" description-columns="SURNAME;NAME" service-type="DummyService"
+  separator=", " recursive="no" root-title="CUSTOMERS" [title]="{title}"
+  [controls]="{controls}" [quick-filter]="{quickFilter}" [refresh-button]="{refreshButton}"
+  (onNodeSelected)="nodeSelected($event)"
+  (onNodeExpanded)="nodeExpanded($event)"
+  (onNodeCollapsed)="nodeCollapsed($event)">
+</o-tree>
 `;
 
 const TREE_TS_DATA = `
@@ -18,6 +26,21 @@ const TREE_TS_DATA = `
   }
 })
 export class TreeBasicComponent implements OnInit {
+
+  @ViewChild('treeview')
+  tree: any;
+
+  @ViewChild('controlsToggle')
+  controlsToggle: any;
+
+  @ViewChild('quickFilterToggle')
+  quickFilterToggle: any;
+
+  @ViewChild('refreshButtonToggle')
+  refreshButtonToggle: any;
+
+  @ViewChild('treeTitle')
+  treeTitle: any;
 
   treeEvents: Array<any> = [];
 
@@ -41,8 +64,22 @@ export class TreeBasicComponent implements OnInit {
     //
   }
 
-  onShowSource(tree?: any, exampleComp?: any) {
-    //
+  onShowSource(exampleComp?: any) {
+    const itemData: any = {
+      title: this.treeTitle.nativeElement.value,
+      controls: this.controlsToggle.checked,
+      quickFilter: this.quickFilterToggle.checked,
+      refreshButton: this.refreshButtonToggle.checked
+    };
+    exampleComp.html = this.getHtml(itemData);
+  }
+
+  public getHtml(data: any) {
+    let tpl = TREE_HTML_DATA.replace('{title}', data.title)
+      .replace('{controls}', data.controls)
+      .replace('{quickFilter}', data.quickFilter)
+      .replace('{refreshButton}', data.refreshButton);
+    return tpl;
   }
 
   nodeSelected(arg: any) {

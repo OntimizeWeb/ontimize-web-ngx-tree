@@ -1,12 +1,12 @@
 <example-comp #ex collapsible="no" collapsed="no" comp-name="TREE.STATIC.COMPONENT" comp-desc="TREE.STATIC.COMPONENT.DESC"
   [files]="files" (showSource)="onShowSource(treeview, ex)" style.height="65%">
   <!--  -->
-  <div fxLayout="row" fxLayoutAlign="center stretch" layout-padding>
+  <!-- <div fxLayout="row" fxLayoutAlign="center stretch" layout-padding>
 
-    <div fxLayout="column" layout-padding fxLayoutAlign="center stretch" fxFlex="35">
+    <div fxLayout="column" layout-padding fxLayoutAlign="center stretch" fxFlex="35"> -->
 
-
-      <o-tree #treeview fxFlex root-title="CUSTOMERS" [static-data]="getCustomers()" keys="CUSTOMERID" columns="CUSTOMERID;SURNAME;NAME"
+      <o-tree #treeview fxFlex root-title="CUSTOMERS" [static-data]="getCustomers()"
+        keys="CUSTOMERID" columns="CUSTOMERID;SURNAME;NAME"
         description-columns="SURNAME;NAME" separator=", ">
 
         <!-- <o-tree-node root-title="ACCOUNTS" show-root="no" service-type="DummyService"
@@ -30,9 +30,9 @@
 
       </o-tree>
 
-    </div>
+    <!-- </div>
 
 
-  </div>
+  </div> -->
 
 </example-comp>

@@ -105,6 +105,8 @@
   "TREE.NODES.COMPONENT.DESC": "Using inner nodes which data depends on its parent",
   "TREE.STATIC.COMPONENT": "Tree with static data",
   "TREE.STATIC.COMPONENT.DESC": "Loading data from arrays",
+  "TREE.DETAIL.COMPONENT": "Detail component tree",
+  "TREE.DETAIL.COMPONENT.DESC": "Tree with detail component navigation",
   "TREE.CONFIGURATION": "Tree configuration",
   "TREE.BUTTON.BASIC": "Basic",
   "TREE.BUTTON.NODES": "Nodes",
@@ -114,6 +116,13 @@
   "TREE.REFRESH_BUTTON": "Refresh button",
   "TREE.INPUTS": "Inputs",
   "TREE.OUTPUTS": "Outputs",
-  "ACCOUNT_CONCEPTS" :"Concepts",
-  "ACCOUNT_MOVEMENTTYPES" :"Movement types"
+  "ACCOUNT_CONCEPTS": "Concepts",
+  "ACCOUNT_MOVEMENTTYPES": "Movement types",
+  "CARD_MENU_LAYOUT.BUTTON_TEXT": "View example",
+  "BASIC": "Basic",
+  "BASIC_CONTENT": "Basic",
+  "NODES": "Inner nodes",
+  "NODES_CONTENT": "Inner nodes",
+  "STATIC": "Static data",
+  "STATIC_CONTENT": "Static data"
 }

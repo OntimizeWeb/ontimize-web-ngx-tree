@@ -105,6 +105,8 @@
   "TREE.NODES.COMPONENT.DESC": "Usando nodos internos cuyos datos dependen de su nodo padre",
   "TREE.STATIC.COMPONENT": "Árbol con datos estáticos",
   "TREE.STATIC.COMPONENT.DESC": "Cargando los datos de arrays",
+  "TREE.DETAIL.COMPONENT": "Árbol con detalle",
+  "TREE.DETAIL.COMPONENT.DESC": "Árbol con navegación a componentes detalle",
   "TREE.CONFIGURATION": "Configuración del árbol",
   "TREE.BUTTON.BASIC": "Básico",
   "TREE.BUTTON.NODES": "Nodos",
@@ -114,6 +116,13 @@
   "TREE.REFRESH_BUTTON": "Botón recargar",
   "TREE.INPUTS": "Inputs",
   "TREE.OUTPUTS": "Outputs",
-  "ACCOUNT_CONCEPTS" :"Conceptos",
-  "ACCOUNT_MOVEMENTTYPES" :"Movimientos"
+  "ACCOUNT_CONCEPTS": "Conceptos",
+  "ACCOUNT_MOVEMENTTYPES": "Movimientos",
+  "CARD_MENU_LAYOUT.BUTTON_TEXT": "Ver ejemplo",
+  "BASIC" : "Básico",
+  "BASIC_CONTENT" : "Básico",
+  "NODES" : "Nodos internos",
+  "NODES_CONTENT" : "Nodos internos",
+  "STATIC" : "Datos estáticos",
+  "STATIC_CONTENT" : "Datos estáticos"
 }

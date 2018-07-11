@@ -2,14 +2,34 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { OTranslateService, SnackBarService, OSnackBarConfig } from 'ontimize-web-ngx';
 
 const TREE_HTML_DATA = `
-
-aaaaaaaaaaaa
+<o-tree #treeview fxFlex root-title="CUSTOMERS" [static-data]="getCustomers()"
+        keys="CUSTOMERID" columns="CUSTOMERID;SURNAME;NAME"
+        description-columns="SURNAME;NAME" separator=", ">
+</o-tree>
 `;
 
 const TREE_TS_DATA = `
+protected _customers: any[] = [{
+  SURNAME: 'Lawrence',
+  CUSTOMERID: 7511,
+  NAME: 'Daisy'
+}, {
+  SURNAME: 'Buttercup',
+  CUSTOMERID: 10808,
+  NAME: 'Billy'
+}, {
+  SURNAME: 'Galouzeau',
+  CUSTOMERID: 19343,
+  NAME: 'Jeanne'
+}, {
+  SURNAME: 'Nikopolidis',
+  CUSTOMERID: 19350,
+  NAME: 'Andromeda'
+}];
 
-asdfasdf
-
+getCustomers(): any[] {
+  return this._customers;
+}
 `;
 
 @Component({
@@ -189,12 +209,13 @@ export class TreeStaticComponent implements OnInit {
     },
     'typescript': {
       'data': TREE_TS_DATA
-    },
-    files: [{
-      'label': 'customers',
-      'type': 'typescript',
-      'data': this._customers
-    }]
+    }
+    // ,
+    // files: [{
+    //   'label': 'customers',
+    //   'type': 'typescript',
+    //   'data': this._customers
+    // }]
   };
 
   constructor(
