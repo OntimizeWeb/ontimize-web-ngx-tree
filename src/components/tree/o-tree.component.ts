@@ -125,7 +125,6 @@ export class OTreeComponent extends OServiceBaseComponent implements OnInit, Aft
   protected descriptionColArray: Array<string> = [];
 
   oTitle: string;
-  protected state: any;
   treeNodes: OTreeNodeComponent[] = [];
 
   onNodeSelected: EventEmitter<any> = new EventEmitter();
@@ -353,7 +352,6 @@ export class OTreeComponent extends OServiceBaseComponent implements OnInit, Aft
   }
 
   protected setData(treeArray: any[], sqlTypes?: any) {
-    console.log(sqlTypes);
     let childrenArray: TreeModel[] = [];
 
     treeArray.forEach(el => {
