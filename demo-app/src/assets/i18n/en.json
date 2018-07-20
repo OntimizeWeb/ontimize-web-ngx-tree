@@ -107,6 +107,8 @@
   "TREE.STATIC.COMPONENT.DESC": "Loading data from arrays",
   "TREE.DETAIL.COMPONENT": "Detail component tree",
   "TREE.DETAIL.COMPONENT.DESC": "Tree with detail component navigation",
+  "TREE.RECURSIVE.COMPONENT": "Recursive tree",
+  "TREE.RECURSIVE.COMPONENT.DESC": "Tree loading recursive data",
   "TREE.CONFIGURATION": "Tree configuration",
   "TREE.BUTTON.BASIC": "Basic",
   "TREE.BUTTON.NODES": "Nodes",
@@ -124,5 +126,8 @@
   "NODES": "Inner nodes",
   "NODES_CONTENT": "Inner nodes",
   "STATIC": "Static data",
-  "STATIC_CONTENT": "Static data"
+  "STATIC_CONTENT": "Static data",
+  "DETAIL_CONTENT" : "Detail",
+  "RECURSIVE" :"Recursive",
+  "RECURSIVE_CONTENT" :"Recursive"
 }

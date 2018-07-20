@@ -107,6 +107,8 @@
   "TREE.STATIC.COMPONENT.DESC": "Cargando los datos de arrays",
   "TREE.DETAIL.COMPONENT": "Árbol con detalle",
   "TREE.DETAIL.COMPONENT.DESC": "Árbol con navegación a componentes detalle",
+  "TREE.RECURSIVE.COMPONENT": "Árbol recursivo",
+  "TREE.RECURSIVE.COMPONENT.DESC": "Cargando datos con estructura recursiva",
   "TREE.CONFIGURATION": "Configuración del árbol",
   "TREE.BUTTON.BASIC": "Básico",
   "TREE.BUTTON.NODES": "Nodos",
@@ -124,5 +126,8 @@
   "NODES" : "Nodos internos",
   "NODES_CONTENT" : "Nodos internos",
   "STATIC" : "Datos estáticos",
-  "STATIC_CONTENT" : "Datos estáticos"
+  "STATIC_CONTENT" : "Datos estáticos",
+  "DETAIL_CONTENT" : "Detalle",
+  "RECURSIVE" :"Recursivo",
+  "RECURSIVE_CONTENT" :"Recursivo"
 }

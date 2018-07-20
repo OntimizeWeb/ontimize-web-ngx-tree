@@ -1,4 +1,4 @@
-<section fxLayout="column" class="mat-elevation-z2" fxLayoutAlign="start stretch">
+<section fxFlexFill fxLayout="column" class="mat-elevation-z2" fxLayoutAlign="start stretch">
 
   <mat-toolbar fxLayout="row" color="primary" class="playground-toolbar">
     <div fxLayout="column" fxFlex>
@@ -14,25 +14,27 @@
     </button>
   </mat-toolbar>
 
-  <div fxLayout *ngIf="showSource" [style.height]="tabHeight">
-    <mat-tab-group fxFlex class="playground-tabs">
-      <mat-tab label="{{ 'html' | uppercase }}" *ngIf="html">
-        <highlight-comp [template-content]="html" template-type="html"></highlight-comp>
-      </mat-tab>
-      <mat-tab label="{{ 'scss' | uppercase }}" *ngIf="files.scss && files.scss.data">
-        <highlight-comp [template-content]="files.scss.data" template-type="scss"></highlight-comp>
-      </mat-tab>
-      <mat-tab label="{{ 'typescript' | uppercase }}" *ngIf="files.typescript && files.typescript.data">
-        <highlight-comp [template-content]="files.typescript.data" template-type="typescript"></highlight-comp>
-      </mat-tab>
-      <mat-tab *ngFor="let file of aditionalTabs" [label]="file.label">
-        <highlight-comp [template-content]="file.data" [template-type]="file.type"></highlight-comp>
-      </mat-tab>
-    </mat-tab-group>
+  <div fxLayout="column" fxFlex="grow">
+    <div *ngIf="showSource" [style.height]="tabHeight">
+      <mat-tab-group fxFlex class="playground-tabs">
+        <mat-tab label="{{ 'html' | uppercase }}" *ngIf="html">
+          <highlight-comp [template-content]="html" template-type="html"></highlight-comp>
+        </mat-tab>
+        <mat-tab label="{{ 'scss' | uppercase }}" *ngIf="files.scss && files.scss.data">
+          <highlight-comp [template-content]="files.scss.data" template-type="scss"></highlight-comp>
+        </mat-tab>
+        <mat-tab label="{{ 'typescript' | uppercase }}" *ngIf="files.typescript && files.typescript.data">
+          <highlight-comp [template-content]="files.typescript.data" template-type="typescript"></highlight-comp>
+        </mat-tab>
+        <mat-tab *ngFor="let file of aditionalTabs" [label]="file.label">
+          <highlight-comp [template-content]="file.data" [template-type]="file.type"></highlight-comp>
+        </mat-tab>
+      </mat-tab-group>
+    </div>
+    <!-- Live Demos -->
+    <div fxFlex="grow" [class.collapsed]="collapsed" [class.collapsible]="collapsible" class="playground-examples" fxLayout="column"
+      fxLayoutAlign="start stretch">
+      <ng-content></ng-content>
+    </div>
   </div>
-  <!-- Live Demos -->
-  <div fxFlex="grow" [class.collapsed]="collapsed" [class.collapsible]="collapsible" class="playground-examples" fxLayout="column" fxLayoutAlign="start stretch">
-    <ng-content></ng-content>
-  </div>
-
 </section>

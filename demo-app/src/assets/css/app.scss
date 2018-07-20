@@ -19,6 +19,9 @@
 @import 'node_modules/ontimize-web-ngx/theme.scss';
 @include o-material-theme($theme);
 
+@import 'node_modules/ontimize-web-ngx-tree/o-tree-theme.scss';
+@include o-tree-theme($theme);
+
 /*
 * Propagate theme to screen styles definition.
 */

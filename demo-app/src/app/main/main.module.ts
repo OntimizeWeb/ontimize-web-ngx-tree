@@ -8,6 +8,7 @@ import { MainRoutingModule } from './main-routing.module';
 import { TreeBasicComponent } from './01.basic/tree-basic.component';
 import { TreeNodesComponent } from './02.nodes/tree-nodes.component';
 import { TreeStaticComponent } from './03.static/tree-static.component';
+import { TreeRecursiveComponent } from './05.recursive/tree-recursive.component';
 
 @NgModule({
   imports: [
@@ -20,7 +21,8 @@ import { TreeStaticComponent } from './03.static/tree-static.component';
     MainComponent,
     TreeBasicComponent,
     TreeNodesComponent,
-    TreeStaticComponent
+    TreeStaticComponent,
+    TreeRecursiveComponent
   ]
   // ,
   // schemas: [CUSTOM_ELEMENTS_SCHEMA]

@@ -7,7 +7,7 @@
     "xxx": "rimraf node_modules/ontimize-web-ngx && npm install",
     "zzz": "npm run xxx && npm start",
     "ng": "ng",
-    "start": "ng serve --port 4321",
+    "start": "ng serve --port 4321 --host 10.7.0.141",
     "build": "ng build",
     "production": "ng build --aot=false --target -prod --base-href /ontimize-web-ngx-tree-quickstart/",
     "production-aot": "ontimize-web-ngx production-aot --href /ontimize-web-ngx-tree-quickstart/",

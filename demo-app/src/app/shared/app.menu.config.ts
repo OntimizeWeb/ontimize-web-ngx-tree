@@ -28,6 +28,12 @@ export const MENU_CONFIG: MenuRootItem[] = [
       tooltip: 'DETAIL_CONTENT',
       route: '/main/detail',
       icon: 'people'
+    }, {
+      id: 'recursive',
+      name: 'RECURSIVE',
+      tooltip: 'RECURSIVE_CONTENT',
+      route: '/main/recursive',
+      icon: 'people'
     }]
   },
   {

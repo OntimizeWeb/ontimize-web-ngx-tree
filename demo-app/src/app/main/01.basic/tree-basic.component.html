@@ -1,4 +1,3 @@
-<!-- <div fxFlexFill fxLayout="column"> -->
 <example-comp fxFlexFill #ex collapsible="no" collapsed="no" comp-name="TREE.BASIC.COMPONENT" comp-desc="TREE.BASIC.COMPONENT.DESC"
   [files]="files" (showSource)="onShowSource(ex)">
   <div fxLayout="row" fxLayoutAlign="center stretch" layout-padding>
@@ -10,8 +9,12 @@
         (onLoadNextLevel)="nextLevelLoaded($event)">
       </o-tree>
     </div>
+
     <o-column attr="conf" title-label="{{ 'TREE.CONFIGURATION' | oTranslate }}" elevation="0" fxFlex="55" layout-padding layout-align="center">
+
       <o-column title-label="{{ 'TREE.INPUTS' | oTranslate }}" elevation="0" fxFlex layout-padding layout-align="center">
+        <!-- <mat-icon svgIcon="ontimize:add"></mat-icon>
+        <mat-icon svgIcon="ontimize:android"></mat-icon> -->
         <mat-form-field fxFlex="50">
           <input matInput #treeTitle placeholder="{{ 'TITLE' | oTranslate }}" value="Tree">
         </mat-form-field>
@@ -37,4 +40,3 @@
     </o-column>
   </div>
 </example-comp>
-<!-- </div> -->
