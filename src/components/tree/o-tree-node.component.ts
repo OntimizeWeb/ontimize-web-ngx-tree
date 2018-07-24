@@ -5,62 +5,25 @@ import {
   Util,
   OSharedModule,
   OFormComponent,
-  OServiceBaseComponent,
   OntimizeService,
   dataServiceFactory
 } from 'ontimize-web-ngx';
 
 import { OTreeComponent } from './o-tree.component';
 
-export const DEFAULT_INPUTS_O_TREE_NODE = [
-  ...OServiceBaseComponent.DEFAULT_INPUTS_O_SERVICE_BASE_COMPONENT,
-
-  // sort-columns [string]: initial sorting, with the format column:[ASC|DESC], separated by ';'. Default: no value.
-  'sortColumns: sort-columns',
-
-  'descriptionColumns: description-columns',
-
-  'separator',
-
-  'parentColumn: parent-column',
-
-  'showRoot: show-root',
-
-  'rootTitle: root-title',
-
-  'recursive',
-
-  'recursiveLevels: recursive-levels',
-
-  'translate',
-
-  'route'
-];
-
-export const DEFAULT_OUTPUTS_O_TREE_NODE = [
-  'onNodeSelected',
-  // 'onNodeMoved',
-  // 'onNodeCreated',
-  // 'onNodeRemoved',
-  // 'onNodeRenamed',
-  'onNodeExpanded',
-  'onNodeCollapsed',
-  'onLoadNextLevel'
-];
-
 @Component({
   selector: 'o-tree-node',
   template: ' ',
-  inputs: DEFAULT_INPUTS_O_TREE_NODE,
-  outputs: DEFAULT_OUTPUTS_O_TREE_NODE,
+  inputs: OTreeComponent.DEFAULT_BASIC_INPUTS_O_TREE,
+  outputs: OTreeComponent.DEFAULT_OUTPUTS_O_TREE,
   providers: [
     { provide: OntimizeService, useFactory: dataServiceFactory, deps: [Injector] }
   ],
 })
 
 export class OTreeNodeComponent extends OTreeComponent implements OnInit, OnDestroy {
-  public static DEFAULT_INPUTS_O_TREE_NODE = DEFAULT_INPUTS_O_TREE_NODE;
-  public static DEFAULT_OUTPUTS_O_TREE_NODE = DEFAULT_OUTPUTS_O_TREE_NODE;
+  public static DEFAULT_INPUTS_O_TREE_NODE = OTreeComponent.DEFAULT_BASIC_INPUTS_O_TREE;
+  public static DEFAULT_OUTPUTS_O_TREE_NODE = OTreeComponent.DEFAULT_OUTPUTS_O_TREE;
 
   onNodeSelected: EventEmitter<any> = new EventEmitter();
   // onNodeMoved: EventEmitter<any> = new EventEmitter();

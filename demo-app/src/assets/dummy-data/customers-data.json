@@ -1,0 +1,416 @@
+{
+  "code": 0,
+  "message": "",
+  "data": [
+    {
+      "SURNAME": "Lawrence",
+      "CUSTOMERID": 7511,
+      "NAME": "Daisy"
+    },
+    {
+      "SURNAME": "Alan",
+      "CUSTOMERID": 10602,
+      "NAME": "James"
+    },
+    {
+      "SURNAME": "Smith",
+      "CUSTOMERID": 10603,
+      "NAME": "Lucie"
+    },
+    {
+      "SURNAME": "Bugle",
+      "CUSTOMERID": 10604,
+      "NAME": "Mark"
+    },
+    {
+      "SURNAME": "Murray",
+      "CUSTOMERID": 10605,
+      "NAME": "Clarette"
+    },
+    {
+      "SURNAME": "Baños Márqueza",
+      "CUSTOMERID": 10606,
+      "NAME": "Tomás Miguel"
+    },
+    {
+      "SURNAME": "Buendía Lorente",
+      "CUSTOMERID": 10607,
+      "NAME": "Lidya Esther"
+    },
+    {
+      "SURNAME": "Buttercup",
+      "CUSTOMERID": 10808,
+      "NAME": "Billy"
+    },
+    {
+      "SURNAME": "C.Johnson",
+      "CUSTOMERID": 10810,
+      "NAME": "Marie"
+    },
+    {
+      "SURNAME": "Fernández Blanco",
+      "CUSTOMERID": 10811,
+      "NAME": "Pablo"
+    },
+    {
+      "SURNAME": "Windflower",
+      "CUSTOMERID": 10812,
+      "NAME": "Abie"
+    },
+    {
+      "SURNAME": "Poppy",
+      "CUSTOMERID": 10813,
+      "NAME": "Chistine"
+    },
+    {
+      "SURNAME": "Rose",
+      "CUSTOMERID": 10814,
+      "NAME": "Bernice"
+    },
+    {
+      "SURNAME": "Corbirock",
+      "CUSTOMERID": 10815,
+      "NAME": "Bridget"
+    },
+    {
+      "SURNAME": "Green",
+      "CUSTOMERID": 10834,
+      "NAME": "John"
+    },
+    {
+      "SURNAME": "Schwarzkopf",
+      "CUSTOMERID": 19270,
+      "NAME": "Adolph"
+    },
+    {
+      "SURNAME": "Engels",
+      "CUSTOMERID": 19271,
+      "NAME": "Aubrey"
+    },
+    {
+      "SURNAME": "Schmidt",
+      "CUSTOMERID": 19272,
+      "NAME": "Egbert"
+    },
+    {
+      "SURNAME": "Müller",
+      "CUSTOMERID": 19273,
+      "NAME": "Frieda"
+    },
+    {
+      "SURNAME": "Meyer",
+      "CUSTOMERID": 19274,
+      "NAME": "Gretchen"
+    },
+    {
+      "SURNAME": "Fischer",
+      "CUSTOMERID": 19320,
+      "NAME": "Heidi"
+    },
+    {
+      "SURNAME": "Schneider",
+      "CUSTOMERID": 19321,
+      "NAME": "Helmuth"
+    },
+    {
+      "SURNAME": "Metzger",
+      "CUSTOMERID": 19322,
+      "NAME": "Lancelot"
+    },
+    {
+      "SURNAME": "Töpfer",
+      "CUSTOMERID": 19323,
+      "NAME": "Luther"
+    },
+    {
+      "SURNAME": "Weffer",
+      "CUSTOMERID": 19324,
+      "NAME": "Erick"
+    },
+    {
+      "SURNAME": "Matius",
+      "CUSTOMERID": 19325,
+      "NAME": "Adelbert"
+    },
+    {
+      "SURNAME": "Smit",
+      "CUSTOMERID": 19326,
+      "NAME": "Hiltrud"
+    },
+    {
+      "SURNAME": "Jansen",
+      "CUSTOMERID": 19327,
+      "NAME": "Kees"
+    },
+    {
+      "SURNAME": "van Bruggen",
+      "CUSTOMERID": 19328,
+      "NAME": "Piet"
+    },
+    {
+      "SURNAME": " de Groot",
+      "CUSTOMERID": 19329,
+      "NAME": "Sjon"
+    },
+    {
+      "SURNAME": "Van Rijn",
+      "CUSTOMERID": 19330,
+      "NAME": "Maikol"
+    },
+    {
+      "SURNAME": "van Wijk",
+      "CUSTOMERID": 19331,
+      "NAME": "Sjaak"
+    },
+    {
+      "SURNAME": "van Serooskerken",
+      "CUSTOMERID": 19332,
+      "NAME": "Petrik"
+    },
+    {
+      "SURNAME": "Van Dyck",
+      "CUSTOMERID": 19333,
+      "NAME": "Steve"
+    },
+    {
+      "SURNAME": "Timmerman",
+      "CUSTOMERID": 19334,
+      "NAME": "Olinda"
+    },
+    {
+      "SURNAME": "Van Dijk",
+      "CUSTOMERID": 19335,
+      "NAME": "Nixie"
+    },
+    {
+      "SURNAME": "De Jong",
+      "CUSTOMERID": 19336,
+      "NAME": "Marlene"
+    },
+    {
+      "SURNAME": "Bakker",
+      "CUSTOMERID": 19337,
+      "NAME": "Louise"
+    },
+    {
+      "SURNAME": "Visser",
+      "CUSTOMERID": 19338,
+      "NAME": "Schmetterling"
+    },
+    {
+      "SURNAME": "de Gaulle",
+      "CUSTOMERID": 19339,
+      "NAME": "Jacques"
+    },
+    {
+      "SURNAME": "d'Orléans",
+      "CUSTOMERID": 19340,
+      "NAME": "Jean"
+    },
+    {
+      "SURNAME": "d'Estaing",
+      "CUSTOMERID": 19341,
+      "NAME": "Marie"
+    },
+    {
+      "SURNAME": "Vieuville ",
+      "CUSTOMERID": 19342,
+      "NAME": "Julia"
+    },
+    {
+      "SURNAME": "Galouzeau",
+      "CUSTOMERID": 19343,
+      "NAME": "Jeanne"
+    },
+    {
+      "SURNAME": "al-Fulan",
+      "CUSTOMERID": 19344,
+      "NAME": "Abbud"
+    },
+    {
+      "SURNAME": "Khalid",
+      "CUSTOMERID": 19345,
+      "NAME": "Abdel Khâliq"
+    },
+    {
+      "SURNAME": "Sharifah",
+      "CUSTOMERID": 19346,
+      "NAME": "Baraka"
+    },
+    {
+      "SURNAME": "Khalid",
+      "CUSTOMERID": 19347,
+      "NAME": "Jawhar"
+    },
+    {
+      "SURNAME": "Papamakarios",
+      "CUSTOMERID": 19348,
+      "NAME": "Adelphos"
+    },
+    {
+      "SURNAME": "Thalassinos",
+      "CUSTOMERID": 19349,
+      "NAME": "Ambrosine"
+    },
+    {
+      "SURNAME": "Nikopolidis",
+      "CUSTOMERID": 19350,
+      "NAME": "Andromeda"
+    },
+    {
+      "SURNAME": "Kirgyakos",
+      "CUSTOMERID": 19351,
+      "NAME": "Adonis"
+    },
+    {
+      "SURNAME": "Christopoulos",
+      "CUSTOMERID": 19352,
+      "NAME": "Elektra"
+    },
+    {
+      "SURNAME": "Mao",
+      "CUSTOMERID": 19353,
+      "NAME": "Tsang"
+    },
+    {
+      "SURNAME": "Qian",
+      "CUSTOMERID": 19354,
+      "NAME": "Zedong"
+    },
+    {
+      "SURNAME": "Pérez Miguelez",
+      "CUSTOMERID": 19355,
+      "NAME": "Paco"
+    },
+    {
+      "SURNAME": "Vazquez Santos",
+      "CUSTOMERID": 19356,
+      "NAME": "Paula"
+    },
+    {
+      "SURNAME": "Míguez Martinez",
+      "CUSTOMERID": 19357,
+      "NAME": "Ana"
+    },
+    {
+      "SURNAME": "López Piñeiro",
+      "CUSTOMERID": 19358,
+      "NAME": "Jose"
+    },
+    {
+      "SURNAME": "Dominguez ",
+      "CUSTOMERID": 19359,
+      "NAME": "Juan"
+    },
+    {
+      "SURNAME": "Nuñez Fernandez",
+      "CUSTOMERID": 19360,
+      "NAME": "Maria"
+    },
+    {
+      "SURNAME": "Santos Rodríguez",
+      "CUSTOMERID": 19361,
+      "NAME": "Carlos Manuel"
+    },
+    {
+      "SURNAME": "Brown",
+      "CUSTOMERID": 19362,
+      "NAME": "Philippe"
+    },
+    {
+      "SURNAME": "Calaghan",
+      "CUSTOMERID": 19363,
+      "NAME": "Michael"
+    },
+    {
+      "SURNAME": "Ashworth",
+      "CUSTOMERID": 19364,
+      "NAME": "Sue"
+    },
+    {
+      "SURNAME": "Andersen",
+      "CUSTOMERID": 19365,
+      "NAME": "Wing"
+    },
+    {
+      "SURNAME": "Martínez Kirsten",
+      "CUSTOMERID": 19381,
+      "NAME": "Pablo"
+    },
+    {
+      "SURNAME": "Londhe",
+      "CUSTOMERID": 19387,
+      "NAME": "vikas"
+    },
+    {
+      "SURNAME": "Ignacio",
+      "CUSTOMERID": 19393,
+      "NAME": "Salinas"
+    },
+    {
+      "SURNAME": "Genaro",
+      "CUSTOMERID": 19395,
+      "NAME": "Iglesias"
+    },
+    {
+      "SURNAME": "Rogelia",
+      "CUSTOMERID": 19397,
+      "NAME": "Fecha"
+    },
+    {
+      "SURNAME": "Eladio",
+      "CUSTOMERID": 19398,
+      "NAME": "Martínez"
+    },
+    {
+      "SURNAME": "Agustín",
+      "CUSTOMERID": 19399,
+      "NAME": "Lorenzo"
+    },
+    {
+      "SURNAME": "Jacinto",
+      "CUSTOMERID": 19400,
+      "NAME": "Villar"
+    },
+    {
+      "SURNAME": "Eudaldo",
+      "CUSTOMERID": 19401,
+      "NAME": "Hernandez"
+    },
+    {
+      "SURNAME": "Cristina",
+      "CUSTOMERID": 19403,
+      "NAME": "Cifuentes"
+    },
+    {
+      "SURNAME": "Jesucristo",
+      "CUSTOMERID": 19404,
+      "NAME": "Pérez"
+    },
+    {
+      "SURNAME": "Plácido",
+      "CUSTOMERID": 19405,
+      "NAME": "Domingo"
+    },
+    {
+      "SURNAME": "Gonzalo",
+      "CUSTOMERID": 19406,
+      "NAME": "López"
+    },
+    {
+      "SURNAME": "Carlos",
+      "CUSTOMERID": 19407,
+      "NAME": "Puente"
+    },
+    {
+      "SURNAME": "Martínez",
+      "CUSTOMERID": 19421,
+      "NAME": "Gonzalo"
+    }
+  ],
+  "sqlTypes": {
+    "SURNAME": 12,
+    "NAME": 12,
+    "CUSTOMERID": 4
+  }
+}
