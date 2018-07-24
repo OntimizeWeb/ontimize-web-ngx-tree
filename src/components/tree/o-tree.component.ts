@@ -24,7 +24,7 @@ import {
 
 import { OTreeNodeComponent } from './o-tree-node.component';
 
-export const DEFAULT_INPUTS_O_TREE = [
+export const DEFAULT_BASIC_INPUTS_O_TREE = [
   ...OServiceBaseComponent.DEFAULT_INPUTS_O_SERVICE_BASE_COMPONENT,
 
   // sort-columns [string]: initial sorting, with the format column:[ASC|DESC], separated by ';'. Default: no value.
@@ -46,7 +46,12 @@ export const DEFAULT_INPUTS_O_TREE = [
 
   'translate',
 
-  'route',
+  'route'
+];
+
+
+export const DEFAULT_INPUTS_O_TREE = [
+  ...DEFAULT_BASIC_INPUTS_O_TREE,
 
   'oTitle: title',
 
@@ -90,6 +95,7 @@ export const DEFAULT_OUTPUTS_O_TREE = [
 export class OTreeComponent extends OServiceBaseComponent implements OnInit, AfterViewInit, OnDestroy {
 
   static DEFAULT_INPUTS_O_TREE = DEFAULT_INPUTS_O_TREE;
+  static DEFAULT_BASIC_INPUTS_O_TREE = DEFAULT_BASIC_INPUTS_O_TREE;
   static DEFAULT_OUTPUTS_O_TREE = DEFAULT_OUTPUTS_O_TREE;
   static DEFAULT_ROOT_ROUTE = 'home';
 
@@ -351,7 +357,7 @@ export class OTreeComponent extends OServiceBaseComponent implements OnInit, Aft
     return descTxt;
   }
 
-  protected setData(treeArray: any[], sqlTypes?: any) {
+  protected setData(treeArray: any[]) {//, sqlTypes?: any) {
     let childrenArray: TreeModel[] = [];
 
     treeArray.forEach(el => {
