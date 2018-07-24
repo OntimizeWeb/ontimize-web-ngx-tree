@@ -3,7 +3,7 @@
 
   <div fxLayout="row" fxLayoutAlign="center stretch" fxFlexFill>
 
-    <o-tree #treeview fxFlex root-title="CUSTOMERS" service-type="DummyService" service="customers" entity="customer" keys="CUSTOMERID"
+    <o-tree controls="no" #treeview fxFlex root-title="CUSTOMERS" service-type="DummyService" service="customers" entity="customer" keys="CUSTOMERID"
       columns="CUSTOMERID;SURNAME;NAME" description-columns="SURNAME;NAME" separator=", " query-on-init="true" route=":CUSTOMERID">
 
       <o-tree-node root-title="ACCOUNTS" show-root="no" service-type="DummyService" service="customers" entity="customerAccount"

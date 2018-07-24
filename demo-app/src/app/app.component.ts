@@ -11,9 +11,6 @@ export class AppComponent {
   // ontimizeMatIconRegistry: OntimizeMatIconRegistry;
   ontimizeMatIconRegistry: any;
   constructor(protected injector: Injector) {
-    this.ontimizeMatIconRegistry = this.injector.get(MatIconRegistry);
-    this.ontimizeMatIconRegistry.addOntimizeSvgIcon('android', 'assets/baseline-android-24px.svg');
-    console.log(this.ontimizeMatIconRegistry);
   }
 
 }
