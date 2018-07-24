@@ -34,6 +34,16 @@ You must add the module styles definition in your '*.angular-cli.json*' file sty
 ...
 ```
 
+### Add the library theming
+In your application '*app.scss*' file you should add the library theme.
+
+```bash
+...
+@import 'node_modules/ontimize-web-ngx-tree/o-tree-theme.scss';
+@include o-tree-theme($theme);
+...
+```
+
 ### Import in an application module
 
 Include the library tree module into your app in the module where you want to use it.

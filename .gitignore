@@ -6,8 +6,8 @@
 /tmp
 /src/**/*.css
 
-
 # dependencies
+demo-app/node_modules/
 /node_modules
 /typings
 
