@@ -29,7 +29,7 @@
   },
   "peerDependencies": {},
   "devDependencies": {
-    "ontimize-web-ngx": "3.0.0-rc.1",
+    "ontimize-web-ngx": "3.0.0",
     "ontimize-web-ngx-library-tools": "1.0.0",
     "@angular/flex-layout": "5.0.0-beta.13",
     "@angular/material": "5.2.4",
