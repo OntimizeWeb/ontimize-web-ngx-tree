@@ -8,6 +8,7 @@
 
 # dependencies
 /demo-app/node_modules/**
+/demo-app/dist/**
 /node_modules
 /typings
 
