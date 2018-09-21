@@ -1,6 +1,6 @@
 {
   "name": "ontimize-web-ngx-tree-quickstart",
-  "version": "3.0.0",
+  "version": "3.1.0",
   "license": "MIT",
   "angular-cli": {},
   "scripts": {
@@ -36,9 +36,9 @@
     "reflect-metadata": "0.1.12",
     "rxjs": "5.5.6",
     "zone.js": "0.8.20",
-    "ontimize-web-ngx": "3.0.1",
-    "ontimize-web-ngx-theming": "1.1.2",
-    "ontimize-web-ngx-tree": "3.0.0",
+    "ontimize-web-ngx": "3.1.0",
+    "ontimize-web-ngx-theming": "1.2.0",
+    "ontimize-web-ngx-tree": "file:..\\dist\\ontimize-web-ngx-tree-3.1.0.tgz",
     "classlist.js": "^1.1.20150312",
     "intl": "^1.2.5",
     "web-animations-js": "^2.3.1",
