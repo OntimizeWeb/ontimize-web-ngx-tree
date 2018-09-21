@@ -7,7 +7,7 @@
     "build": "o-ngx-lib-builder build --package ontimize-web-ngx-tree --ng-library ng.ontimizeWebTree"
   },
   "keywords": [
-    "angular2",
+    "angular",
     "ontimize-web-ngx",
     "ontimize-web-ngx-tree",
     "tree",
