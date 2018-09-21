@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { Router, ActivatedRoute, RouterModule } from '@angular/router';
 import { TreeModule, TreeModel, Ng2TreeSettings, TreeComponent, Tree, NodeSelectedEvent, NodeCollapsedEvent, NodeExpandedEvent, NodeMovedEvent, NodeCreatedEvent, NodeRemovedEvent, NodeRenamedEvent, TreeController } from 'ng2-tree';
 import { LoadNextLevelEvent } from 'ng2-tree/src/tree.events';
+import { Subscription } from 'rxjs/Subscription';
 
 import {
   OntimizeWebModule,
@@ -19,7 +20,8 @@ import {
   FilterExpressionUtils,
   OSearchInputModule,
   OntimizeService,
-  dataServiceFactory
+  dataServiceFactory,
+  OTranslateService
 } from 'ontimize-web-ngx';
 
 import { OTreeNodeComponent } from './o-tree-node.component';
@@ -153,6 +155,9 @@ export class OTreeComponent extends OServiceBaseComponent implements OnInit, Aft
   protected actRoute: ActivatedRoute;
   protected translating: boolean;
 
+  protected translateService: OTranslateService;
+  protected onLanguageChangeSubscription: Subscription;
+
   constructor(
     injector: Injector,
     protected elRef: ElementRef,
@@ -161,6 +166,7 @@ export class OTreeComponent extends OServiceBaseComponent implements OnInit, Aft
     super(injector);
     this.router = this.injector.get(Router);
     this.actRoute = this.injector.get(ActivatedRoute);
+    this.translateService = this.injector.get(OTranslateService);
   }
 
   getComponentKey(): string {
@@ -175,6 +181,9 @@ export class OTreeComponent extends OServiceBaseComponent implements OnInit, Aft
 
   ngOnInit(): void {
     this.initialize();
+    this.onLanguageChangeSubscription = this.translateService.onLanguageChanged.subscribe(() => {
+      this.onLanguageChangeCallback();
+    });
   }
 
   ngAfterViewInit() {
@@ -182,12 +191,15 @@ export class OTreeComponent extends OServiceBaseComponent implements OnInit, Aft
       this.elRef.nativeElement.removeAttribute('title');
     }
     if (this.queryOnInit) {
-      this.queryData(this.parentItem);
+      this.queryData();
     }
   }
 
   ngOnDestroy() {
     super.destroy();
+    if (this.onLanguageChangeSubscription) {
+      this.onLanguageChangeSubscription.unsubscribe();
+    }
   }
 
   ngOnChanges(changes: { [propName: string]: SimpleChange }) {
@@ -202,8 +214,7 @@ export class OTreeComponent extends OServiceBaseComponent implements OnInit, Aft
     super.initialize();
   }
 
-  onLanguageChangeCallback(res: any) {
-    super.onLanguageChangeCallback(res);
+  onLanguageChangeCallback() {
     this.translating = true;
     this.treeComponent.getController().rename(this.translateService.get(this.rootTitle));
     this.translateChildren(this.tree);
@@ -262,7 +273,7 @@ export class OTreeComponent extends OServiceBaseComponent implements OnInit, Aft
     if (!this.dataService || !(queryMethodName in this.dataService) || !this.entity) {
       return;
     }
-    let parentItem = ServiceUtils.getParentItemFromForm(this.parentItem, this._pKeysEquiv, this.form);
+    const parentItem = ServiceUtils.getParentKeysFromForm(this._pKeysEquiv, this.form);
     let filter = (parentItem !== undefined) ? parentItem : {};
     filter[this.parentColumn] = id;
 
