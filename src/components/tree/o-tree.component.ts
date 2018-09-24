@@ -66,7 +66,13 @@ export const DEFAULT_INPUTS_O_TREE = [
   'refreshButton: refresh-button',
 
   // quick-filter [no|yes]: show quick filter. Default: yes.
-  'quickFilter: quick-filter'
+  'quickFilter: quick-filter',
+
+  // quick-filter-columns [string]: columns of the filter, separated by ';'. Default: no value.
+  'quickFilterColumns: quick-filter-columns',
+
+  // filter [yes|no|true|false]: filter si case sensitive. Default: no.
+  'filterCaseSensitive: filter-case-sensitive'
 ];
 
 export const DEFAULT_OUTPUTS_O_TREE = [
@@ -126,11 +132,16 @@ export class OTreeComponent extends OServiceBaseComponent implements OnInit, Aft
   refreshButton: boolean = true;
   @InputConverter()
   quickFilter: boolean = false;
+  quickFilterColumns: string;
+  @InputConverter()
+  filterCaseSensitive: boolean = false;
   /* end of variables */
 
   /* parsed input variables */
   protected sortColArray: Array<ISQLOrder> = [];
   protected descriptionColArray: Array<string> = [];
+  protected quickFilterColArray: string[];
+  protected dataResponseArray: Array<any> = [];
 
   oTitle: string;
   treeNodes: OTreeNodeComponent[] = [];
@@ -212,6 +223,12 @@ export class OTreeComponent extends OServiceBaseComponent implements OnInit, Aft
     this.sortColArray = ServiceUtils.parseSortColumns(this.sortColumns);
     this.descriptionColArray = Util.parseArray(this.descriptionColumns, true);
     super.initialize();
+
+    if (this.quickFilterColumns) {
+      this.quickFilterColArray = Util.parseArray(this.quickFilterColumns, true);
+    } else {
+      this.quickFilterColArray = this.colArray;
+    }
   }
 
   onLanguageChangeCallback() {
@@ -369,6 +386,7 @@ export class OTreeComponent extends OServiceBaseComponent implements OnInit, Aft
   }
 
   protected setData(treeArray: any[]) {//, sqlTypes?: any) {
+    this.dataResponseArray = treeArray;
     let childrenArray: TreeModel[] = [];
 
     treeArray.forEach(el => {
@@ -407,35 +425,46 @@ export class OTreeComponent extends OServiceBaseComponent implements OnInit, Aft
   }
 
   onSearch(textValue: string) {
+    if (this.pageable) {
+      return;
+    }
     let textFilter = textValue;
     if (textFilter && textFilter.length > 0) {
-      //   textFilter = '*' + textFilter + '*';
-      //   if (this.dataService) { // uses dataservice to query data
-      //     let nodeDescriptionFilter = {};
-      //     if (this.nodeDescription) {
-      //       nodeDescriptionFilter[this.nodeDescription] = textFilter;
-      //     }
-      //     this.queryData(nodeDescriptionFilter);
-      //   } else {
-      //     // if ( && tree.children.length > 0)
-      //   }
-
-      //   // this.treeComponent.getController().expand();
-      // this.tree.children.forEach(child => {
-      //   const controller: TreeController = this.treeComponent.getControllerByNodeId(child.id);
-      //   if (controller.isExpanded) {
-
-      //   } else {
-
-      //   }
-
-      // });
-
-      // for (var i = 0; i < tree.children.length; i++) {
-      // tree.children[i].loadChi ldren('');
-      //     this.treeComponent.getControllerByNodeId(tree.children[i].id).expand();
-      // }
+      const treeController = this.treeComponent.getController();
+      if (treeController) {
+        const filteredChildren: TreeModel[] = this.getQuickFilterData(textFilter);
+        treeController.setChildren(filteredChildren);
+      }
+    } else {
+      this.setData(this.dataResponseArray);
     }
+    //   textFilter = '*' + textFilter + '*';
+    //   if (this.dataService) { // uses dataservice to query data
+    //     let nodeDescriptionFilter = {};
+    //     if (this.nodeDescription) {
+    //       nodeDescriptionFilter[this.nodeDescription] = textFilter;
+    //     }
+    //     this.queryData(nodeDescriptionFilter);
+    //   } else {
+    //     // if ( && tree.children.length > 0)
+    //   }
+
+    //   // this.treeComponent.getController().expand();
+    // this.tree.children.forEach(child => {
+    //   const controller: TreeController = this.treeComponent.getControllerByNodeId(child.id);
+    //   if (controller.isExpanded) {
+
+    //   } else {
+
+    //   }
+
+    // });
+
+    // for (var i = 0; i < tree.children.length; i++) {
+    // tree.children[i].loadChi ldren('');
+    //     this.treeComponent.getControllerByNodeId(tree.children[i].id).expand();
+    // }
+
   }
 
   nodeSelected(event: NodeSelectedEvent) {
@@ -608,7 +637,60 @@ export class OTreeComponent extends OServiceBaseComponent implements OnInit, Aft
   }
 
   useQuickFilter(): boolean {
-    return this.quickFilter && !this.recursive && this.treeNodes.length === 0;
+    return this.quickFilter;// && !this.recursive && this.treeNodes.length === 0;
+  }
+
+  protected getQuickFilterData(filter: any): TreeModel[] {
+    if (!this.filterCaseSensitive) {
+      filter = filter.toLowerCase();
+    }
+    return this.tree.children.filter((item: TreeModel) => {
+      return this.filterTreeModel(item, filter);
+    });
+  }
+
+  protected filterTreeModel(item: TreeModel, filter: string): boolean {
+    const controller = this.treeComponent.getControllerByNodeId(item.id);
+    if (controller && controller.isExpanded()) {
+      return this.filterBranch(item, filter);
+    }
+    return this.filterLeaf(item, filter);
+  }
+
+  protected filterBranch(item: TreeModel, filter: string): boolean {
+    const controller: TreeController = this.treeComponent.getControllerByNodeId(item.id);
+    const children = controller.toTreeModel().children;
+    let result = this.filterLeaf(item, filter);
+    if (result) {
+      return true;
+    }
+    for (let i = 0, len = children.length; i < len; i++) {
+      const child = children[i];
+      if (this.filterTreeModel(child, filter)) {
+        result = true;
+        break;
+      }
+    }
+    return result;
+  }
+
+  protected filterLeaf(item: TreeModel, filter: string): boolean {
+    let searchStr = this.getStringForSearch(item);
+    if (!this.filterCaseSensitive) {
+      searchStr = searchStr.toLowerCase();
+    }
+    const result = searchStr.indexOf(filter) !== -1;
+    item._childrenLoadingState = result ? 2 : 0;
+    return result;
+  }
+
+  protected getStringForSearch(item: TreeModel) {
+    let resultArr = [];
+    let columns = item.treeNodeComponent ? item.treeNodeComponent.quickFilterColArray : this.quickFilterColArray;
+    resultArr = columns.map((col: string) => {
+      return item.data[col];
+    });
+    return resultArr.join(' ');
   }
 }
 
