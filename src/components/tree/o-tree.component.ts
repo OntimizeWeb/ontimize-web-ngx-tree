@@ -1,10 +1,9 @@
-import { Component, OnInit, ViewEncapsulation, NgModule, Injector, ElementRef, Optional, Inject, forwardRef, OnDestroy, ViewChild, AfterViewInit, EventEmitter, SimpleChange } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation, NgModule, Injector, ElementRef, Optional, Inject, forwardRef, OnDestroy, ViewChild, AfterViewInit, EventEmitter, SimpleChange, ViewChildren, QueryList } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Router, ActivatedRoute, RouterModule } from '@angular/router';
 import { TreeModule, TreeModel, Ng2TreeSettings, TreeComponent, Tree, NodeSelectedEvent, NodeCollapsedEvent, NodeExpandedEvent, NodeMovedEvent, NodeCreatedEvent, NodeRemovedEvent, NodeRenamedEvent, TreeController } from 'ng2-tree';
 import { LoadNextLevelEvent } from 'ng2-tree/src/tree.events';
 import { Subscription } from 'rxjs/Subscription';
-
 import {
   OntimizeWebModule,
   InputConverter,
@@ -21,7 +20,8 @@ import {
   OSearchInputModule,
   OntimizeService,
   dataServiceFactory,
-  OTranslateService
+  OTranslateService,
+  OSearchInputComponent
 } from 'ontimize-web-ngx';
 
 import { OTreeNodeComponent } from './o-tree-node.component';
@@ -97,7 +97,7 @@ export const DEFAULT_OUTPUTS_O_TREE = [
     { provide: OntimizeService, useFactory: dataServiceFactory, deps: [Injector] }
   ],
   host: {
-    '[class.o-tree]': 'tree'
+    '[class.o-tree]': 'true'
   }
 })
 export class OTreeComponent extends OServiceBaseComponent implements OnInit, AfterViewInit, OnDestroy {
@@ -156,7 +156,7 @@ export class OTreeComponent extends OServiceBaseComponent implements OnInit, Aft
   onLoadNextLevel: EventEmitter<any> = new EventEmitter();
 
   @ViewChild('treeComponent') treeComponent: TreeComponent;
-  tree: TreeModel;
+  rootTreeModel: TreeModel;
   settings: Ng2TreeSettings;
   selectedNode: Tree;
 
@@ -168,6 +168,10 @@ export class OTreeComponent extends OServiceBaseComponent implements OnInit, Aft
 
   protected translateService: OTranslateService;
   protected onLanguageChangeSubscription: Subscription;
+
+  @ViewChildren(OSearchInputComponent)
+  searchInput: QueryList<OSearchInputComponent>;
+  protected filteringTree: boolean = false;
 
   constructor(
     injector: Injector,
@@ -214,7 +218,7 @@ export class OTreeComponent extends OServiceBaseComponent implements OnInit, Aft
   }
 
   ngOnChanges(changes: { [propName: string]: SimpleChange }) {
-    if (Util.isDefined(this.tree) && Util.isDefined(this.treeComponent)) {
+    if (Util.isDefined(this.rootTreeModel) && Util.isDefined(this.treeComponent)) {
       super.ngOnChanges(changes);
     }
   }
@@ -234,7 +238,7 @@ export class OTreeComponent extends OServiceBaseComponent implements OnInit, Aft
   onLanguageChangeCallback() {
     this.translating = true;
     this.treeComponent.getController().rename(this.translateService.get(this.rootTitle));
-    this.translateChildren(this.tree);
+    this.translateChildren(this.rootTreeModel);
     this.translating = false;
   }
 
@@ -393,7 +397,7 @@ export class OTreeComponent extends OServiceBaseComponent implements OnInit, Aft
       childrenArray.push(this.mapTreeNode(el));
     });
 
-    this.tree = {
+    this.rootTreeModel = {
       value: this.translateService.get(this.rootTitle),
       id: 0,
       children: childrenArray,
@@ -421,6 +425,10 @@ export class OTreeComponent extends OServiceBaseComponent implements OnInit, Aft
     //   this.setTree(this.data);
     // } else {
     this.queryData();
+    if (this.searchInput.length === 1) {
+      const filter = this.searchInput.first.getValue();
+      this.onSearch(filter);
+    }
     // }
   }
 
@@ -428,43 +436,15 @@ export class OTreeComponent extends OServiceBaseComponent implements OnInit, Aft
     if (this.pageable) {
       return;
     }
-    let textFilter = textValue;
-    if (textFilter && textFilter.length > 0) {
-      const treeController = this.treeComponent.getController();
-      if (treeController) {
-        const filteredChildren: TreeModel[] = this.getQuickFilterData(textFilter);
-        treeController.setChildren(filteredChildren);
-      }
+    if (textValue && textValue.length > 0) {
+      this.setData(this.dataResponseArray);
+      const self = this;
+      setTimeout(() => {
+        self.filterTreeUsingFilter(textValue);
+      }, 0);
     } else {
       this.setData(this.dataResponseArray);
     }
-    //   textFilter = '*' + textFilter + '*';
-    //   if (this.dataService) { // uses dataservice to query data
-    //     let nodeDescriptionFilter = {};
-    //     if (this.nodeDescription) {
-    //       nodeDescriptionFilter[this.nodeDescription] = textFilter;
-    //     }
-    //     this.queryData(nodeDescriptionFilter);
-    //   } else {
-    //     // if ( && tree.children.length > 0)
-    //   }
-
-    //   // this.treeComponent.getController().expand();
-    // this.tree.children.forEach(child => {
-    //   const controller: TreeController = this.treeComponent.getControllerByNodeId(child.id);
-    //   if (controller.isExpanded) {
-
-    //   } else {
-
-    //   }
-
-    // });
-
-    // for (var i = 0; i < tree.children.length; i++) {
-    // tree.children[i].loadChi ldren('');
-    //     this.treeComponent.getControllerByNodeId(tree.children[i].id).expand();
-    // }
-
   }
 
   nodeSelected(event: NodeSelectedEvent) {
@@ -561,7 +541,9 @@ export class OTreeComponent extends OServiceBaseComponent implements OnInit, Aft
   }
 
   nodeRemoved(event: NodeRemovedEvent) {
-    console.log(event);
+    if (!this.filteringTree) {
+      console.log(event);
+    }
     // if (node && node.node && node.node.id && this.dataService) {
     // // this.dialogService.confirm('CONFIRM', 'MESSAGES.CONFIRM_DELETE_TREE_NODE').then(
     // //     res => {
@@ -640,48 +622,55 @@ export class OTreeComponent extends OServiceBaseComponent implements OnInit, Aft
     return this.quickFilter;// && !this.recursive && this.treeNodes.length === 0;
   }
 
-  protected getQuickFilterData(filter: any): TreeModel[] {
+  protected filterTreeUsingFilter(filter: any) {
+    this.filteringTree = true;
     if (!this.filterCaseSensitive) {
       filter = filter.toLowerCase();
     }
-    return this.tree.children.filter((item: TreeModel) => {
-      return this.filterTreeModel(item, filter);
+    this.rootTreeModel.children.forEach((item: TreeModel) => {
+      this.filterNodesUsingFilter(item, filter);
     });
+    this.filteringTree = false;
   }
 
-  protected filterTreeModel(item: TreeModel, filter: string): boolean {
+  protected filterNodesUsingFilter(item: TreeModel, filter: string) {
     const controller = this.treeComponent.getControllerByNodeId(item.id);
     if (controller && controller.isExpanded()) {
-      return this.filterBranch(item, filter);
+      this.filterBranch(item, filter);
+    } else if (controller) {
+      this.filterLeaf(item, filter);
     }
-    return this.filterLeaf(item, filter);
   }
 
-  protected filterBranch(item: TreeModel, filter: string): boolean {
+  protected filterBranch(item: TreeModel, filter: string) {
     const controller: TreeController = this.treeComponent.getControllerByNodeId(item.id);
     const children = controller.toTreeModel().children;
-    let result = this.filterLeaf(item, filter);
-    if (result) {
-      return true;
+
+    children.forEach((child: TreeModel) => {
+      this.filterNodesUsingFilter(child, filter);
+    });
+
+    let notNullChildren = children.filter((child: TreeModel) => {
+      return Util.isDefined(this.treeComponent.getControllerByNodeId(child.id));
+    });
+
+    if (notNullChildren.length === 0) {
+      this.filterLeaf(item, filter);
     }
-    for (let i = 0, len = children.length; i < len; i++) {
-      const child = children[i];
-      if (this.filterTreeModel(child, filter)) {
-        result = true;
-        break;
-      }
-    }
-    return result;
   }
 
-  protected filterLeaf(item: TreeModel, filter: string): boolean {
+  protected filterLeaf(item: TreeModel, filter: string) {
     let searchStr = this.getStringForSearch(item);
     if (!this.filterCaseSensitive) {
       searchStr = searchStr.toLowerCase();
     }
-    const result = searchStr.indexOf(filter) !== -1;
-    item._childrenLoadingState = result ? 2 : 0;
-    return result;
+    const remove = searchStr.indexOf(filter) === -1;
+    if (remove) {
+      const treeController: TreeController = this.treeComponent.getControllerByNodeId(item.id);
+      if (treeController) {
+        treeController.remove();
+      }
+    }
   }
 
   protected getStringForSearch(item: TreeModel) {
