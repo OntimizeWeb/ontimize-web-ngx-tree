@@ -141,8 +141,8 @@ export class OTreeComponent extends OServiceBaseComponent implements OnInit, Aft
   protected sortColArray: Array<ISQLOrder> = [];
   protected descriptionColArray: Array<string> = [];
   protected quickFilterColArray: string[];
-  protected dataResponseArray: Array<any> = [];
-
+  protected dataResponseArray: any[] = [];
+  protected expandedNodesIds: any[] = [];
   oTitle: string;
   treeNodes: OTreeNodeComponent[] = [];
 
@@ -172,6 +172,7 @@ export class OTreeComponent extends OServiceBaseComponent implements OnInit, Aft
   @ViewChildren(OSearchInputComponent)
   searchInput: QueryList<OSearchInputComponent>;
   protected filteringTree: boolean = false;
+  protected resetingTree: boolean = false;
 
   constructor(
     injector: Injector,
@@ -311,6 +312,7 @@ export class OTreeComponent extends OServiceBaseComponent implements OnInit, Aft
         value: this.translateService.get(childNode.rootTitle),
         id: childNode.oattr,
         treeNodeComponent: childNode,
+        emitLoadNextLevel: false,
         loadChildren: (childNodeCallback) => {
           let queryMethodName = childNode.queryMethod;
           if (!childNode.dataService || !(queryMethodName in childNode.dataService) || !childNode.entity) {
@@ -389,6 +391,24 @@ export class OTreeComponent extends OServiceBaseComponent implements OnInit, Aft
     return descTxt;
   }
 
+  reloadData() {
+    // if (this.unstructuredData) {
+    //   this.static = true;
+    //   this.rightMenu = false;
+    //   this.setTreefromDirtyArray(this.unstructuredData);
+    // } else if (this.data) {
+    //   this.setTree(this.data);
+    // } else {
+    this.queryData();
+    if (this.searchInput.length === 1) {
+      const filter = this.searchInput.first.getValue();
+      if (filter && filter.length > 1) {
+        this.onSearch(filter);
+      }
+    }
+    // }
+  }
+
   protected setData(treeArray: any[]) {//, sqlTypes?: any) {
     this.dataResponseArray = treeArray;
     let childrenArray: TreeModel[] = [];
@@ -416,34 +436,33 @@ export class OTreeComponent extends OServiceBaseComponent implements OnInit, Aft
     };
   }
 
-  reloadData() {
-    // if (this.unstructuredData) {
-    //   this.static = true;
-    //   this.rightMenu = false;
-    //   this.setTreefromDirtyArray(this.unstructuredData);
-    // } else if (this.data) {
-    //   this.setTree(this.data);
-    // } else {
-    this.queryData();
-    if (this.searchInput.length === 1) {
-      const filter = this.searchInput.first.getValue();
-      this.onSearch(filter);
-    }
-    // }
+  protected resetTree() {
+    this.resetingTree = true;
+    this.setData(this.dataResponseArray);
+    const self = this;
+    setTimeout(() => {
+      self.expandedNodesIds.forEach((id: any, index: number) => {
+        const controller: TreeController = self.treeComponent.getControllerByNodeId(id);
+        if (controller) {
+          controller.expand();
+        }
+        if (index === self.expandedNodesIds.length - 1) {
+          self.resetingTree = false;
+        }
+      });
+    }, 0);
   }
 
   onSearch(textValue: string) {
     if (this.pageable) {
       return;
     }
+    this.resetTree();
     if (textValue && textValue.length > 0) {
-      this.setData(this.dataResponseArray);
       const self = this;
       setTimeout(() => {
         self.filterTreeUsingFilter(textValue);
-      }, 0);
-    } else {
-      this.setData(this.dataResponseArray);
+      }, 250);
     }
   }
 
@@ -585,8 +604,9 @@ export class OTreeComponent extends OServiceBaseComponent implements OnInit, Aft
   }
 
   nodeExpanded(event: NodeExpandedEvent) {
-    if (event && event.node && event.node.id) {
+    if (!this.resetingTree && event && event.node && event.node.id) {
       const node: Tree = event.node;
+      this.expandedNodesIds.push(node.id);
       this.onNodeExpanded.emit(node);
     }
   }
@@ -594,6 +614,7 @@ export class OTreeComponent extends OServiceBaseComponent implements OnInit, Aft
   nodeCollapsed(event: NodeCollapsedEvent) {
     if (event && event.node && event.node.id) {
       const node: Tree = event.node;
+      this.expandedNodesIds.splice(this.expandedNodesIds.indexOf(node.id), 1);
       this.onNodeCollapsed.emit(node);
     }
   }
@@ -679,6 +700,9 @@ export class OTreeComponent extends OServiceBaseComponent implements OnInit, Aft
     resultArr = columns.map((col: string) => {
       return item.data[col];
     });
+    if (Util.isDefined(item.loadChildren)) {
+      resultArr.push(item.value);
+    }
     return resultArr.join(' ');
   }
 }
