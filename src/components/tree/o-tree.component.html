@@ -21,7 +21,7 @@
       <o-search-input #searchInput *ngIf="useQuickFilter()" placeholder="" (onSearch)="onSearch($event)"></o-search-input>
     </div>
   </mat-toolbar>
-  <div class="tree-content o-scroll" [class.recursive-tree]="recursive">
+  <div class="tree-content o-scroll" [class.recursive-tree]="recursive" [class.filtering-tree]="resetingTree">
     <tree #treeComponent *ngIf="!loading" [tree]="rootTreeModel" [settings]="settings"
       (nodeSelected)="nodeSelected($event)" (nodeMoved)="nodeMoved($event)"
       (nodeCreated)="nodeCreated($event)" (nodeRemoved)="nodeRemoved($event)"

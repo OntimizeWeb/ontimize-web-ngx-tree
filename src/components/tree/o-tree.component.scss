@@ -17,6 +17,10 @@
       }
     }
 
+    .filtering-tree {
+      visibility: hidden;
+    }
+
     tree-internal {
       ul {
         padding: 0 0 4px 12px;

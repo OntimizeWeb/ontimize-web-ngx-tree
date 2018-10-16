@@ -172,7 +172,7 @@ export class OTreeComponent extends OServiceBaseComponent implements OnInit, Aft
   @ViewChildren(OSearchInputComponent)
   searchInput: QueryList<OSearchInputComponent>;
   protected filteringTree: boolean = false;
-  protected resetingTree: boolean = false;
+  resetingTree: boolean = false;
 
   constructor(
     injector: Injector,
@@ -442,13 +442,12 @@ export class OTreeComponent extends OServiceBaseComponent implements OnInit, Aft
     const self = this;
     setTimeout(() => {
       self.expandedNodesIds.forEach((id: any, index: number) => {
-        const controller: TreeController = self.treeComponent.getControllerByNodeId(id);
-        if (controller) {
-          controller.expand();
-        }
-        if (index === self.expandedNodesIds.length - 1) {
-          self.resetingTree = false;
-        }
+        setTimeout(() => {
+          const controller: TreeController = self.treeComponent.getControllerByNodeId(id);
+          if (controller) {
+            controller.expand();
+          }
+        }, index * 75);
       });
     }, 0);
   }
@@ -458,12 +457,17 @@ export class OTreeComponent extends OServiceBaseComponent implements OnInit, Aft
       return;
     }
     this.resetTree();
-    if (textValue && textValue.length > 0) {
-      const self = this;
-      setTimeout(() => {
-        self.filterTreeUsingFilter(textValue);
-      }, 250);
-    }
+    const self = this;
+    setTimeout(() => {
+      if (textValue && textValue.length > 0) {
+        setTimeout(() => {
+          self.filterTreeUsingFilter(textValue);
+          self.resetingTree = false;
+        }, (self.expandedNodesIds.length + 1) * 75);
+      } else {
+        self.resetingTree = false;
+      }
+    }, 75);
   }
 
   nodeSelected(event: NodeSelectedEvent) {
@@ -606,7 +610,9 @@ export class OTreeComponent extends OServiceBaseComponent implements OnInit, Aft
   nodeExpanded(event: NodeExpandedEvent) {
     if (!this.resetingTree && event && event.node && event.node.id) {
       const node: Tree = event.node;
-      this.expandedNodesIds.push(node.id);
+      if (this.expandedNodesIds.indexOf(node.id) === -1) {
+        this.expandedNodesIds.push(node.id);
+      }
       this.onNodeExpanded.emit(node);
     }
   }
