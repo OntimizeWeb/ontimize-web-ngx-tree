@@ -3,8 +3,8 @@ import { OTranslateService, SnackBarService, OSnackBarConfig } from 'ontimize-we
 
 const TREE_HTML_DATA = `
 <o-tree #treeview fxFlex root-title="CUSTOMERS" [static-data]="getCustomers()"
-        keys="CUSTOMERID" columns="CUSTOMERID;SURNAME;NAME"
-        description-columns="SURNAME;NAME" separator=", ">
+    keys="CUSTOMERID" columns="CUSTOMERID;SURNAME;NAME"
+    description-columns="SURNAME;NAME" separator=", ">
 </o-tree>
 `;
 

@@ -1,5 +1,5 @@
-<o-form service="customers" entity="customer" show-header="yes" header-actions="R;I;U;D" #oDetailForm keys="CUSTOMERID" keys-sql-types="INTEGER"
-  columns="ID_DMS_DOC" editable-detail="yes" service-type="DummyService" label-header="CUSTOMER">
+<o-form service="customers" entity="customer" show-header="yes" header-actions="R;I;U;D" #oDetailForm keys="CUSTOMERID"
+  keys-sql-types="INTEGER" columns="ID_DMS_DOC" editable-detail="yes" service-type="DummyService" label-header="CUSTOMER">
 
 
   <div fxLayout="column" fxLayoutGap="24px" layout-padding>
@@ -17,8 +17,8 @@
 
         <o-table-column attr="ACCOUNT" title="ACCOUNT" class="o-table-column-centered"></o-table-column>
         <o-table-column attr="STARTDATE" title="STARTDATE" type="date" format="LL"></o-table-column>
-        <o-table-column attr="BALANCE" title="BALANCE" type="currency" currency-symbol="€" currency-symbol-position="right" thousand-separator="."
-          decimal-separator=",">
+        <o-table-column attr="BALANCE" title="BALANCE" type="currency" currency-symbol="€" currency-symbol-position="right"
+          thousand-separator="." decimal-separator=",">
         </o-table-column>
         <o-table-column attr="ENDDATE" title="ENDDATE" type="date" format="LL"></o-table-column>
       </o-table>

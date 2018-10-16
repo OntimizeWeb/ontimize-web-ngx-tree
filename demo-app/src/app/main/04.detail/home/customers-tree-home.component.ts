@@ -5,11 +5,15 @@ const TREE_HTML_DATA = `
 <div fxLayout="row" fxLayoutAlign="center stretch" fxFlexFill>
   <div fxLayout="column" fxLayoutAlign="center stretch" fxFlex="25">
 
-    <o-tree #treeview fxFlex root-title="CUSTOMERS" service-type="DummyService" service="customers" entity="customer" keys="CUSTOMERID"
-      columns="CUSTOMERID;SURNAME;NAME" description-columns="SURNAME;NAME" separator=", " query-on-init="true" route=":CUSTOMERID">
+    <o-tree #treeview fxFlex root-title="CUSTOMERS" service-type="DummyService"
+      service="customers" entity="customer" keys="CUSTOMERID"
+      columns="CUSTOMERID;SURNAME;NAME" description-columns="SURNAME;NAME"
+      separator=", " query-on-init="true" route=":CUSTOMERID">
 
-      <o-tree-node root-title="ACCOUNTS" show-root="no" service-type="DummyService" service="customers" entity="customerAccount"
-        columns="ACCOUNTID;CUSTOMERID;ACCOUNT" description-columns="ACCOUNT" keys="ACCOUNTID" parent-keys="CUSTOMERID" route="accounts/:ACCOUNTID">
+      <o-tree-node root-title="ACCOUNTS" show-root="no" service-type="DummyService"
+        service="customers" entity="customerAccount" columns="ACCOUNTID;CUSTOMERID;ACCOUNT"
+        description-columns="ACCOUNT" keys="ACCOUNTID" parent-keys="CUSTOMERID"
+        route="accounts/:ACCOUNTID">
       </o-tree-node>
 
     </o-tree>
@@ -46,9 +50,9 @@ const ROUTING_TS_DATA = `
 `;
 
 const CUSTOMER_DETAIL_HTML_DATA = `
-<o-form service="customers" entity="customer" show-header="yes" header-actions="R;I;U;D" #oDetailForm keys="CUSTOMERID" keys-sql-types="INTEGER"
-  columns="ID_DMS_DOC" editable-detail="yes" service-type="DummyService" label-header="CUSTOMER">
-
+<o-form service="customers" entity="customer" show-header="yes" header-actions="R;I;U;D"
+  #oDetailForm keys="CUSTOMERID" keys-sql-types="INTEGER" columns="ID_DMS_DOC"
+  editable-detail="yes" service-type="DummyService" label-header="CUSTOMER">
 
   <div fxLayout="column" fxLayoutGap="24px" layout-padding>
 
@@ -59,14 +63,15 @@ const CUSTOMER_DETAIL_HTML_DATA = `
 
     <o-column attr="other_data" title-label="CONTACT_DATA" layout-padding layout-align="start stretch" class="rounded-panel">
       <o-table #accountsTable service-type="DummyService" service="customers" entity="customerAccount" parent-keys="CUSTOMERID"
-        keys="ACCOUNTID" detail-form-route="accounts" edit-form-route="accounts" columns="ACCOUNTID;ENTITYID;OFFICEID;CDID;ANID;ACCOUNT;BALANCE;CUSTOMERID;STARTDATE;ENDDATE"
+        keys="ACCOUNTID" detail-form-route="accounts" edit-form-route="accounts"
+        columns="ACCOUNTID;ENTITYID;OFFICEID;CDID;ANID;ACCOUNT;BALANCE;CUSTOMERID;STARTDATE;ENDDATE"
         visible-columns="ACCOUNT;BALANCE;STARTDATE;ENDDATE" title="ACCOUNTS" sort-columns="STARTDATE" query-on-init="false"
         query-rows="6" quick-filter="yes" pageable="no" insert-button="no" row-height="medium" class="vertical-padding-8">
 
         <o-table-column attr="ACCOUNT" title="ACCOUNT" class="o-table-column-centered"></o-table-column>
         <o-table-column attr="STARTDATE" title="STARTDATE" type="date" format="LL"></o-table-column>
-        <o-table-column attr="BALANCE" title="BALANCE" type="currency" currency-symbol="€" currency-symbol-position="right" thousand-separator="."
-          decimal-separator=",">
+        <o-table-column attr="BALANCE" title="BALANCE" type="currency" currency-symbol="€"
+          currency-symbol-position="right" thousand-separator="." decimal-separator=",">
         </o-table-column>
         <o-table-column attr="ENDDATE" title="ENDDATE" type="date" format="LL"></o-table-column>
       </o-table>
@@ -78,8 +83,9 @@ const CUSTOMER_DETAIL_HTML_DATA = `
 `;
 
 const ACCOUNT_DETAIL_HTML_DATA = `
-<o-form service="branches" entity="account" keys="ACCOUNTID" keys-sql-types="INTEGER" columns="ACCOUNTID;BALANCE;ENTITYID;OFFICEID;CDID;ANID;ACCOUNTTYP"
-  fxLayout="column" show-header="yes" header-actions="R;U;D" #oForm label-header="ACCOUNT" service-type="DummyService">
+<o-form service="branches" entity="account" keys="ACCOUNTID" keys-sql-types="INTEGER"
+  columns="ACCOUNTID;BALANCE;ENTITYID;OFFICEID;CDID;ANID;ACCOUNTTYP" fxLayout="column"
+  show-header="yes" header-actions="R;U;D" #oForm label-header="ACCOUNT" service-type="DummyService">
 
   <div fxLayout="column" fxLayoutGap="24px" layout-padding>
 
@@ -91,18 +97,21 @@ const ACCOUNT_DETAIL_HTML_DATA = `
 
     <o-column attr="other_data" title-label="TRANSACTIONS" layout-padding layout-align="start stretch" class="rounded-panel">
 
-      <o-table fxFlex service-type="DummyService" service="movements" entity="movement" keys="MOVEMENTID" parent-keys="ACCOUNTID"
-        detail-form-route="transactions" insert-form-route="transactions/new" edit-form-route="transactions"
+      <o-table fxFlex service-type="DummyService" service="movements" entity="movement"
+        keys="MOVEMENTID" parent-keys="ACCOUNTID" detail-form-route="transactions"
+        insert-form-route="transactions/new" edit-form-route="transactions"
         columns="ACCOUNTID;MOVEMENTID;DATE_;CONCEPT;MOVEMENT;MOVEMENTTYPES"
-        visible-columns="DATE_;CONCEPT;MOVEMENT;MOVEMENTTYPES" title="MOVEMENTS" sort-columns="DATE_" query-on-init="false"
-        query-rows="5" quick-filter="yes" pageable="no">
+        visible-columns="DATE_;CONCEPT;MOVEMENT;MOVEMENTTYPES" title="MOVEMENTS" sort-columns="DATE_"
+        query-on-init="false" query-rows="5" quick-filter="yes" pageable="no">
 
         <o-table-columns-filter></o-table-columns-filter>
 
-        <o-table-column attr="DATE_" title="DATE_" type="date" format="LL" width="30%"></o-table-column>
+        <o-table-column attr="DATE_" title="DATE_" type="date" format="LL" width="30%">
+        </o-table-column>
         <o-table-column attr="CONCEPT" title="CONCEPT" width="18%"></o-table-column>
-        <o-table-column attr="MOVEMENT" title="MOVEMENT" width="18%" type="currency" currency-symbol="€" currency-symbol-position="right"
-          thousand-separator="." decimal-separator=","></o-table-column>
+        <o-table-column attr="MOVEMENT" title="MOVEMENT" width="18%" type="currency" currency-symbol="€"
+          currency-symbol-position="right" thousand-separator="." decimal-separator=",">
+        </o-table-column>
         <o-table-column attr="MOVEMENTTYPES" title="MOVEMENTTYPES">
         </o-table-column>
       </o-table>
