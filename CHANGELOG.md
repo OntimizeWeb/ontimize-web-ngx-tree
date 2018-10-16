@@ -1,4 +1,4 @@
-## 3.1.0 (2018-10-05)
+## 3.1.0 (2018-10-16)
 ### PEER-DEPENDENCY UPDATES ###
 * **Updated**:  ontimize-web-ngx@3.1.0
 
