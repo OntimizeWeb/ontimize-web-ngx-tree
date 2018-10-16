@@ -2,17 +2,20 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { OTranslateService, SnackBarService, OSnackBarConfig } from 'ontimize-web-ngx';
 
 const TREE_HTML_DATA = `
-<o-tree #treeview fxFlex root-title="CUSTOMERS" service-type="DummyService" service="customers"
-  entity="customer" keys="CUSTOMERID" columns="CUSTOMERID;SURNAME;NAME"
-  description-columns="SURNAME;NAME" separator=", " query-on-init="true">
+<o-tree #treeview fxFlex root-title="CUSTOMERS" service-type="DummyService"
+  service="customers" entity="customer" keys="CUSTOMERID" columns="CUSTOMERID;SURNAME;NAME"
+  description-columns="SURNAME;NAME" separator=", " query-on-init="true"
+  quick-filter="true" quick-filter-columns="SURNAME;NAME">
 
   <o-tree-node root-title="ACCOUNTS" show-root="no" service-type="DummyService"
-    service="customers" entity="customerAccount" columns="ACCOUNTID;CUSTOMERID;ACCOUNT"
-    description-columns="ACCOUNT" keys="ACCOUNTID" parent-keys="CUSTOMERID">
+    service="customers" entity="customerAccount" quick-filter-columns="ACCOUNT"
+    columns="ACCOUNTID;CUSTOMERID;ACCOUNT" description-columns="ACCOUNT" keys="ACCOUNTID"
+    parent-keys="CUSTOMERID">
 
     <o-tree-node root-title="ACCOUNT_CONCEPTS" show-root="no" service-type="DummyService"
       service="branches" entity="accountConcepts" columns="CONCEPT;ACCOUNTID"
-      description-columns="CONCEPT" keys="CONCEPT;ACCOUNTID" parent-keys="ACCOUNTID">
+      quick-filter-columns="CONCEPT" description-columns="CONCEPT" keys="CONCEPT;ACCOUNTID"
+      parent-keys="ACCOUNTID">
     </o-tree-node>
 
     <o-tree-node root-title="ACCOUNT_MOVEMENTTYPES" show-root="no" service-type="DummyService"
@@ -22,7 +25,7 @@ const TREE_HTML_DATA = `
 
   </o-tree-node>
 
-</o-tree>
+  </o-tree>
 `;
 
 const TREE_TS_DATA = `
@@ -54,15 +57,15 @@ export class TreeNodesComponent implements OnInit {
       label: 'customers',
       type: 'typescript',
       data: CUSTOMERS_DATA
-    },{
+    }, {
       label: 'accounts',
       type: 'typescript',
       data: ACCOUNTS_DATA
-    },{
+    }, {
       label: 'concepts',
       type: 'typescript',
       data: CONCEPTS_DATA
-    },{
+    }, {
       label: 'movement types',
       type: 'typescript',
       data: MOVEMENTTYPES_DATA

@@ -1,9 +1,9 @@
-import { Component, OnInit, ViewEncapsulation, NgModule, Injector, ElementRef, Optional, Inject, forwardRef, OnDestroy, ViewChild, AfterViewInit, EventEmitter, SimpleChange } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation, NgModule, Injector, ElementRef, Optional, Inject, forwardRef, OnDestroy, ViewChild, AfterViewInit, EventEmitter, SimpleChange, ViewChildren, QueryList } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Router, ActivatedRoute, RouterModule } from '@angular/router';
 import { TreeModule, TreeModel, Ng2TreeSettings, TreeComponent, Tree, NodeSelectedEvent, NodeCollapsedEvent, NodeExpandedEvent, NodeMovedEvent, NodeCreatedEvent, NodeRemovedEvent, NodeRenamedEvent, TreeController } from 'ng2-tree';
 import { LoadNextLevelEvent } from 'ng2-tree/src/tree.events';
-
+import { Subscription } from 'rxjs/Subscription';
 import {
   OntimizeWebModule,
   InputConverter,
@@ -19,7 +19,9 @@ import {
   FilterExpressionUtils,
   OSearchInputModule,
   OntimizeService,
-  dataServiceFactory
+  dataServiceFactory,
+  OTranslateService,
+  OSearchInputComponent
 } from 'ontimize-web-ngx';
 
 import { OTreeNodeComponent } from './o-tree-node.component';
@@ -64,7 +66,13 @@ export const DEFAULT_INPUTS_O_TREE = [
   'refreshButton: refresh-button',
 
   // quick-filter [no|yes]: show quick filter. Default: yes.
-  'quickFilter: quick-filter'
+  'quickFilter: quick-filter',
+
+  // quick-filter-columns [string]: columns of the filter, separated by ';'. Default: no value.
+  'quickFilterColumns: quick-filter-columns',
+
+  // filter [yes|no|true|false]: filter si case sensitive. Default: no.
+  'filterCaseSensitive: filter-case-sensitive'
 ];
 
 export const DEFAULT_OUTPUTS_O_TREE = [
@@ -89,7 +97,7 @@ export const DEFAULT_OUTPUTS_O_TREE = [
     { provide: OntimizeService, useFactory: dataServiceFactory, deps: [Injector] }
   ],
   host: {
-    '[class.o-tree]': 'tree'
+    '[class.o-tree]': 'true'
   }
 })
 export class OTreeComponent extends OServiceBaseComponent implements OnInit, AfterViewInit, OnDestroy {
@@ -124,12 +132,17 @@ export class OTreeComponent extends OServiceBaseComponent implements OnInit, Aft
   refreshButton: boolean = true;
   @InputConverter()
   quickFilter: boolean = false;
+  quickFilterColumns: string;
+  @InputConverter()
+  filterCaseSensitive: boolean = false;
   /* end of variables */
 
   /* parsed input variables */
   protected sortColArray: Array<ISQLOrder> = [];
   protected descriptionColArray: Array<string> = [];
-
+  protected quickFilterColArray: string[];
+  protected dataResponseArray: any[] = [];
+  protected expandedNodesIds: any[] = [];
   oTitle: string;
   treeNodes: OTreeNodeComponent[] = [];
 
@@ -143,7 +156,7 @@ export class OTreeComponent extends OServiceBaseComponent implements OnInit, Aft
   onLoadNextLevel: EventEmitter<any> = new EventEmitter();
 
   @ViewChild('treeComponent') treeComponent: TreeComponent;
-  tree: TreeModel;
+  rootTreeModel: TreeModel;
   settings: Ng2TreeSettings;
   selectedNode: Tree;
 
@@ -153,6 +166,14 @@ export class OTreeComponent extends OServiceBaseComponent implements OnInit, Aft
   protected actRoute: ActivatedRoute;
   protected translating: boolean;
 
+  protected translateService: OTranslateService;
+  protected onLanguageChangeSubscription: Subscription;
+
+  @ViewChildren(OSearchInputComponent)
+  searchInput: QueryList<OSearchInputComponent>;
+  protected filteringTree: boolean = false;
+  resetingTree: boolean = false;
+
   constructor(
     injector: Injector,
     protected elRef: ElementRef,
@@ -161,6 +182,7 @@ export class OTreeComponent extends OServiceBaseComponent implements OnInit, Aft
     super(injector);
     this.router = this.injector.get(Router);
     this.actRoute = this.injector.get(ActivatedRoute);
+    this.translateService = this.injector.get(OTranslateService);
   }
 
   getComponentKey(): string {
@@ -175,6 +197,9 @@ export class OTreeComponent extends OServiceBaseComponent implements OnInit, Aft
 
   ngOnInit(): void {
     this.initialize();
+    this.onLanguageChangeSubscription = this.translateService.onLanguageChanged.subscribe(() => {
+      this.onLanguageChangeCallback();
+    });
   }
 
   ngAfterViewInit() {
@@ -182,16 +207,19 @@ export class OTreeComponent extends OServiceBaseComponent implements OnInit, Aft
       this.elRef.nativeElement.removeAttribute('title');
     }
     if (this.queryOnInit) {
-      this.queryData(this.parentItem);
+      this.queryData();
     }
   }
 
   ngOnDestroy() {
     super.destroy();
+    if (this.onLanguageChangeSubscription) {
+      this.onLanguageChangeSubscription.unsubscribe();
+    }
   }
 
   ngOnChanges(changes: { [propName: string]: SimpleChange }) {
-    if (Util.isDefined(this.tree) && Util.isDefined(this.treeComponent)) {
+    if (Util.isDefined(this.rootTreeModel) && Util.isDefined(this.treeComponent)) {
       super.ngOnChanges(changes);
     }
   }
@@ -200,13 +228,18 @@ export class OTreeComponent extends OServiceBaseComponent implements OnInit, Aft
     this.sortColArray = ServiceUtils.parseSortColumns(this.sortColumns);
     this.descriptionColArray = Util.parseArray(this.descriptionColumns, true);
     super.initialize();
+
+    if (this.quickFilterColumns) {
+      this.quickFilterColArray = Util.parseArray(this.quickFilterColumns, true);
+    } else {
+      this.quickFilterColArray = this.colArray;
+    }
   }
 
-  onLanguageChangeCallback(res: any) {
-    super.onLanguageChangeCallback(res);
+  onLanguageChangeCallback() {
     this.translating = true;
     this.treeComponent.getController().rename(this.translateService.get(this.rootTitle));
-    this.translateChildren(this.tree);
+    this.translateChildren(this.rootTreeModel);
     this.translating = false;
   }
 
@@ -262,7 +295,7 @@ export class OTreeComponent extends OServiceBaseComponent implements OnInit, Aft
     if (!this.dataService || !(queryMethodName in this.dataService) || !this.entity) {
       return;
     }
-    let parentItem = ServiceUtils.getParentItemFromForm(this.parentItem, this._pKeysEquiv, this.form);
+    const parentItem = ServiceUtils.getParentKeysFromForm(this._pKeysEquiv, this.form);
     let filter = (parentItem !== undefined) ? parentItem : {};
     filter[this.parentColumn] = id;
 
@@ -279,6 +312,7 @@ export class OTreeComponent extends OServiceBaseComponent implements OnInit, Aft
         value: this.translateService.get(childNode.rootTitle),
         id: childNode.oattr,
         treeNodeComponent: childNode,
+        emitLoadNextLevel: false,
         loadChildren: (childNodeCallback) => {
           let queryMethodName = childNode.queryMethod;
           if (!childNode.dataService || !(queryMethodName in childNode.dataService) || !childNode.entity) {
@@ -357,14 +391,33 @@ export class OTreeComponent extends OServiceBaseComponent implements OnInit, Aft
     return descTxt;
   }
 
+  reloadData() {
+    // if (this.unstructuredData) {
+    //   this.static = true;
+    //   this.rightMenu = false;
+    //   this.setTreefromDirtyArray(this.unstructuredData);
+    // } else if (this.data) {
+    //   this.setTree(this.data);
+    // } else {
+    this.queryData();
+    if (this.searchInput.length === 1) {
+      const filter = this.searchInput.first.getValue();
+      if (filter && filter.length > 1) {
+        this.onSearch(filter);
+      }
+    }
+    // }
+  }
+
   protected setData(treeArray: any[]) {//, sqlTypes?: any) {
+    this.dataResponseArray = treeArray;
     let childrenArray: TreeModel[] = [];
 
     treeArray.forEach(el => {
       childrenArray.push(this.mapTreeNode(el));
     });
 
-    this.tree = {
+    this.rootTreeModel = {
       value: this.translateService.get(this.rootTitle),
       id: 0,
       children: childrenArray,
@@ -383,48 +436,38 @@ export class OTreeComponent extends OServiceBaseComponent implements OnInit, Aft
     };
   }
 
-  reloadData() {
-    // if (this.unstructuredData) {
-    //   this.static = true;
-    //   this.rightMenu = false;
-    //   this.setTreefromDirtyArray(this.unstructuredData);
-    // } else if (this.data) {
-    //   this.setTree(this.data);
-    // } else {
-    this.queryData();
-    // }
+  protected resetTree() {
+    this.resetingTree = true;
+    this.setData(this.dataResponseArray);
+    const self = this;
+    setTimeout(() => {
+      self.expandedNodesIds.forEach((id: any, index: number) => {
+        setTimeout(() => {
+          const controller: TreeController = self.treeComponent.getControllerByNodeId(id);
+          if (controller) {
+            controller.expand();
+          }
+        }, index * 75);
+      });
+    }, 0);
   }
 
   onSearch(textValue: string) {
-    let textFilter = textValue;
-    if (textFilter && textFilter.length > 0) {
-      //   textFilter = '*' + textFilter + '*';
-      //   if (this.dataService) { // uses dataservice to query data
-      //     let nodeDescriptionFilter = {};
-      //     if (this.nodeDescription) {
-      //       nodeDescriptionFilter[this.nodeDescription] = textFilter;
-      //     }
-      //     this.queryData(nodeDescriptionFilter);
-      //   } else {
-      //     // if ( && tree.children.length > 0)
-      //   }
-
-      //   // this.treeComponent.getController().expand();
-      // this.tree.children.forEach(child => {
-      //   const controller: TreeController = this.treeComponent.getControllerByNodeId(child.id);
-      //   if (controller.isExpanded) {
-
-      //   } else {
-
-      //   }
-
-      // });
-
-      // for (var i = 0; i < tree.children.length; i++) {
-      // tree.children[i].loadChi ldren('');
-      //     this.treeComponent.getControllerByNodeId(tree.children[i].id).expand();
-      // }
+    if (this.pageable) {
+      return;
     }
+    this.resetTree();
+    const self = this;
+    setTimeout(() => {
+      if (textValue && textValue.length > 0) {
+        setTimeout(() => {
+          self.filterTreeUsingFilter(textValue);
+          self.resetingTree = false;
+        }, (self.expandedNodesIds.length + 1) * 75);
+      } else {
+        self.resetingTree = false;
+      }
+    }, 75);
   }
 
   nodeSelected(event: NodeSelectedEvent) {
@@ -521,7 +564,9 @@ export class OTreeComponent extends OServiceBaseComponent implements OnInit, Aft
   }
 
   nodeRemoved(event: NodeRemovedEvent) {
-    console.log(event);
+    if (!this.filteringTree) {
+      console.log(event);
+    }
     // if (node && node.node && node.node.id && this.dataService) {
     // // this.dialogService.confirm('CONFIRM', 'MESSAGES.CONFIRM_DELETE_TREE_NODE').then(
     // //     res => {
@@ -563,8 +608,11 @@ export class OTreeComponent extends OServiceBaseComponent implements OnInit, Aft
   }
 
   nodeExpanded(event: NodeExpandedEvent) {
-    if (event && event.node && event.node.id) {
+    if (!this.resetingTree && event && event.node && event.node.id) {
       const node: Tree = event.node;
+      if (this.expandedNodesIds.indexOf(node.id) === -1) {
+        this.expandedNodesIds.push(node.id);
+      }
       this.onNodeExpanded.emit(node);
     }
   }
@@ -572,6 +620,7 @@ export class OTreeComponent extends OServiceBaseComponent implements OnInit, Aft
   nodeCollapsed(event: NodeCollapsedEvent) {
     if (event && event.node && event.node.id) {
       const node: Tree = event.node;
+      this.expandedNodesIds.splice(this.expandedNodesIds.indexOf(node.id), 1);
       this.onNodeCollapsed.emit(node);
     }
   }
@@ -597,7 +646,70 @@ export class OTreeComponent extends OServiceBaseComponent implements OnInit, Aft
   }
 
   useQuickFilter(): boolean {
-    return this.quickFilter && !this.recursive && this.treeNodes.length === 0;
+    return this.quickFilter;// && !this.recursive && this.treeNodes.length === 0;
+  }
+
+  protected filterTreeUsingFilter(filter: any) {
+    this.filteringTree = true;
+    if (!this.filterCaseSensitive) {
+      filter = filter.toLowerCase();
+    }
+    this.rootTreeModel.children.forEach((item: TreeModel) => {
+      this.filterNodesUsingFilter(item, filter);
+    });
+    this.filteringTree = false;
+  }
+
+  protected filterNodesUsingFilter(item: TreeModel, filter: string) {
+    const controller = this.treeComponent.getControllerByNodeId(item.id);
+    if (controller && controller.isExpanded()) {
+      this.filterBranch(item, filter);
+    } else if (controller) {
+      this.filterLeaf(item, filter);
+    }
+  }
+
+  protected filterBranch(item: TreeModel, filter: string) {
+    const controller: TreeController = this.treeComponent.getControllerByNodeId(item.id);
+    const children = controller.toTreeModel().children;
+
+    children.forEach((child: TreeModel) => {
+      this.filterNodesUsingFilter(child, filter);
+    });
+
+    let notNullChildren = children.filter((child: TreeModel) => {
+      return Util.isDefined(this.treeComponent.getControllerByNodeId(child.id));
+    });
+
+    if (notNullChildren.length === 0) {
+      this.filterLeaf(item, filter);
+    }
+  }
+
+  protected filterLeaf(item: TreeModel, filter: string) {
+    let searchStr = this.getStringForSearch(item);
+    if (!this.filterCaseSensitive) {
+      searchStr = searchStr.toLowerCase();
+    }
+    const remove = searchStr.indexOf(filter) === -1;
+    if (remove) {
+      const treeController: TreeController = this.treeComponent.getControllerByNodeId(item.id);
+      if (treeController) {
+        treeController.remove();
+      }
+    }
+  }
+
+  protected getStringForSearch(item: TreeModel) {
+    let resultArr = [];
+    let columns = item.treeNodeComponent ? item.treeNodeComponent.quickFilterColArray : this.quickFilterColArray;
+    resultArr = columns.map((col: string) => {
+      return item.data[col];
+    });
+    if (Util.isDefined(item.loadChildren)) {
+      resultArr.push(item.value);
+    }
+    return resultArr.join(' ');
   }
 }
 

@@ -9,6 +9,7 @@
 # dependencies
 /demo-app/node_modules/**
 /demo-app/dist/**
+/demo-app/tmp-src/**
 /node_modules
 /typings
 

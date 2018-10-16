@@ -4,7 +4,7 @@
     <div fxLayout="column" layout-padding fxLayoutAlign="center stretch" fxFlex="45">
       <o-tree #treeview fxFlex service="customers" entity="customerRecursive" keys="CUSTOMERID" columns="CUSTOMERID;SURNAME;NAME;PARENT"
         description-columns="SURNAME;NAME" separator=", " recursive="yes" parent-column="PARENT" query-on-init="true" service-type="DummyService"
-        root-title="CUSTOMERS">
+        root-title="CUSTOMERS" quick-filter="true">
       </o-tree>
     </div>
   </div>

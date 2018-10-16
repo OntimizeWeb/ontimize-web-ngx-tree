@@ -131,7 +131,7 @@ export class DummyService extends OntimizeService {
   private fetchRoots(resp: any): Array<any> {
     let rootsArray = [];
     resp.data.forEach(element => {
-      if (!element.hasOwnProperty('iditemtypeclassparent')) {
+      if (!element.hasOwnProperty('PARENT')) {
         rootsArray.push(element);
       }
     });
