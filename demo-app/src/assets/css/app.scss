@@ -28,6 +28,9 @@
 @import '../../app/login/login.theme.scss';
 @include login-theme($theme);
 
+@import '../../app/main/main-theme.scss';
+@include main-theme($theme);
+
 @import '../../app/shared/example/example.theme.scss';
 @include example-component-theme($theme);
 

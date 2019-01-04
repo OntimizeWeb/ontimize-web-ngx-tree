@@ -1,7 +1,8 @@
 <example-comp fxFlexFill #ex collapsible="no" collapsed="no" comp-name="TREE.BASIC.COMPONENT" comp-desc="TREE.BASIC.COMPONENT.DESC"
   [files]="files" (showSource)="onShowSource(ex)">
   <div fxLayout="row" fxLayoutAlign="center stretch" layout-padding>
-    <div fxLayout="column" layout-padding fxLayoutAlign="center stretch" fxFlex="45">
+
+    <div fxLayout="column" layout-padding fxLayoutAlign="start stretch" fxFlex="45">
       <o-tree #treeview fxFlex service="customers" entity="customer" keys="CUSTOMERID" columns="CUSTOMERID;SURNAME;NAME" description-columns="SURNAME;NAME"
         separator=", " recursive="no" query-on-init="true" service-type="DummyService" root-title="CUSTOMERS" [title]="treeTitle.value"
         [controls]="controlsToggle.checked" [quick-filter]="quickFilterToggle.checked" [refresh-button]="refreshButtonToggle.checked"

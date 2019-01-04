@@ -14,7 +14,7 @@
     </button>
   </mat-toolbar>
 
-  <div fxLayout="column" fxFlex="grow">
+  <div fxLayout="column" fxFlex="grow" class="o-scroll">
     <div *ngIf="showSource" [style.height]="tabHeight">
       <mat-tab-group fxFlex class="playground-tabs">
         <mat-tab label="{{ 'html' | uppercase }}" *ngIf="html">
