@@ -9,7 +9,7 @@
     "build": "ng build",
     "production": "ng build --aot=false --target -prod --base-href /ontimize-web-ngx-tree-quickstart/",
     "production-aot": "ontimize-web-ngx production-aot --href /ontimize-web-ngx-tree-quickstart/",
-    "production-aot-server": "ontimize-web-ngx production-aot --href /ontimizeweb/tree/v3/"
+    "production-aot-server": "ontimize-web-ngx production-aot --href /ontimizeweb/v3/tree/"
   },
   "private": true,
   "dependencies": {
