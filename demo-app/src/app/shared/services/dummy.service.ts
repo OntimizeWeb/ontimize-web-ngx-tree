@@ -1,10 +1,8 @@
 import { Injector } from '@angular/core';
-import { Headers, RequestOptions } from '@angular/http';
-import { Observable } from 'rxjs/Observable';
-import 'rxjs/add/operator/map';
-import 'rxjs/add/operator/share';
+import { Observable } from 'rxjs';
+import { share } from 'rxjs/operators';
 
-import { OntimizeService, LoginService, AppConfig } from 'ontimize-web-ngx';
+import { OntimizeService, LoginService, AppConfig, Util } from 'ontimize-web-ngx';
 import { FilterExpressionUtils } from 'ontimize-web-ngx/ontimize/components/filter-expression.utils';
 
 export class DummyService extends OntimizeService {
@@ -60,7 +58,7 @@ export class DummyService extends OntimizeService {
 
   public query(kv?: Object, av?: Array<string>, entity?: string,
     sqltypes?: Object): Observable<any> {
-    entity = (this.isNullOrUndef(entity)) ? this.entity : entity;
+    entity = (Util.isDefined(entity)) ? entity : this.entity;
 
     const url = this._urlBase + DummyService.mappings[entity];
     const options = {
@@ -68,29 +66,41 @@ export class DummyService extends OntimizeService {
     };
 
     const self = this;
+    const dataObservable: Observable<any> = new Observable(_innerObserver => {
+      self.httpClient.get(url, options).subscribe((resp: any) => {
+        if (resp && resp.code === 3) {
+          self.redirectLogin(true);
+        } else if (resp.code === 1) {
+          _innerObserver.error(resp.message);
+        } else if (resp.code === 0) {
+          resp.data = self.filterResponse(kv, resp);
+          _innerObserver.next(resp);
+        } else {
+          // Unknow state -> error
+          _innerObserver.error('Service unavailable');
+        }
+      }, error => _innerObserver.error(error),
+        () => _innerObserver.complete());
+    });
+    return dataObservable.pipe(share());
+  }
 
-    let innerObserver: any;
-    const dataObservable = Observable.create(observer => {
-      innerObserver = observer;
-    }).share();
+  public advancedQuery(kv?: Object, av?: Array<string>, entity?: string, sqltypes?: Object,
+    offset?: number, pagesize?: number, orderby?: Array<Object>): Observable<any> {
+    return undefined;
+  }
 
-    // setTimeout(() => {
-    self.httpClient.get(url, options).subscribe((resp: any) => {
-      if (resp && resp.code === 3) {
-        self.redirectLogin(true);
-      } else if (resp.code === 1) {
-        innerObserver.error(resp.message);
-      } else if (resp.code === 0) {
-        resp.data = self.filterResponse(kv, resp);
-        innerObserver.next(resp);
-      } else {
-        // Unknow state -> error
-        innerObserver.error('Service unavailable');
-      }
-    }, error => innerObserver.error(error),
-      () => innerObserver.complete());
-    // }, 1000);
-    return dataObservable;
+  public insert(av: Object = {}, entity?: string, sqltypes?: Object): Observable<any> {
+    return undefined;
+  }
+
+  public update(kv: Object = {}, av: Object = {}, entity?: string,
+    sqltypes?: Object): Observable<any> {
+    return undefined;
+  }
+
+  public delete(kv: Object = {}, entity?: string, sqltypes?: Object): Observable<any> {
+    return undefined;
   }
 
   private filterResponse(kv: Object, resp) {
@@ -136,24 +146,6 @@ export class DummyService extends OntimizeService {
       }
     });
     return rootsArray;
-  }
-
-  public advancedQuery(kv?: Object, av?: Array<string>, entity?: string, sqltypes?: Object,
-    offset?: number, pagesize?: number, orderby?: Array<Object>): Observable<any> {
-    return undefined;
-  }
-
-  public insert(av: Object = {}, entity?: string, sqltypes?: Object): Observable<any> {
-    return undefined;
-  }
-
-  public update(kv: Object = {}, av: Object = {}, entity?: string,
-    sqltypes?: Object): Observable<any> {
-    return undefined;
-  }
-
-  public delete(kv: Object = {}, entity?: string, sqltypes?: Object): Observable<any> {
-    return undefined;
   }
 
 }
