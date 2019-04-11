@@ -1,11 +1,12 @@
-<example-comp fxFlexFill #ex collapsible="no" collapsed="no" comp-name="TREE.RECURSIVE.COMPONENT" comp-desc="TREE.RECURSIVE.COMPONENT.DESC"
-  [files]="files">
+<example-comp fxFlexFill #ex collapsible="no" collapsed="no" comp-name="TREE.RECURSIVE.COMPONENT"
+  comp-desc="TREE.RECURSIVE.COMPONENT.DESC" [files]="files">
   <div fxLayout="row" fxLayoutAlign="start stretch" layout-padding>
-    <div fxLayout="column" layout-padding fxLayoutAlign="center stretch" fxFlex="45">
-      <o-tree #treeview fxFlex service="customers" entity="customerRecursive" keys="CUSTOMERID" columns="CUSTOMERID;SURNAME;NAME;PARENT"
-        description-columns="SURNAME;NAME" separator=", " recursive="yes" parent-column="PARENT" query-on-init="true" service-type="DummyService"
-        root-title="CUSTOMERS" quick-filter="true">
-      </o-tree>
-    </div>
+    <!-- <div fxLayout="column" layout-padding fxLayoutAlign="center stretch" fxFlex="45"> -->
+    <o-tree #treeview fxFlex service="customers" entity="customerRecursive" keys="CUSTOMERID"
+      columns="CUSTOMERID;SURNAME;NAME;PARENT" description-columns="SURNAME;NAME" separator=", " recursive="yes"
+      parent-column="PARENT" query-on-init="true" service-type="DummyService" root-title="CUSTOMERS"
+      quick-filter="true">
+    </o-tree>
+    <!-- </div> -->
   </div>
 </example-comp>

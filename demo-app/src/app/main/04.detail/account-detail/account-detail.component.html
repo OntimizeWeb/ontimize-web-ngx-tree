@@ -3,13 +3,13 @@
 
   <div fxLayout="column" fxLayoutGap="24px" layout-padding>
 
-    <o-row attr="row1" title-label="CUSTOMER_DATA" layout-padding layout-align="start center" class="rounded-panel">
+    <o-row attr="row1" title="CUSTOMER_DATA" layout-padding layout-align="start center" class="rounded-panel">
       <o-currency-input attr="BALANCE" class="margin-right-24"></o-currency-input>
       <o-date-input attr="STARTDATE" class="margin-right-24"></o-date-input>
       <o-date-input attr="ENDDATE"></o-date-input>
     </o-row>
 
-    <o-column attr="other_data" title-label="TRANSACTIONS" layout-padding layout-align="start stretch" class="rounded-panel">
+    <o-column attr="other_data" title="TRANSACTIONS" layout-padding layout-align="start stretch" class="rounded-panel">
 
       <o-table fxFlex service-type="DummyService" service="movements" entity="movement" keys="MOVEMENTID" parent-keys="ACCOUNTID"
         detail-form-route="transactions" insert-form-route="transactions/new" edit-form-route="transactions" columns="ACCOUNTID;MOVEMENTID;DATE_;CONCEPT;MOVEMENT;MOVEMENTTYPES"

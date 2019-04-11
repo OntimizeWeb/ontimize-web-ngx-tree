@@ -61,6 +61,14 @@
       }
     }
 
+    .o-tree-toolbar-header {
+      background-color: mat-color($background, app-bar);
+
+      .mat-toolbar-tools .mat-button[disabled] {
+        color: mat-color($background, disabled-button);
+      }
+    }
+
   }
 
 }

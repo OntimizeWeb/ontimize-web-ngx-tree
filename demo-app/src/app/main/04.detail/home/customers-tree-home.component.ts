@@ -56,12 +56,12 @@ const CUSTOMER_DETAIL_HTML_DATA = `
 
   <div fxLayout="column" fxLayoutGap="24px" layout-padding>
 
-    <o-row attr="row1" title-label="CUSTOMER_DATA" layout-padding layout-align="start center" class="rounded-panel">
+    <o-row attr="row1" title="CUSTOMER_DATA" layout-padding layout-align="start center" class="rounded-panel">
       <o-text-input attr="NAME" class="margin-right-24" fxFlex.lg="30" fxFlex.xl="30" fxFlex="50"></o-text-input>
       <o-text-input attr="SURNAME" fxFlex="50"></o-text-input>
     </o-row>
 
-    <o-column attr="other_data" title-label="CONTACT_DATA" layout-padding layout-align="start stretch" class="rounded-panel">
+    <o-column attr="other_data" title="CONTACT_DATA" layout-padding layout-align="start stretch" class="rounded-panel">
       <o-table #accountsTable service-type="DummyService" service="customers" entity="customerAccount" parent-keys="CUSTOMERID"
         keys="ACCOUNTID" detail-form-route="accounts" edit-form-route="accounts"
         columns="ACCOUNTID;ENTITYID;OFFICEID;CDID;ANID;ACCOUNT;BALANCE;CUSTOMERID;STARTDATE;ENDDATE"
@@ -89,13 +89,13 @@ const ACCOUNT_DETAIL_HTML_DATA = `
 
   <div fxLayout="column" fxLayoutGap="24px" layout-padding>
 
-    <o-row attr="row1" title-label="CUSTOMER_DATA" layout-padding layout-align="start center" class="rounded-panel">
+    <o-row attr="row1" title="CUSTOMER_DATA" layout-padding layout-align="start center" class="rounded-panel">
       <o-currency-input attr="BALANCE" class="margin-right-24"></o-currency-input>
       <o-date-input attr="STARTDATE" class="margin-right-24"></o-date-input>
       <o-date-input attr="ENDDATE"></o-date-input>
     </o-row>
 
-    <o-column attr="other_data" title-label="TRANSACTIONS" layout-padding layout-align="start stretch" class="rounded-panel">
+    <o-column attr="other_data" title="TRANSACTIONS" layout-padding layout-align="start stretch" class="rounded-panel">
 
       <o-table fxFlex service-type="DummyService" service="movements" entity="movement"
         keys="MOVEMENTID" parent-keys="ACCOUNTID" detail-form-route="transactions"

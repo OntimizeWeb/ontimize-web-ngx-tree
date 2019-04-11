@@ -4,12 +4,12 @@
 
   <div fxLayout="column" fxLayoutGap="24px" layout-padding>
 
-    <o-row attr="row1" title-label="CUSTOMER_DATA" layout-padding layout-align="start center" class="rounded-panel">
+    <o-row attr="row1" title="CUSTOMER_DATA" layout-padding layout-align="start center" class="rounded-panel">
       <o-text-input attr="NAME" class="margin-right-24" fxFlex.lg="30" fxFlex.xl="30" fxFlex="50"></o-text-input>
       <o-text-input attr="SURNAME" fxFlex="50"></o-text-input>
     </o-row>
 
-    <o-column attr="other_data" title-label="CONTACT_DATA" layout-padding layout-align="start stretch" class="rounded-panel">
+    <o-column attr="other_data" title="CONTACT_DATA" layout-padding layout-align="start stretch" class="rounded-panel">
       <o-table #accountsTable service-type="DummyService" service="customers" entity="customerAccount" parent-keys="CUSTOMERID"
         keys="ACCOUNTID" detail-form-route="accounts" edit-form-route="accounts" columns="ACCOUNTID;ENTITYID;OFFICEID;CDID;ANID;ACCOUNT;BALANCE;CUSTOMERID;STARTDATE;ENDDATE"
         visible-columns="ACCOUNT;BALANCE;STARTDATE;ENDDATE" title="ACCOUNTS" sort-columns="STARTDATE" query-on-init="false"

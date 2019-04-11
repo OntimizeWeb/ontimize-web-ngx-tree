@@ -245,7 +245,7 @@ export default {
         // relative to the current directory, or the name
         // of a module in node_modules
         'node_modules/moment/moment.js': ['moment'],
-        'node_modules/ng2-tree/bundles/ng2-tree.umd.min.js': [ 'ng2-tree' ]
+        'node_modules/ngx-tree/bundles/ngx-tree.umd.min.js': [ 'ngx-tree' ]
       },
       include: 'node_modules/**'
     })
