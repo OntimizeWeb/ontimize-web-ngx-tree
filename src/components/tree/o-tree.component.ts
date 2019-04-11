@@ -1,9 +1,9 @@
 import { Component, OnInit, ViewEncapsulation, NgModule, Injector, ElementRef, Optional, Inject, forwardRef, OnDestroy, ViewChild, AfterViewInit, EventEmitter, SimpleChange, ViewChildren, QueryList } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Router, ActivatedRoute, RouterModule } from '@angular/router';
-import { TreeModule, TreeModel, Ng2TreeSettings, TreeComponent, Tree, NodeSelectedEvent, NodeCollapsedEvent, NodeExpandedEvent, NodeMovedEvent, NodeCreatedEvent, NodeRemovedEvent, NodeRenamedEvent, TreeController } from 'ng2-tree';
-import { LoadNextLevelEvent } from 'ng2-tree/src/tree.events';
-import { Subscription } from 'rxjs/Subscription';
+import { TreeModule, TreeModel, Ng2TreeSettings, TreeComponent, Tree, NodeSelectedEvent, NodeCollapsedEvent, NodeExpandedEvent, NodeMovedEvent, NodeCreatedEvent, NodeRemovedEvent, NodeRenamedEvent, TreeController } from 'ngx-tree';
+import { LoadNextLevelEvent } from 'ngx-tree/src/tree.events';
+import { Subscription } from 'rxjs';
 import {
   OntimizeWebModule,
   InputConverter,
@@ -72,7 +72,10 @@ export const DEFAULT_INPUTS_O_TREE = [
   'quickFilterColumns: quick-filter-columns',
 
   // filter [yes|no|true|false]: filter si case sensitive. Default: no.
-  'filterCaseSensitive: filter-case-sensitive'
+  'filterCaseSensitive: filter-case-sensitive',
+
+  // show-buttons-text [yes|no|true|false]: show text of header buttons. Default: yes.
+  'showButtonsText: show-buttons-text'
 ];
 
 export const DEFAULT_OUTPUTS_O_TREE = [
@@ -87,6 +90,7 @@ export const DEFAULT_OUTPUTS_O_TREE = [
 ];
 
 @Component({
+  moduleId: module.id,
   selector: 'o-tree',
   templateUrl: './o-tree.component.html',
   styleUrls: ['./o-tree.component.scss'],
@@ -135,6 +139,8 @@ export class OTreeComponent extends OServiceBaseComponent implements OnInit, Aft
   quickFilterColumns: string;
   @InputConverter()
   filterCaseSensitive: boolean = false;
+  @InputConverter()
+  showButtonsText: boolean = true;
   /* end of variables */
 
   /* parsed input variables */
