@@ -1,8 +1,8 @@
 import { Component, OnInit, ViewEncapsulation, NgModule, Injector, ElementRef, Optional, Inject, forwardRef, OnDestroy, ViewChild, AfterViewInit, EventEmitter, SimpleChange, ViewChildren, QueryList } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Router, ActivatedRoute, RouterModule } from '@angular/router';
-import { TreeModule, TreeModel, Ng2TreeSettings, TreeComponent, Tree, NodeSelectedEvent, NodeCollapsedEvent, NodeExpandedEvent, NodeMovedEvent, NodeCreatedEvent, NodeRemovedEvent, NodeRenamedEvent, TreeController } from 'ngx-tree';
-import { LoadNextLevelEvent } from 'ngx-tree/src/tree.events';
+import { TreeModule, TreeModel, Ng2TreeSettings, TreeComponent, Tree, NodeSelectedEvent, NodeCollapsedEvent, NodeExpandedEvent, NodeMovedEvent, NodeCreatedEvent, NodeRemovedEvent, NodeRenamedEvent, TreeController } from 'o-ngx-tree';
+import { LoadNextLevelEvent } from 'o-ngx-tree/src/tree.events';
 import { Subscription } from 'rxjs';
 import {
   OntimizeWebModule,
