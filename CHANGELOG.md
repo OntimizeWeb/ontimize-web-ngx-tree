@@ -1,4 +1,4 @@
-## 4.0.1 
+## 4.0.1 (2019-10-07)
 ### PEER-DEPENDENCY UPDATES ###
 * **Updated**:  updating libraries to use ontimize-web-ngx@4.0.7
 
