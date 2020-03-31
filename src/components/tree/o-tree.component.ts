@@ -1,28 +1,60 @@
-import { Component, OnInit, ViewEncapsulation, NgModule, Injector, ElementRef, Optional, Inject, forwardRef, OnDestroy, ViewChild, AfterViewInit, EventEmitter, SimpleChange, ViewChildren, QueryList } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { Router, ActivatedRoute, RouterModule } from '@angular/router';
-import { TreeModule, TreeModel, Ng2TreeSettings, TreeComponent, Tree, NodeSelectedEvent, NodeCollapsedEvent, NodeExpandedEvent, NodeMovedEvent, NodeCreatedEvent, NodeRemovedEvent, NodeRenamedEvent, TreeController } from 'o-ngx-tree';
-import { LoadNextLevelEvent } from 'o-ngx-tree/src/tree.events';
-import { Subscription } from 'rxjs';
 import {
-  OntimizeWebModule,
-  InputConverter,
-  LocalStorageService,
-  DialogService,
-  Util,
-  OSharedModule,
-  ServiceUtils,
-  OServiceBaseComponent,
+  AfterViewInit,
+  Component,
+  ElementRef,
+  EventEmitter,
+  forwardRef,
+  Inject,
+  Injector,
+  NgModule,
+  OnDestroy,
+  OnInit,
+  Optional,
+  QueryList,
+  SimpleChange,
+  ViewChild,
+  ViewChildren,
+  ViewEncapsulation,
+} from '@angular/core';
+import { ActivatedRoute, Router, RouterModule } from '@angular/router';
+import {
+  Ng2TreeSettings,
+  NodeCollapsedEvent,
+  NodeCreatedEvent,
+  NodeExpandedEvent,
+  NodeMovedEvent,
+  NodeRemovedEvent,
+  NodeRenamedEvent,
+  NodeSelectedEvent,
+  Tree,
+  TreeComponent,
+  TreeController,
+  TreeModel,
+  TreeModule,
+} from 'o-ngx-tree';
+import { LoadNextLevelEvent } from 'o-ngx-tree/src/tree.events';
+import {
   Codes,
-  ISQLOrder,
-  OFormComponent,
-  FilterExpressionUtils,
-  OSearchInputModule,
-  OntimizeService,
   dataServiceFactory,
+  DialogService,
+  FilterExpressionUtils,
+  InputConverter,
+  ISQLOrder,
+  LocalStorageService,
+  NavigationService,
+  OFormComponent,
+  OntimizeService,
+  OntimizeWebModule,
+  OSearchInputComponent,
+  OSearchInputModule,
+  OServiceBaseComponent,
+  OSharedModule,
   OTranslateService,
-  OSearchInputComponent
+  ServiceUtils,
+  Util,
 } from 'ontimize-web-ngx';
+import { Subscription } from 'rxjs';
 
 import { OTreeNodeComponent } from './o-tree-node.component';
 
@@ -180,6 +212,8 @@ export class OTreeComponent extends OServiceBaseComponent implements OnInit, Aft
   protected filteringTree: boolean = false;
   resetingTree: boolean = false;
 
+  protected navigationService: NavigationService;
+
   constructor(
     injector: Injector,
     protected elRef: ElementRef,
@@ -189,6 +223,7 @@ export class OTreeComponent extends OServiceBaseComponent implements OnInit, Aft
     this.router = this.injector.get(Router);
     this.actRoute = this.injector.get(ActivatedRoute);
     this.translateService = this.injector.get(OTranslateService);
+    this.navigationService = this.injector.get(NavigationService);
   }
 
   getComponentKey(): string {
@@ -496,7 +531,6 @@ export class OTreeComponent extends OServiceBaseComponent implements OnInit, Aft
   protected innerNodeSelected(data: any, node: Tree) {
     this.onNodeSelected.emit(data);
     this.selectedNode = node;
-
     if (Util.isDefined((node.node as any).route) || (node.id === 0)) {
       let route = undefined;
       if (node.id === 0) {
@@ -515,6 +549,7 @@ export class OTreeComponent extends OServiceBaseComponent implements OnInit, Aft
         const extras = {
           relativeTo: this.actRoute
         };
+        this.storeNavigationFormRoutes('detailFormRoute', this.getQueryConfiguration());
         this.router.navigate([route], extras);
       }
     }
@@ -716,6 +751,49 @@ export class OTreeComponent extends OServiceBaseComponent implements OnInit, Aft
       resultArr.push(item.value);
     }
     return resultArr.join(' ');
+  }
+
+  private getQueryConfiguration(): any {
+    let result = {
+      keysValues: this.getKeysValues()
+    };
+    if (this.pageable) {
+      result = Object.assign({
+        serviceType: this.serviceType,
+        queryArguments: this.queryArguments,
+        entity: this.entity,
+        service: this.service,
+        queryMethod: this.pageable ? this.paginatedQueryMethod : this.queryMethod,
+        totalRecordsNumber: this.getTotalRecordsNumber(),
+        queryRows: this.queryRows,
+        queryRecordOffset: Math.max(this.state.queryRecordOffset - this.queryRows, 0)
+      }, result);
+    }
+    return result;
+  }
+
+  private getKeysValues(): any[] {
+    const data = this.dataArray;
+    const self = this;
+    return data.map((row) => {
+      const obj = {};
+      self.keysArray.forEach((key) => {
+        if (row[key] !== undefined) {
+          obj[key] = row[key];
+        }
+      });
+      return obj;
+    });
+  }
+
+  private storeNavigationFormRoutes(activeMode: string, queryConf?: any): void {
+    this.navigationService.storeFormRoutes({
+      mainFormLayoutManagerComponent: true,
+      isMainNavigationComponent: true,
+      detailFormRoute: undefined,
+      editFormRoute: undefined,
+      insertFormRoute: Codes.DEFAULT_INSERT_ROUTE
+    }, activeMode, queryConf);
   }
 }
 
