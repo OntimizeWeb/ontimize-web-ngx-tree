@@ -1,0 +1,22 @@
+<example-comp fxFlexFill #ex collapsible="no" collapsed="no" comp-name="TREE.DETAIL.COMPONENT" comp-desc="TREE.DETAIL.COMPONENT.DESC"
+  [files]="files">
+
+  <div fxLayout="row" fxLayoutAlign="center stretch" fxFlexFill>
+
+    <o-tree controls="no" #treeview fxFlex root-title="CUSTOMERS" service-type="DummyService" service="customers"
+      entity="customer" keys="CUSTOMERID" columns="CUSTOMERID;SURNAME;NAME" description-columns="SURNAME;NAME"
+      separator=", " query-on-init="true" route=":CUSTOMERID">
+
+      <o-tree-node root-title="ACCOUNTS" show-root="no" service-type="DummyService" service="customers" entity="customerAccount"
+        columns="ACCOUNTID;CUSTOMERID;ACCOUNT" description-columns="ACCOUNT" keys="ACCOUNTID" parent-keys="CUSTOMERID"
+        route="accounts/:ACCOUNTID">
+      </o-tree-node>
+
+    </o-tree>
+
+    <div fxLayout="column" fxLayoutAlign="center stretch" fxFlex="75">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+
+</example-comp>

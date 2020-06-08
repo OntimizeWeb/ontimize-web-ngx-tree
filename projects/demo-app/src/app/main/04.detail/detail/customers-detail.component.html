@@ -1,0 +1,29 @@
+<o-form service="customers" entity="customer" show-header="yes" header-actions="R;I;U;D" #oDetailForm keys="CUSTOMERID"
+  keys-sql-types="INTEGER" columns="ID_DMS_DOC" editable-detail="yes" service-type="DummyService" label-header="CUSTOMER">
+
+
+  <div fxLayout="column" fxLayoutGap="24px" layout-padding>
+
+    <o-row attr="row1" title="CUSTOMER_DATA" layout-padding layout-align="start center" class="rounded-panel">
+      <o-text-input attr="NAME" class="margin-right-24" fxFlex.lg="30" fxFlex.xl="30" fxFlex="50"></o-text-input>
+      <o-text-input attr="SURNAME" fxFlex="50"></o-text-input>
+    </o-row>
+
+    <o-column attr="other_data" title="CONTACT_DATA" layout-padding layout-align="start stretch" class="rounded-panel">
+      <o-table #accountsTable service-type="DummyService" service="customers" entity="customerAccount" parent-keys="CUSTOMERID"
+        keys="ACCOUNTID" detail-form-route="accounts" edit-form-route="accounts" columns="ACCOUNTID;ENTITYID;OFFICEID;CDID;ANID;ACCOUNT;BALANCE;CUSTOMERID;STARTDATE;ENDDATE"
+        visible-columns="ACCOUNT;BALANCE;STARTDATE;ENDDATE" title="ACCOUNTS" sort-columns="STARTDATE" query-on-init="false"
+        query-rows="6" quick-filter="yes" pageable="no" insert-button="no" row-height="medium" class="vertical-padding-8">
+
+        <o-table-column attr="ACCOUNT" title="ACCOUNT" class="o-table-column-centered"></o-table-column>
+        <o-table-column attr="STARTDATE" title="STARTDATE" type="date" format="LL"></o-table-column>
+        <o-table-column attr="BALANCE" title="BALANCE" type="currency" currency-symbol="€" currency-symbol-position="right"
+          thousand-separator="." decimal-separator=",">
+        </o-table-column>
+        <o-table-column attr="ENDDATE" title="ENDDATE" type="date" format="LL"></o-table-column>
+      </o-table>
+    </o-column>
+
+  </div>
+
+</o-form>

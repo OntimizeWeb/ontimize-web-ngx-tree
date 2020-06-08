@@ -1,0 +1,26 @@
+<example-comp fxFlexFill #ex collapsible="no" collapsed="no" comp-name="TREE.NODES.COMPONENT" comp-desc="TREE.NODES.COMPONENT.DESC"
+  [files]="files" (showSource)="onShowSource(treeview, ex)" style.height="65%">
+
+  <o-tree #treeview fxFlex root-title="CUSTOMERS" service-type="DummyService" service="customers" entity="customer"
+    keys="CUSTOMERID" columns="CUSTOMERID;SURNAME;NAME" description-columns="SURNAME;NAME" separator=", " query-on-init="true"
+    quick-filter="true" quick-filter-columns="SURNAME;NAME">
+
+    <o-tree-node root-title="ACCOUNTS" show-root="no" service-type="DummyService" service="customers" entity="customerAccount"
+      quick-filter-columns="ACCOUNT" columns="ACCOUNTID;CUSTOMERID;ACCOUNT" description-columns="ACCOUNT" keys="ACCOUNTID"
+      parent-keys="CUSTOMERID">
+
+      <o-tree-node root-title="ACCOUNT_CONCEPTS" show-root="no" service-type="DummyService" service="branches" entity="accountConcepts"
+        columns="CONCEPT;ACCOUNTID" quick-filter-columns="CONCEPT" description-columns="CONCEPT" keys="CONCEPT;ACCOUNTID"
+        parent-keys="ACCOUNTID">
+      </o-tree-node>
+
+      <o-tree-node root-title="ACCOUNT_MOVEMENTTYPES" show-root="no" service-type="DummyService" service="branches"
+        entity="accountMovementTypes" columns="DESCRIPTION;ACCOUNTID" description-columns="DESCRIPTION" keys="DESCRIPTION;ACCOUNTID"
+        parent-keys="ACCOUNTID">
+      </o-tree-node>
+
+    </o-tree-node>
+
+  </o-tree>
+
+</example-comp>

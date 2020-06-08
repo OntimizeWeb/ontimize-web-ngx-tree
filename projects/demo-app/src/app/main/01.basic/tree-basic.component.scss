@@ -1,0 +1,12 @@
+.tree-basic {
+  .event-column {
+    .container-content {
+      overflow-y: auto;
+      max-height: 340px;
+    }
+  }
+
+  .mat-slide-toggle-ripple.mat-ripple {
+    display: none;
+  }
+}

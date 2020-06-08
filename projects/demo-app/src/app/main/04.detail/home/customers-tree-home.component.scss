@@ -1,0 +1,23 @@
+.customers-tree-home {
+  .o-form form.inner-form {
+    position: initial;
+  }
+
+  router-outlet + * {
+    height: 100%;
+    position: relative;
+  }
+
+}
+
+.application-layout-content-wrapper {
+  .customers-tree-home {
+    .o-form-container {
+      position: initial;
+
+      .o-form-container-content {
+        position: initial;
+      }
+    }
+  }
+}

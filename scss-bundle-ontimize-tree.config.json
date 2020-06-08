@@ -1,0 +1,8 @@
+{
+  "bundlerOptions": {
+    "entryFile": "./projects/ontimize-web-ngx-tree/styles.scss",
+    "rootDir": "./projects/ontimize-web-ngx-tree/src/lib/components/",
+    "outFile": "./dist/styles.scss",
+    "logLevel": "trace"
+  }
+}

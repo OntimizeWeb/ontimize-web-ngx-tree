@@ -1,0 +1,32 @@
+.example-comp {
+  & > section {
+    // height: 100%;
+    // margin: 12px;
+  }
+
+  .playground-toolbar .comp-description {
+    font-size: .8em;
+    line-height: 1em;
+  }
+
+  .collapsible {
+    overflow: hidden;
+    -webkit-transition: max-height 1.8s;
+    -moz-transition: max-height 1.8s;
+    transition: max-height 1.8s;
+    max-height: 2500px;
+
+    &.collapsed {
+      max-height: 0;
+    }
+  }
+
+  .o-form form.inner-form {
+    position: relative;
+  }
+
+  .mat-tab-body-wrapper {
+    height: 100%;
+  }
+
+}
