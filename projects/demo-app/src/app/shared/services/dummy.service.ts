@@ -63,8 +63,6 @@ export class DummyService extends OntimizeService {
     const options = {
       headers: this.buildHeaders()
     };
-
-    console.log('ADSf');
     return this.doRequest({
       method: 'GET',
       url: url,
