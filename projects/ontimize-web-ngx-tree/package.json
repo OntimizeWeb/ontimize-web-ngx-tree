@@ -1,8 +1,8 @@
 {
   "name": "ontimize-web-ngx-tree",
-  "version": "8.0.0-SNAPSHOT-0",
+  "version": "8.0.0-rc.0",
   "dependencies": {
-    "o-ngx-tree": "8.0.0-SNAPSHOT-0"
+    "o-ngx-tree": "8.0.0-rc.0"
   },
   "peerDependencies": {
     "ontimize-web-ngx": "8.0.0-rc.0"

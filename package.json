@@ -1,6 +1,6 @@
 {
   "name": "ontimize-web-ngx-tree",
-  "version": "8.0.0-SNAPSHOT-0",
+  "version": "8.0.0-rc.0",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -26,7 +26,7 @@
     "@angular/router": "~8.2.14",
     "hammerjs": "~2.0.8",
     "ontimize-web-ngx": "8.0.0-rc.0",
-    "o-ngx-tree": "file:C:\\workspace\\ontimizeWeb\\8.x.x\\o-ngx-tree\\dist\\o-ngx-tree-8.0.0-rc.0.tgz",
+    "o-ngx-tree": "8.0.0-rc.0",
     "rxjs": "~6.4.0",
     "tslib": "~1.10.0",
     "zone.js": "0.9.1"
