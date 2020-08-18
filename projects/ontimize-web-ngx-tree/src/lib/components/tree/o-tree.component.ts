@@ -325,7 +325,7 @@ export class OTreeComponent extends OServiceBaseComponent implements OnInit, Aft
       filter = {};
       filter[FilterExpressionUtils.FILTER_EXPRESSION_KEY] = filterExpr;
     }
-    return filter;
+    return super.getComponentFilter(filter);
   }
 
   getRecursiveChildren(id: any, callback) {
