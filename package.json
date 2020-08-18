@@ -1,6 +1,6 @@
 {
   "name": "ontimize-web-ngx-tree",
-  "version": "4.0.1",
+  "version": "4.1.0-SNAPSHOT-1",
   "description": "An implementation of a tree component for Ontimize Web",
   "scripts": {
     "clean": "rimraf coverage && o-ngx-lib-builder clean",
