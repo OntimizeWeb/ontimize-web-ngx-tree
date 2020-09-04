@@ -61,7 +61,7 @@
     "@types/node": "7.0.10",
     "@types/uglify-js": "2.6.30",
     "@types/webpack": "4.1.1",
-    "node-sass": "4.9.4",
+    "node-sass": "4.13.1",
     "rimraf": "2.6.2",
     "gulp": "4.0.0",
     "gulp-cssimport": "6.0.0",
