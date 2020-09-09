@@ -10,8 +10,8 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "production": "ng build --aot --baseHref /ontimize-web-ngx-tree-quickstart",
-    "production-aot-server": "ng build --aot --baseHref /ontimizeweb/v8/tree/"
+    "production": "ng build --prod --baseHref=/ontimize-web-ngx-tree-quickstart",
+    "production-aot-server": "ng build --prod --baseHref=/ontimizeweb/v8/tree/"
   },
   "private": true,
   "dependencies": {
@@ -35,8 +35,8 @@
     "@ngx-translate/http-loader": "^4.0.0",
     "core-js": "^3.6.4",
     "ngx-material-timepicker": "5.4.3",
-    "ontimize-web-ngx": "8.0.0-rc.0",
-    "ontimize-web-ngx-tree": "8.0.0-rc.0",
+    "ontimize-web-ngx": "8.0.0",
+    "ontimize-web-ngx-tree": "file:C:\\workspace\\ontimizeWeb\\8.x.x\\ontimize-web-ngx-tree\\dist\\ontimize-web-ngx-tree-8.0.0.tgz",
     "ontimize-web-ngx-theming": "4.0.2",
     "reflect-metadata": "0.1.13",
     "rxjs": "~6.4.0",
