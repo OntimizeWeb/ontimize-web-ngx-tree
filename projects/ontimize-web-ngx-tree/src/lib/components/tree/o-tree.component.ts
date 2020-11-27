@@ -15,7 +15,7 @@ import {
   SimpleChange,
   ViewChild,
   ViewChildren,
-  ViewEncapsulation,
+  ViewEncapsulation
 } from '@angular/core';
 import { ActivatedRoute, Router, RouterModule } from '@angular/router';
 import {
@@ -31,7 +31,7 @@ import {
   TreeComponent,
   TreeController,
   TreeModel,
-  TreeModule,
+  TreeModule
 } from 'o-ngx-tree';
 import { LoadNextLevelEvent } from 'o-ngx-tree/src/tree.events';
 import {
@@ -52,7 +52,7 @@ import {
   OTranslateService,
   ServiceUtils,
   SQLOrder,
-  Util,
+  Util
 } from 'ontimize-web-ngx';
 import { Subscription } from 'rxjs';
 
@@ -80,7 +80,9 @@ export const DEFAULT_BASIC_INPUTS_O_TREE = [
 
   'translate',
 
-  'route'
+  'route',
+
+  'expandAllNodes: expand-all'
 ];
 
 
@@ -145,6 +147,8 @@ export class OTreeComponent extends OServiceBaseComponent implements OnInit, Aft
   /* inputs variables */
   protected sortColumns: string;
   protected descriptionColumns: string;
+  @InputConverter()
+  protected expandAllNodes: boolean = false;
   protected separator: string = Codes.HYPHEN_SEPARATOR;
   protected parentColumn: string;
   @InputConverter()
@@ -192,7 +196,7 @@ export class OTreeComponent extends OServiceBaseComponent implements OnInit, Aft
   onNodeCollapsed: EventEmitter<any> = new EventEmitter();
   onLoadNextLevel: EventEmitter<any> = new EventEmitter();
 
-  @ViewChild('treeComponent', { static: false }) treeComponent: TreeComponent;
+  @ViewChild('treeComponent', { static: false }) treeComponentRef: TreeComponent;
   rootTreeModel: TreeModel;
   settings: Ng2TreeSettings;
   selectedNode: Tree;
@@ -223,6 +227,10 @@ export class OTreeComponent extends OServiceBaseComponent implements OnInit, Aft
     this.actRoute = this.injector.get(ActivatedRoute);
     this.translateService = this.injector.get(OTranslateService);
     this.navigationService = this.injector.get(NavigationService);
+  }
+
+  get treeComponent(): TreeComponent {
+    return this.treeComponentRef;
   }
 
   getComponentKey(): string {
@@ -385,6 +393,9 @@ export class OTreeComponent extends OServiceBaseComponent implements OnInit, Aft
         }
       }
       callback(children);
+      if(children.length > 0) {
+        this.expandAll(children);
+      }
     });
   }
 
@@ -473,6 +484,22 @@ export class OTreeComponent extends OServiceBaseComponent implements OnInit, Aft
     this.settings = {
       rootIsVisible: this.showRoot
     };
+
+    this.expandAll(this.rootTreeModel.children);
+  }
+
+
+  protected expandAll(nodes: TreeModel[]) {
+    if(this.expandAllNodes) {
+      setTimeout(() => {
+        nodes.forEach((node: any) => {
+          const controller: TreeController = this.treeComponent.getControllerByNodeId(node.id);
+          if (controller) {
+            controller.expand();
+          }
+        });
+      }, 100);
+    }
   }
 
   protected resetTree() {

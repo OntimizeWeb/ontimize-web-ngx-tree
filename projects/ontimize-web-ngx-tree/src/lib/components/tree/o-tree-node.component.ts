@@ -10,8 +10,9 @@ import {
   OnDestroy,
   OnInit,
   Optional,
-  SkipSelf,
+  SkipSelf
 } from '@angular/core';
+import { TreeComponent } from 'o-ngx-tree';
 import { OFormComponent, OntimizeServiceProvider, OntimizeWebModule, OSharedModule, Util } from 'ontimize-web-ngx';
 
 import { OTreeComponent } from './o-tree.component';
@@ -69,6 +70,10 @@ export class OTreeNodeComponent extends OTreeComponent implements OnInit, OnDest
 
   onLanguageChangeCallback() {
     // empty
+  }
+
+  get treeComponent(): TreeComponent {
+    return this.oTree.treeComponent;
   }
 
 }
