@@ -33,16 +33,16 @@
     "@angular/upgrade": "^8.2.14",
     "@ngx-translate/core": "^12.1.1",
     "@ngx-translate/http-loader": "^4.0.0",
+    "angular2-highlight-js": "5.0.2",
     "core-js": "^3.6.4",
     "ngx-material-timepicker": "5.4.3",
+    "ontimize-web-ngx-tree": "8.0.1",
     "ontimize-web-ngx": "8.0.0",
-    "ontimize-web-ngx-tree": "8.0.0",
     "ontimize-web-ngx-theming": "4.0.2",
     "reflect-metadata": "0.1.13",
     "rxjs": "~6.4.0",
     "tslib": "^1.10.0",
-    "zone.js": "~0.9.1",
-    "angular2-highlight-js": "5.0.2"
+    "zone.js": "~0.9.1"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.803.24",

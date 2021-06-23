@@ -1,3 +1,22 @@
+## 8.0.1 (2021-06-23)
+### Features
+* **o-tree**: new attribute `expand-all`
+
+## 8.0.0 (2020-09-09)
+### DEPENDENCY UPDATES
+* **Updated**: ontimize-web-ngx@8.0.0
+
+## 4.1.0 (2020-08-18)
+### PEER-DEPENDENCY UPDATES ###
+* **Updated**:  updating libraries to use ontimize-web-ngx@4.1.3
+
+## 8.0.0-rc.0 (2020-07-02)
+### Features
+* **angular8:** adapt code to Angular 8.
+
+### DEPENDENCY UPDATES
+* **Updated**: ontimize-web-ngx@8.0.0-rc.0
+
 ## 4.0.1 (2019-10-07)
 ### PEER-DEPENDENCY UPDATES ###
 * **Updated**:  updating libraries to use ontimize-web-ngx@4.0.7

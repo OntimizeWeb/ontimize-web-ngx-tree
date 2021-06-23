@@ -6,5 +6,10 @@
 export const environment = {
   // apiEndpoint: 'http://10.7.0.141:9080/qsallcomponents-jee/services/rest',
   apiEndpoint: 'https://try.imatia.com/ontimizeweb/services/qsallcomponents-jee/services/rest',
-  production: false
+  production: false,
+  versions: {
+    core: '8.3.0',
+    theming: '8.0.1',
+    tree: '8.0.1'
+  }
 };
