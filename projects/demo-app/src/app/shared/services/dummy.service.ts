@@ -1,8 +1,7 @@
 import { Injector } from '@angular/core';
 import { Observable, Subscriber } from 'rxjs';
-import { share } from 'rxjs/operators';
 
-import { FilterExpressionUtils, OntimizeService, LoginService, AppConfig, Util, ServiceResponse } from 'ontimize-web-ngx';
+import { FilterExpressionUtils, OntimizeService, AppConfig, Util, ServiceResponse, AuthService } from 'ontimize-web-ngx';
 
 export class DummyService extends OntimizeService {
 
@@ -22,21 +21,19 @@ export class DummyService extends OntimizeService {
 
   public getDefaultServiceConfiguration(serviceName?: string): Object {
 
-    const loginService = this.injector.get(LoginService);
+    const authService = this.injector.get(AuthService);
     const configuration = this.injector.get(AppConfig).getServiceConfiguration();
 
     let servConfig = {};
     if (serviceName && configuration.hasOwnProperty(serviceName)) {
       servConfig = configuration[serviceName];
     }
-    servConfig['session'] = loginService.getSessionInfo();
+    servConfig['session'] = authService.getSessionInfo();
     return servConfig;
   }
 
   public configureService(config: any): void {
     this._urlBase = './assets/dummy-data';
-    this._sessionid = config.session ? config.session.id : -1;
-    // this._user = config.session ? config.session.user : '';
 
     if (config.entity !== undefined) {
       this.entity = config.entity;
@@ -74,24 +71,6 @@ export class DummyService extends OntimizeService {
     });
 
 
-    // const self = this;
-    // const dataObservable: Observable<any> = new Observable(_innerObserver => {
-    //   self.httpClient.get(url, options).subscribe((resp: any) => {
-    //     if (resp && resp.code === 3) {
-    //       self.redirectLogin(true);
-    //     } else if (resp.code === 1) {
-    //       _innerObserver.error(resp.message);
-    //     } else if (resp.code === 0) {
-    //       resp.data = self.filterResponse(kv, resp);
-    //       _innerObserver.next(resp);
-    //     } else {
-    //       // Unknow state -> error
-    //       _innerObserver.error('Service unavailable');
-    //     }
-    //   }, error => _innerObserver.error(error),
-    //     () => _innerObserver.complete());
-    // });
-    // return dataObservable.pipe(share());
   }
 
   public advancedQuery(kv?: Object, av?: Array<string>, entity?: string, sqltypes?: Object,
