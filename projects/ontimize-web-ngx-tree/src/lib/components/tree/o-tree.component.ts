@@ -11,10 +11,8 @@ import {
   OnDestroy,
   OnInit,
   Optional,
-  QueryList,
   SimpleChange,
   ViewChild,
-  ViewChildren,
   ViewEncapsulation
 } from '@angular/core';
 import { ActivatedRoute, Router, RouterModule } from '@angular/router';
@@ -45,9 +43,8 @@ import {
   OFormComponent,
   OntimizeServiceProvider,
   OntimizeWebModule,
-  OSearchInputComponent,
   OSearchInputModule,
-  OServiceBaseComponent,
+  OServiceComponent,
   OSharedModule,
   OTranslateService,
   ServiceUtils,
@@ -137,7 +134,7 @@ export const DEFAULT_OUTPUTS_O_TREE = [
     '[class.o-tree]': 'true'
   }
 })
-export class OTreeComponent extends OServiceBaseComponent implements OnInit, AfterViewInit, OnDestroy {
+export class OTreeComponent extends OServiceComponent implements OnInit, AfterViewInit, OnDestroy {
 
   static DEFAULT_INPUTS_O_TREE = DEFAULT_INPUTS_O_TREE;
   static DEFAULT_BASIC_INPUTS_O_TREE = DEFAULT_BASIC_INPUTS_O_TREE;
@@ -210,8 +207,6 @@ export class OTreeComponent extends OServiceBaseComponent implements OnInit, Aft
   protected translateService: OTranslateService;
   protected onLanguageChangeSubscription: Subscription;
 
-  @ViewChildren(OSearchInputComponent)
-  searchInput: QueryList<OSearchInputComponent>;
   protected filteringTree: boolean = false;
   resetingTree: boolean = false;
 
@@ -222,7 +217,7 @@ export class OTreeComponent extends OServiceBaseComponent implements OnInit, Aft
     protected elRef: ElementRef,
     @Optional() @Inject(forwardRef(() => OFormComponent)) protected form: OFormComponent
   ) {
-    super(injector);
+    super(injector, elRef, form);
     this.router = this.injector.get(Router);
     this.actRoute = this.injector.get(ActivatedRoute);
     this.translateService = this.injector.get(OTranslateService);
@@ -251,6 +246,13 @@ export class OTreeComponent extends OServiceBaseComponent implements OnInit, Aft
   }
 
   ngAfterViewInit() {
+    this.afterViewInit();
+    if (this.searchInputComponent) {
+      this.registerQuickFilter(this.searchInputComponent);
+    }
+  }
+
+  afterViewInit() {
     if (this.elRef) {
       this.elRef.nativeElement.removeAttribute('title');
     }
@@ -393,7 +395,7 @@ export class OTreeComponent extends OServiceBaseComponent implements OnInit, Aft
         }
       }
       callback(children);
-      if(children.length > 0) {
+      if (children.length > 0) {
         this.expandAll(children);
       }
     });
@@ -450,10 +452,10 @@ export class OTreeComponent extends OServiceBaseComponent implements OnInit, Aft
     //   this.setTree(this.data);
     // } else {
     this.queryData();
-    if (this.searchInput.length === 1) {
-      const filter = this.searchInput.first.getValue();
+    if (this.searchInputComponent) {
+      const filter = this.searchInputComponent.getValue();
       if (filter && filter.length > 1) {
-        this.onSearch(filter);
+        this.filterData(filter);
       }
     }
     // }
@@ -490,7 +492,7 @@ export class OTreeComponent extends OServiceBaseComponent implements OnInit, Aft
 
 
   protected expandAll(nodes: TreeModel[]) {
-    if(this.expandAllNodes) {
+    if (this.expandAllNodes) {
       setTimeout(() => {
         nodes.forEach((node: any) => {
           const controller: TreeController = this.treeComponent.getControllerByNodeId(node.id);
@@ -518,16 +520,16 @@ export class OTreeComponent extends OServiceBaseComponent implements OnInit, Aft
     }, 0);
   }
 
-  onSearch(textValue: string) {
+  filterData(value?: string, loadMore?: boolean): void {
     if (this.pageable) {
       return;
     }
     this.resetTree();
     const self = this;
     setTimeout(() => {
-      if (textValue && textValue.length > 0) {
+      if (value && value.length > 0) {
         setTimeout(() => {
-          self.filterTreeUsingFilter(textValue);
+          self.filterTreeUsingFilter(value);
           self.resetingTree = false;
         }, (self.expandedNodesIds.length + 1) * 75);
       } else {
@@ -778,7 +780,7 @@ export class OTreeComponent extends OServiceBaseComponent implements OnInit, Aft
     return resultArr.join(' ');
   }
 
-  private getQueryConfiguration(): any {
+  protected getQueryConfiguration(): any {
     let result = {
       keysValues: this.getKeysValues()
     };
@@ -797,7 +799,7 @@ export class OTreeComponent extends OServiceBaseComponent implements OnInit, Aft
     return result;
   }
 
-  private getKeysValues(): any[] {
+  protected getKeysValues(): any[] {
     const data = this.dataArray;
     const self = this;
     return data.map((row) => {
@@ -811,7 +813,7 @@ export class OTreeComponent extends OServiceBaseComponent implements OnInit, Aft
     });
   }
 
-  private storeNavigationFormRoutes(activeMode: string, queryConf?: any): void {
+  protected storeNavigationFormRoutes(activeMode: string, queryConf?: any): void {
     this.navigationService.storeFormRoutes({
       mainFormLayoutManagerComponent: false,
       isMainNavigationComponent: true,
