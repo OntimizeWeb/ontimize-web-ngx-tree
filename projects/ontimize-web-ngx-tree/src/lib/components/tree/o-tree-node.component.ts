@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
 import {
+  AfterViewInit,
   Component,
   ElementRef,
   EventEmitter,
@@ -27,15 +28,11 @@ import { OTreeComponent } from './o-tree.component';
   ],
 })
 
-export class OTreeNodeComponent extends OTreeComponent implements OnInit, OnDestroy {
+export class OTreeNodeComponent extends OTreeComponent implements OnInit, AfterViewInit, OnDestroy {
   public static DEFAULT_INPUTS_O_TREE_NODE = OTreeComponent.DEFAULT_BASIC_INPUTS_O_TREE;
   public static DEFAULT_OUTPUTS_O_TREE_NODE = OTreeComponent.DEFAULT_OUTPUTS_O_TREE;
 
   onNodeSelected: EventEmitter<any> = new EventEmitter();
-  // onNodeMoved: EventEmitter<any> = new EventEmitter();
-  // onNodeCreated: EventEmitter<any> = new EventEmitter();
-  // onNodeRemoved: EventEmitter<any> = new EventEmitter();
-  // onNodeRenamed: EventEmitter<any> = new EventEmitter();
   onNodeExpanded: EventEmitter<any> = new EventEmitter();
   onNodeCollapsed: EventEmitter<any> = new EventEmitter();
   onLoadNextLevel: EventEmitter<any> = new EventEmitter();
@@ -62,6 +59,11 @@ export class OTreeNodeComponent extends OTreeComponent implements OnInit, OnDest
     } else if (Util.isDefined(this.oTree)) {
       this.oTree.registerTreeNode(this);
     }
+  }
+
+
+  ngAfterViewInit() {
+    super.afterViewInit();
   }
 
   registerChildNode(child: OTreeNodeComponent) {
