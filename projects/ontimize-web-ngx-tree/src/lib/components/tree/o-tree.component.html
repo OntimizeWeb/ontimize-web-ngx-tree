@@ -27,7 +27,7 @@
       <!-- <button md-icon-button aria-label="ExpandAll/CollapseAll" (click)="expandCollapseTree()">
           <md-icon>expand_{{isExpanded ? 'less' : 'more'}}</md-icon>
       </button> -->
-      <o-search-input #searchInput *ngIf="quickFilter" [columns]="quickFilterColumns" placeholder="" (onSearch)="filterData($event)"
+      <o-search-input #searchInput *ngIf="quickFilter" [columns]="quickFilterColumns" (onSearch)="filterData($event)"
         [placeholder]="quickFilterPlaceholder" [appearance]="quickFilterAppearance" float-label="never">
       </o-search-input>
     </div>
