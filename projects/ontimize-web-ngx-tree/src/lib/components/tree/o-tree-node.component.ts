@@ -33,10 +33,6 @@ export class OTreeNodeComponent extends OTreeComponent implements OnInit, AfterV
   public static DEFAULT_OUTPUTS_O_TREE_NODE = OTreeComponent.DEFAULT_OUTPUTS_O_TREE;
 
   onNodeSelected: EventEmitter<any> = new EventEmitter();
-  // onNodeMoved: EventEmitter<any> = new EventEmitter();
-  // onNodeCreated: EventEmitter<any> = new EventEmitter();
-  // onNodeRemoved: EventEmitter<any> = new EventEmitter();
-  // onNodeRenamed: EventEmitter<any> = new EventEmitter();
   onNodeExpanded: EventEmitter<any> = new EventEmitter();
   onNodeCollapsed: EventEmitter<any> = new EventEmitter();
   onLoadNextLevel: EventEmitter<any> = new EventEmitter();

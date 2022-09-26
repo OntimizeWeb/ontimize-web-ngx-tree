@@ -18,15 +18,6 @@
         <span>{{ oTitle | oTranslate }}</span>
       </div>
       <span *ngIf="hasTitle()" class="fill-remaining"></span>
-      <!-- <button *ngIf="insertButton" md-icon-button aria-label="Add" md-tooltip="{{'ADDNEWNODE' | oTranslate}}" (click)="add()">
-          <md-icon>add</md-icon>
-      </button> -->
-      <!-- <button *ngIf="editButton" md-icon-button aria-label="Edit" md-tooltip="{{'EDITTREE' | oTranslate}}" (click)="edit()">
-              <md-icon>wrap_text</md-icon>
-          </button> -->
-      <!-- <button md-icon-button aria-label="ExpandAll/CollapseAll" (click)="expandCollapseTree()">
-          <md-icon>expand_{{isExpanded ? 'less' : 'more'}}</md-icon>
-      </button> -->
       <o-search-input #searchInput *ngIf="quickFilter" [columns]="quickFilterColumns" (onSearch)="filterData($event)"
         [placeholder]="quickFilterPlaceholder" [appearance]="quickFilterAppearance" float-label="never">
       </o-search-input>
@@ -34,7 +25,6 @@
   </mat-toolbar>
   <div class="tree-content o-scroll" [class.recursive-tree]="recursive" [class.filtering-tree]="resetingTree">
     <tree #treeComponent *ngIf="!(loading | async)" [tree]="rootTreeModel" [settings]="settings" (nodeSelected)="nodeSelected($event)"
-      (nodeMoved)="nodeMoved($event)" (nodeCreated)="nodeCreated($event)" (nodeRemoved)="nodeRemoved($event)" (nodeRenamed)="nodeRenamed($event)"
       (nodeExpanded)="nodeExpanded($event)" (nodeCollapsed)="nodeCollapsed($event)">
     </tree>
     <div class="spinner-container" fxFlex="100" *ngIf="loading | async" fxLayoutAlign="center center">
