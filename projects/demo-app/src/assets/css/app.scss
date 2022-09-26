@@ -6,7 +6,6 @@
 // @import 'node_modules/ontimize-web-ngx-theming/src/themes/mat-pink-bluegrey.scss';
 // @import 'node_modules/ontimize-web-ngx-theming/src/themes/mat-purple-green.scss';
 @import 'node_modules/ontimize-web-ngx-theming/src/themes/ontimize.scss';
-
 @import 'node_modules/ontimize-web-ngx-theming/ontimize-theme.scss';
 @include ontimize-theme-styles($theme);
 
@@ -17,37 +16,12 @@
 * After define theme, it is necessary to transfer color to Ontimize Web framework
 */
 @import 'node_modules/ontimize-web-ngx/theme.scss';
-@include o-material-theme($theme);
-
+@include o-material-theme($theme,$default-typography);
 @import 'node_modules/ontimize-web-ngx-tree/o-tree-theme.scss';
 @include o-tree-theme($theme);
 
 /*
 * Propagate theme to screen styles definition.
 */
-@import '../../app/login/login.theme.scss';
-@include login-theme($theme);
-
-@import '../../app/main/main-theme.scss';
-@include main-theme($theme);
-
 @import '../../app/shared/example/example.theme.scss';
 @include example-component-theme($theme);
-
-/*
-* Other app styles
-*/
-
-.no-padding {
-  padding: 0px !important;
-}
-
-.customer-picture{
-  .input-image {
-
-    .input-image-preview {
-      width: 200px;
-      height: 200px;
-    }
-  }
-}

@@ -1,7 +1,6 @@
-import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { NgModule } from '@angular/core';
 import { OntimizeWebModule } from 'ontimize-web-ngx';
 import { OTreeModule } from 'ontimize-web-ngx-tree';
-import { CommonModule } from '@angular/common';
 import { SharedModule } from '../shared/shared.module';
 import { MainComponent } from './main.component';
 import { MainRoutingModule } from './main-routing.module';
@@ -24,7 +23,5 @@ import { TreeRecursiveComponent } from './05.recursive/tree-recursive.component'
     TreeStaticComponent,
     TreeRecursiveComponent
   ]
-  // ,
-  // schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class MainModule { }
