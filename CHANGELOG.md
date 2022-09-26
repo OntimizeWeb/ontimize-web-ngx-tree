@@ -1,3 +1,10 @@
+## 8.0.2
+### Bug Fixes
+* Fixed quick filter not displaying with correct styles ([e01c8c7](https://github.com/OntimizeWeb/ontimize-web-ngx/commit/e01c8c7)) Closes [#28](https://github.com/OntimizeWeb/ontimize-web-ngx/issues/28)
+
+### DEPENDENCY UPDATES
+* **Updated**: ontimize-web-ngx@8.8.0
+
 ## 8.0.1 (2021-06-23)
 ### Features
 * **o-tree**: new attribute `expand-all`
