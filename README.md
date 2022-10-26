@@ -42,7 +42,12 @@ npm install
 npm install
 ```
 
-### Build
 
-Run `npm run build` to execute the build process that will generate the dist folder and a .tgz file.
+### Build `ontimize-web-ngx-tree`
+
+Run `cd projects/ontimize-web-ngx-tree && npm run build && cd dist && npm pack && cd ..` to execute the build process that will generate the dist folder and a .tgz file.
 You can use this .tgz file to install the library in your project through the package.json file.
+
+### Run demo
+
+Run `cd projects/demo-app && npm start` in root folder.
