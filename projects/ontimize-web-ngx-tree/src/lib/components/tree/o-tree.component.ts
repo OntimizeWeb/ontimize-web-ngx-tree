@@ -11,10 +11,8 @@ import {
   OnDestroy,
   OnInit,
   Optional,
-  QueryList,
   SimpleChange,
   ViewChild,
-  ViewChildren,
   ViewEncapsulation
 } from '@angular/core';
 import { ActivatedRoute, Router, RouterModule } from '@angular/router';
@@ -45,9 +43,8 @@ import {
   OFormComponent,
   OntimizeServiceProvider,
   OntimizeWebModule,
-  OSearchInputComponent,
   OSearchInputModule,
-  OServiceBaseComponent,
+  OServiceComponent,
   OSharedModule,
   OTranslateService,
   ServiceUtils,
@@ -114,10 +111,6 @@ export const DEFAULT_INPUTS_O_TREE = [
 
 export const DEFAULT_OUTPUTS_O_TREE = [
   'onNodeSelected',
-  // 'onNodeMoved',
-  // 'onNodeCreated',
-  // 'onNodeRemoved',
-  // 'onNodeRenamed',
   'onNodeExpanded',
   'onNodeCollapsed',
   'onLoadNextLevel'
@@ -137,7 +130,7 @@ export const DEFAULT_OUTPUTS_O_TREE = [
     '[class.o-tree]': 'true'
   }
 })
-export class OTreeComponent extends OServiceBaseComponent implements OnInit, AfterViewInit, OnDestroy {
+export class OTreeComponent extends OServiceComponent implements OnInit, AfterViewInit, OnDestroy {
 
   static DEFAULT_INPUTS_O_TREE = DEFAULT_INPUTS_O_TREE;
   static DEFAULT_BASIC_INPUTS_O_TREE = DEFAULT_BASIC_INPUTS_O_TREE;
@@ -188,10 +181,6 @@ export class OTreeComponent extends OServiceBaseComponent implements OnInit, Aft
   treeNodes: OTreeNodeComponent[] = [];
 
   onNodeSelected: EventEmitter<any> = new EventEmitter();
-  // onNodeMoved: EventEmitter<any> = new EventEmitter();
-  // onNodeCreated: EventEmitter<any> = new EventEmitter();
-  // onNodeRemoved: EventEmitter<any> = new EventEmitter();
-  // onNodeRenamed: EventEmitter<any> = new EventEmitter();
   onNodeExpanded: EventEmitter<any> = new EventEmitter();
   onNodeCollapsed: EventEmitter<any> = new EventEmitter();
   onLoadNextLevel: EventEmitter<any> = new EventEmitter();
@@ -210,8 +199,6 @@ export class OTreeComponent extends OServiceBaseComponent implements OnInit, Aft
   protected translateService: OTranslateService;
   protected onLanguageChangeSubscription: Subscription;
 
-  @ViewChildren(OSearchInputComponent)
-  searchInput: QueryList<OSearchInputComponent>;
   protected filteringTree: boolean = false;
   resetingTree: boolean = false;
 
@@ -222,7 +209,7 @@ export class OTreeComponent extends OServiceBaseComponent implements OnInit, Aft
     protected elRef: ElementRef,
     @Optional() @Inject(forwardRef(() => OFormComponent)) protected form: OFormComponent
   ) {
-    super(injector);
+    super(injector, elRef, form);
     this.router = this.injector.get(Router);
     this.actRoute = this.injector.get(ActivatedRoute);
     this.translateService = this.injector.get(OTranslateService);
@@ -251,6 +238,13 @@ export class OTreeComponent extends OServiceBaseComponent implements OnInit, Aft
   }
 
   ngAfterViewInit() {
+    this.afterViewInit();
+    if (this.searchInputComponent) {
+      this.registerQuickFilter(this.searchInputComponent);
+    }
+  }
+
+  afterViewInit() {
     if (this.elRef) {
       this.elRef.nativeElement.removeAttribute('title');
     }
@@ -393,7 +387,7 @@ export class OTreeComponent extends OServiceBaseComponent implements OnInit, Aft
         }
       }
       callback(children);
-      if(children.length > 0) {
+      if (children.length > 0) {
         this.expandAll(children);
       }
     });
@@ -442,24 +436,16 @@ export class OTreeComponent extends OServiceBaseComponent implements OnInit, Aft
   }
 
   reloadData() {
-    // if (this.unstructuredData) {
-    //   this.static = true;
-    //   this.rightMenu = false;
-    //   this.setTreefromDirtyArray(this.unstructuredData);
-    // } else if (this.data) {
-    //   this.setTree(this.data);
-    // } else {
     this.queryData();
-    if (this.searchInput.length === 1) {
-      const filter = this.searchInput.first.getValue();
+    if (this.searchInputComponent) {
+      const filter = this.searchInputComponent.getValue();
       if (filter && filter.length > 1) {
-        this.onSearch(filter);
+        this.filterData(filter);
       }
     }
-    // }
   }
 
-  protected setData(treeArray: any[]) {//, sqlTypes?: any) {
+  protected setData(treeArray: any[]) {
     this.dataResponseArray = treeArray;
     let childrenArray: TreeModel[] = [];
 
@@ -490,7 +476,7 @@ export class OTreeComponent extends OServiceBaseComponent implements OnInit, Aft
 
 
   protected expandAll(nodes: TreeModel[]) {
-    if(this.expandAllNodes) {
+    if (this.expandAllNodes) {
       setTimeout(() => {
         nodes.forEach((node: any) => {
           const controller: TreeController = this.treeComponent.getControllerByNodeId(node.id);
@@ -518,16 +504,16 @@ export class OTreeComponent extends OServiceBaseComponent implements OnInit, Aft
     }, 0);
   }
 
-  onSearch(textValue: string) {
+  filterData(value?: string, loadMore?: boolean): void {
     if (this.pageable) {
       return;
     }
     this.resetTree();
     const self = this;
     setTimeout(() => {
-      if (textValue && textValue.length > 0) {
+      if (value && value.length > 0) {
         setTimeout(() => {
-          self.filterTreeUsingFilter(textValue);
+          self.filterTreeUsingFilter(value);
           self.resetingTree = false;
         }, (self.expandedNodesIds.length + 1) * 75);
       } else {
@@ -578,99 +564,6 @@ export class OTreeComponent extends OServiceBaseComponent implements OnInit, Aft
         this.router.navigate([route], extras);
       }
     }
-  }
-
-  nodeMoved(event: NodeMovedEvent) {
-    if (event && event.node && event.node.id) {
-      // if (e.node.parent.id !== e.previousParent.id)
-      // const node: Tree = event.node;
-      // this.onNodeMoved(node);
-    }
-
-    // let nodeToUpdate = {}, data = {};
-    // nodeToUpdate[this.valueColumn] = e.node.id;
-    // data[this.parentColumn] = e.node.parent.id;
-    // if (this.service && this.entity) {
-    //   this.dataService.update(nodeToUpdate, data, this.entity).subscribe(resp => {
-    //     if (resp && resp.code === Codes.ONTIMIZE_SUCCESSFUL_CODE) {
-    //       this.dialogService.info('INFO', e.node.value + ' ha sido trasladado de ' + e.previousParent.value + ' a ' + e.node.parent.value);
-    //     } else {
-    //       this.dialogService.error('ERROR', 'Ha ocurrido un error a trasladar ' + e.node.value)
-    //     }
-    //   });
-    // }
-
-  }
-
-  nodeCreated(event: NodeCreatedEvent) {
-    console.log(event);
-    // if (node && node.node && node.node.value.length > 0 && this.dataService) {
-    //   let nodeObject: Tree = node.node;
-    //   let nodeToInsert = {};
-    // nodeToInsert[this.nodeDescription] = nodeObject.value;
-    // if (nodeObject.parent && nodeObject.parent.id) {
-    //   nodeToInsert[this.parentColumn] = nodeObject.parent.id;
-    // }
-    // if (this.codeColumn) {
-    //   nodeToInsert[this.codeColumn] = node.node.value.toUpperCase().replace(/[&\/\\#,+()$~%.'":*?<>{} ]/g, '-');
-    // }
-    // if (this.parentItem) {
-    //   nodeToInsert = Object.assign({}, nodeToInsert, this.parentItem);
-    // }
-    // this.subscriber = this.dataService.insert(nodeToInsert, this.entity).subscribe(resp => {
-    //   if (resp && resp.data && resp.data[this.valueColumn]) {
-    //     console.log('Element inserted successfully!', resp)
-    //     node.node.id = resp.data[this.valueColumn];
-    //   }
-    // }, err => {
-    //   this.dialogService.info('ERROR', 'Ha ocurrido un error a insertar el elemento!');
-    //   nodeObject.removeItselfFromParent();
-    // });
-    // }
-  }
-
-  nodeRemoved(event: NodeRemovedEvent) {
-    if (!this.filteringTree) {
-      console.log(event);
-    }
-    // if (node && node.node && node.node.id && this.dataService) {
-    // // this.dialogService.confirm('CONFIRM', 'MESSAGES.CONFIRM_DELETE_TREE_NODE').then(
-    // //     res => {
-    // //         if (res === true) {
-    // let nodeObject: Tree = node.node;
-    // let nodeToDelete = {};
-    // nodeToDelete[this.valueColumn] = nodeObject.id;
-    // this.subscriber = this.dataService.delete(nodeToDelete, this.entity).subscribe(resp => {
-    //   if (resp) {
-    //     console.log('Element deleted successfully!', resp.data)
-    //   }
-    // }, err => {
-    //   this.dialogService.info('ERROR', 'Ha ocurrido un error a remover el elemento!');
-
-    // });
-    // //     }
-    // // });
-    // }
-  }
-
-  nodeRenamed(event: NodeRenamedEvent) {
-    if (!this.translating) {
-      console.log(event);
-    }
-    // if (node && node.node && node.node.id && node.node.value.length > 0 && this.dataService) {
-    //   // let nodeObject: Tree = node.node;
-    //   // let nodeToRename = {};
-    //   // nodeToRename[this.valueColumn] = nodeObject.id;
-    //   // let data = {};
-    //   // data[this.nodeDescription] = nodeObject.value;
-    //   // this.subscriber = this.dataService.update(nodeToRename, data, this.entity).subscribe(resp => {
-    //   //     if (resp) {
-    //   //         console.log('Element renamed successfully!', resp)
-    //   //     }
-    //   // }, err => {
-    //   //     this.dialogService.info('ERROR', 'Ha ocurrido un error a renombrar el elemento!');
-    //   // });
-    // }
   }
 
   nodeExpanded(event: NodeExpandedEvent) {
@@ -778,7 +671,7 @@ export class OTreeComponent extends OServiceBaseComponent implements OnInit, Aft
     return resultArr.join(' ');
   }
 
-  private getQueryConfiguration(): any {
+  protected getQueryConfiguration(): any {
     let result = {
       keysValues: this.getKeysValues()
     };
@@ -797,7 +690,7 @@ export class OTreeComponent extends OServiceBaseComponent implements OnInit, Aft
     return result;
   }
 
-  private getKeysValues(): any[] {
+  protected getKeysValues(): any[] {
     const data = this.dataArray;
     const self = this;
     return data.map((row) => {
@@ -811,7 +704,7 @@ export class OTreeComponent extends OServiceBaseComponent implements OnInit, Aft
     });
   }
 
-  private storeNavigationFormRoutes(activeMode: string, queryConf?: any): void {
+  protected storeNavigationFormRoutes(activeMode: string, queryConf?: any): void {
     this.navigationService.storeFormRoutes({
       mainFormLayoutManagerComponent: false,
       isMainNavigationComponent: true,
