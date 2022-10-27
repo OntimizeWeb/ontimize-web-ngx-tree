@@ -1,3 +1,4 @@
+## 8.1.0
 ## 8.0.2 (2022-10-27)
 ### Bug Fixes
 * Fixed quick filter not displaying with correct styles ([e01c8c7](https://github.com/OntimizeWeb/ontimize-web-ngx/commit/e01c8c7)) Closes [#28](https://github.com/OntimizeWeb/ontimize-web-ngx/issues/28)
