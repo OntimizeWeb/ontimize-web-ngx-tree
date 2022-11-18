@@ -1,6 +1,6 @@
 <h1 align="center">
   <div style="display:inline-block;vertical-align: middle;">
-    <a name="logo" href="https://ontimizeweb.github.io/docs/v8/theming/">
+    <a name="logo" href="https://ontimizeweb.github.io/docs/v8/tree/">
       Ontimize Web Tree
     </a>
   </div>
@@ -8,6 +8,7 @@
 
 <p align="center">
   <a href="#-introduction">Introduction</a> •
+  <a href="#rocket-demo">Demo</a> •
   <a href="#-ideas">Ideas</a> •
   <a href="#gear-development">Development</a>
 </p>
@@ -18,7 +19,11 @@ The `o-tree` component allows to manage a tree that can be used to display hiera
 
 ### 📖 Documentation
 
-Check out our [documentation site](https://ontimizeweb.github.io/docs/v8/tree) to know more details.
+Check out our [documentation site](https://ontimizeweb.github.io/docs/v8/tree/overview/) to know more details.
+
+## :rocket: Demo
+
+Check out our demo application in the following [link](https://try.imatia.com/ontimizeweb/v8/tree/).
 
 ## 💡 Ideas
 
@@ -37,17 +42,13 @@ Follow the next steps:
 ```bash
 npm install
 ```
-  - cd projects/ontimize-web-ngx-tree
-```bash
-npm install
-```
 
 
 ### Build `ontimize-web-ngx-tree`
 
-Run `cd projects/ontimize-web-ngx-tree && npm run build && cd dist && npm pack && cd ..` to execute the build process that will generate the dist folder and a .tgz file.
+Run `npm run build && cd dist && npm pack` to execute the build process that will generate the dist folder and a .tgz file.
 You can use this .tgz file to install the library in your project through the package.json file.
 
-### Run demo
+### Run demo locally
 
-Run `cd projects/demo-app && npm start` in root folder.
+Run `cd projects/demo-app && npm install && npm start` in root folder.
